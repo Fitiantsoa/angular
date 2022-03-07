@@ -1,8 +1,7 @@
-<div>
-  <div>
-    <div>id</div>
-    <div>
-      {{ utilisateur.id }}
-    </div>
-  </div>
-</div>
+<a [routerLink]="['/user/informations']" routerLinkActive="active" class="btn btn-link">
+  Informations personnelles
+</a>
+<a [routerLink]="['/user/commandes']" routerLinkActive="active" class="btn btn-link">
+  Commandes
+</a>
+<router-outlet></router-outlet>
