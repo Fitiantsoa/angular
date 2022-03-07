@@ -11,10 +11,6 @@ export class UtilisateurService {
 
   constructor(private http: HttpClient) {}
 
-  get(login: string): Observable<Utilisateur> {
-    return this.http.get<Utilisateur>(UtilisateurService.URL + '/' + login);
-  }
-
   info(): Observable<Utilisateur> {
     return this.http.get<Utilisateur>(UtilisateurService.URL + '/info');
   }
