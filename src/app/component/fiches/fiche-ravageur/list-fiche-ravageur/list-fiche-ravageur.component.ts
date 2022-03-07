@@ -5,11 +5,11 @@ import { FicheRavageur } from 'src/app/model/fiches/fiche-ravageur';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @Component({
-  selector: 'app-list-fiche-plante',
-  templateUrl: './list-fiche-plante.component.html',
-  styleUrls: ['./list-fiche-plante.component.css']
+  selector: 'app-list-fiche-ravageur',
+  templateUrl: './list-fiche-ravageur.component.html',
+  styleUrls: ['./list-fiche-ravageur.component.css']
 })
-export class ListFichePlanteComponent implements OnInit {
+export class ListFicheRavageurComponent implements OnInit {
 
   fichesRavageurObservable!: Observable<FicheRavageur[]>;
 
@@ -24,5 +24,6 @@ export class ListFichePlanteComponent implements OnInit {
       this.fichesRavageurObservable = this.ficheRavageurService.getAll();
     });
   }
+
 
 }
