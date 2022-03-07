@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Barre de navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+nav .logonav img {
+  width: 200px;
+}
+
+nav .onglets {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  padding-top: 30px;
+  background-color: rgba(100, 182, 56, 1);
+  border-radius: 15px;
+}
+nav .onglets p {
+  font-size: 17px;
+  margin-right: 40px;
+  cursor: pointer;
+  color: white;
+  align-self: center;
+}
+nav .onglets input {
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+}
+/* Fin de la barre de navigation */
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 50px;
+  max-width: 1000px;
+  margin-top: 50px;
+  text-align: center;
+  color: rgba(100, 182, 56, 1);
+}
+header input {
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(100, 182, 56, 1);
+}
+
+header input::placeholder {
+  color: white;
+  opacity: 0.75;
+}
+
+#btnGo {
+  color: white;
+}
+
+/* Fin du header */
+
+/* Section principale */
+
+.main {
+  margin: 20px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Toutes les cartes */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards .card {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.cards .card img {
+  width: 350px;
+}
+.cards .card .card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card .card-body p {
+  margin-top: -10px;
+}
+/* Fin de toutes les cartes */
+
+/* Video de présentation */
+.main .video {
+  margin-top: 80px;
+  width: 90%;
+}
+.main .video iframe {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+}
+/* Fin de la vidéo de présentation */
+/* Fin de la section principale */
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: rgba(100, 182, 56, 1);
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .social-media {
+  display: flex;
+}
+footer .social-media p {
+  margin-right: 15px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 5px;
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+}
+
+/* Fin du pied de page */
+
+@media screen and (max-width: 640px) {
+  nav .onglets .link,
+  nav h1 {
+    display: none;
+  }
+  .cards .card img {
+    width: 300px;
+  }
+}
