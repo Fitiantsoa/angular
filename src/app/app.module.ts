@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InscriptionComponent } from './component/inscription/inscription.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { PotagerComponent } from './component/potager/potager.component';
@@ -16,6 +16,7 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
+import { AuthInterceptor } from "./interceptor/auth.interceptor";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent],
@@ -26,7 +27,7 @@ import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/li
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
