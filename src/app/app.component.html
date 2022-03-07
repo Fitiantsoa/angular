@@ -43,5 +43,9 @@
     class="btn btn-link"
     >Fiches Ravageurs
   </a>
+
+  <a *ngIf="authentificated" class="btn btn-link" (click)="logout()"
+    >Déconnexion</a
+  >
 </nav>
 <router-outlet></router-outlet>
