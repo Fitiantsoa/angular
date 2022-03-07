@@ -1,4 +1,4 @@
-import { UtilisateurService } from './../../service/utilisateur.service';
+import { UtilisateurService } from '../../service/utilisateur.service';
 import { Component, OnInit } from '@angular/core';
 import { Utilisateur } from 'src/app/model/utilisateur';
 import { ActivatedRoute } from '@angular/router';
@@ -21,10 +21,8 @@ export class UtilisateurComponent implements OnInit {
   }
 
   showUtilisateur() {
-    this.activatedRoute.params.subscribe((params) => {
-      this.utilisateurService.get(params['login']).subscribe((result) => {
-        this.utilisateur = result;
-      });
+    this.utilisateurService.info().subscribe((result) => {
+      this.utilisateur = result;
     });
   }
 }
