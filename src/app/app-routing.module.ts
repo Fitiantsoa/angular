@@ -10,7 +10,7 @@ import { IsLoggedInGuard } from "./guard/is-logged-in/is-logged-in.guard";
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
   { path: 'inscription', component: InscriptionComponent, canActivate: [IsLoggedOutGuard] },
-  { path: 'user/:login', component: UtilisateurComponent, canActivate: [IsLoggedInGuard] },
+  { path: 'user', component: UtilisateurComponent, canActivate: [IsLoggedInGuard] },
   { path: '**', component: NotFoundComponent }
 ];
 
