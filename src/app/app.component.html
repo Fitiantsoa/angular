@@ -24,21 +24,21 @@
 
   <a
     *ngIf="authentificated"
-    [routerLink]="['/api/fiches_plante', login]"
+    [routerLink]="['/fiches_plante']"
     routerLinkActive="active"
     class="btn btn-link"
     >Fiches Plante
   </a>
   <a
     *ngIf="authentificated"
-    [routerLink]="['/api/fiches_maladie', login]"
+    [routerLink]="['/fiches_maladie']"
     routerLinkActive="active"
     class="btn btn-link"
     >Fiches Maladies
   </a>
   <a
     *ngIf="authentificated"
-    [routerLink]="['/api/fiches_ravageurs', login]"
+    [routerLink]="['/fiches_ravageurs']"
     routerLinkActive="active"
     class="btn btn-link"
     >Fiches Ravageurs
