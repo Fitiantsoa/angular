@@ -1,0 +1,30 @@
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>description</th>
+    <th>solution(s)</th>
+  </tr>
+  <tr *ngFor="let fR of fichesRavageurObservable | async">
+    <td>{{ fR.id }}</td>
+    <td>{{ fR.nom }}</td>
+    <td>{{ fR.description }}</td>
+    <td>{{ fR.solution }}</td>
+    <td>
+      <a
+        [routerLink]="['/fiches_ravageur', 'edit', fR.id]"
+        routerLinkActive="active"
+        class="btn btn-outline-primary"
+        >editer</a
+      >
+    </td>
+    <td>
+      <button (click)="delete(fR.id!)" class="btn btn-outline-danger">
+        supprimer
+      </button>
+    </td>
+  </tr>
+</table>
+<a routerLink="/fiches_ravageur/edit" routerLinkActive="active" class="btn btn-link"
+  >ajouter une fiche</a
+>
