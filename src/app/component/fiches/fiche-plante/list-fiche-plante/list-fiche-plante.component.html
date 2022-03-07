@@ -1,0 +1,57 @@
+<p>list-fiche-plante works!</p>
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>Nom</th>
+    <th>Besoin en eau</th>
+    <th>Exposition au soleil</th>
+    <th>Espacement</th>
+    <th>Durée de conservation des graines</th>
+    <th>Période Semis</th>
+    <th>Période pour récolter</th>
+    <th>Les bons Copains</th>
+    <th>Les mauvais Copains</th>
+    <th>Maladies connues</th>
+    <th>Ravageurs connus</th>
+    <th>Comment semer?</th>
+    <th>Comment planter?</th>
+    <th>Entretien</th>
+    <th>Comment récolter?</th>
+
+  </tr>
+  <tr *ngFor="let fP of fichesPlanteObservable | async">
+    <td>{{ fP.id }}</td>
+    <td>{{ fP.nom }}</td>
+    <td>{{ fP.eau }}</td>
+    <td>{{ fP.exposition }}</td>
+    <td>{{ fP.espacement }}</td>
+    <td>{{ fP.dureeConservationGraine }}</td>
+    <td>{{ fP.calendrierSemer }}</td>
+    <td>{{ fP.calendrierPlanter }}</td>
+    <td>{{ fP.calendrierRecolter }}</td>
+    <td>{{ fP.bonsCopains }}</td>
+    <td>{{ fP.mauvaisCopains }}</td>
+    <td>{{ fP.maladies }}</td>
+    <td>{{ fP.ravageurs }}</td>
+    <td>{{ fP.methodeSemer }}</td>
+    <td>{{ fP.methodePlanter }}</td>
+    <td>{{ fP.methodeEntretien }}</td>
+    <td>{{ fP.methodeRecolte }}</td>
+    <td>
+      <a
+        [routerLink]="['/fiches_plante', 'edit', fP.id]"
+        routerLinkActive="active"
+        class="btn btn-outline-primary"
+        >editer</a
+      >
+    </td>
+    <td>
+      <button (click)="delete(fP.id!)" class="btn btn-outline-danger">
+        supprimer
+      </button>
+    </td>
+  </tr>
+</table>
+<a routerLink="/fiches_plante/edit" routerLinkActive="active" class="btn btn-link"
+  >ajouter une fiche</a
+>

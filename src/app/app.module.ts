@@ -10,9 +10,15 @@ import { InscriptionComponent } from './component/inscription/inscription.compon
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { PotagerComponent } from './component/potager/potager.component';
 import { RubanComponent } from './component/ruban/ruban.component';
+import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
+import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list-fiche-maladie/list-fiche-maladie.component';
+import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
+import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
+import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
+import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent],
+  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
