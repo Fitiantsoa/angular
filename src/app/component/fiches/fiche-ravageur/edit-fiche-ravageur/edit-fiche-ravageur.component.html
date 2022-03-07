@@ -1,0 +1,25 @@
+<div>
+  <div class="form-group">
+    <label>id:</label>
+    <input class="form-control" [(ngModel)]="ficheRavageur.id" readonly />
+  </div>
+  <div class="form-group">
+    <label>nom:</label>
+    <input class="form-control" [(ngModel)]="ficheRavageur.nom" />
+  </div>
+  <div class="form-group">
+    <label>description:</label>
+    <input type="number" class="form-control" [(ngModel)]="ficheRavageur.description" />
+  </div>
+  <div class="form-group">
+    <label>solution(s):</label>
+    <input class="form-control" [(ngModel)]="ficheRavageur.solution"
+    />
+  </div>
+  <div>
+    <button (click)="save()" class="btn btn-outline-success">
+      enregistrer
+    </button>
+    <a routerLink="/fiches_maladie" routerLinkActive="active" btn-warning>annuler</a>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<p>edit-fiche-plante works!</p>
+<div>
+  <div class="form-group">
+    <label>id:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.id" readonly />
+  </div>
+  <div class="form-group">
+    <label>nom:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.nom" />
+  </div>
+  <div class="form-group">
+    <label>eau:</label>
+    <input type="number" class="form-control" [(ngModel)]="fichePlante.eau" />
+  </div>
+  <div class="form-group">
+    <label>exposition:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.exposition"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>espacement:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.espacement"
+    />
+  </div>
+  <div class="form-group">
+    <label>graine:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.dureeConservationGraine"
+    />
+  </div>
+  <div class="form-group">
+    <label>Période Semis:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.calendrierSemer"
+    />
+  </div>
+  <div class="form-group">
+    <label>Période plantation:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.calendrierPlanter"
+    />
+  </div>
+  <div class="form-group">
+    <label>Période récolte:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.calendrierRecolter"
+    />
+  </div>
+  <div class="form-group">
+    <label>Bons copains:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.bonsCopains"
+    />
+  </div>
+  <div class="form-group">
+    <label>Mauvais Copains:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.mauvaisCopains"
+    />
+  </div>
+  <div class="form-group">
+    <label>maladies:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.maladies"
+    />
+  </div>
+  <div class="form-group">
+    <label>ravageurs:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.ravageurs"
+    />
+  </div>
+  <div class="form-group">
+    <label>exposition:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.exposition"
+    />
+  </div>
+  <div class="form-group">
+    <label>Comment semer?:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.methodeSemer"
+    />
+  </div>
+  <div class="form-group">
+    <label>Comment planter?:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.methodePlanter"
+    />
+  </div>
+  <div class="form-group">
+    <label>Entretien:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.methodeEntretien"
+    />
+  </div>
+  <div class="form-group">
+    <label>Comment récolter?:</label>
+    <input class="form-control" [(ngModel)]="fichePlante.methodeRecolte"
+    />
+  </div>
+
+  <div>
+    <button (click)="save()" class="btn btn-outline-success">
+      enregistrer
+    </button>
+    <a routerLink="/fiches_maladie" routerLinkActive="active" btn-warning>annuler</a>
+  </div>
+</div>
