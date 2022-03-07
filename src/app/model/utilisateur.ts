@@ -1,5 +1,6 @@
 import { Adresse } from './adresse';
 import { Civilite } from './civilite';
+import { Compte } from './compte';
 export class Utilisateur {
   private _id: number | undefined;
   private _civilite: Civilite | undefined;
