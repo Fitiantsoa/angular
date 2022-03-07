@@ -17,9 +17,11 @@ import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-f
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { AuthInterceptor } from "./interceptor/auth.interceptor";
+import { InformationComponent } from './component/utilisateur/information/information.component';
+import { CommandeComponent } from './component/utilisateur/commande/commande.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent],
+  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent, InformationComponent, CommandeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
