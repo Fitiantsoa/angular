@@ -25,4 +25,10 @@ export class AppComponent {
   get login() {
     return localStorage.getItem('login');
   }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/accueil');
+  }
+
 }

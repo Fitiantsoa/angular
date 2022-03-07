@@ -23,13 +23,28 @@
   </a>
   <a
     *ngIf="authentificated"
-    routerLink="['/user']"
+    [routerLink]="['/fiches_plante']"
     routerLinkActive="active"
     class="btn btn-link"
     >Informations personnelles
   </a>
+  <a
+    *ngIf="authentificated"
+    [routerLink]="['/fiches_maladie']"
+    routerLinkActive="active"
+    class="btn btn-link"
+    >Fiches Maladies
+  </a>
+  <a
+    *ngIf="authentificated"
+    [routerLink]="['/fiches_ravageur']"
+    routerLinkActive="active"
+    class="btn btn-link"
+    >Fiches Ravageurs
+  </a>
+
   <a *ngIf="authentificated" class="btn btn-link" (click)="logout()"
-    >deconnection</a
+    >Déconnexion</a
   >
 </nav>
 <router-outlet></router-outlet>
