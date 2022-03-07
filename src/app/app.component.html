@@ -34,14 +34,14 @@
     [routerLink]="['/fiches_maladie']"
     routerLinkActive="active"
     class="btn btn-link"
-    >Fiches Maladies
+    >Fiches Maladie
   </a>
   <a
     *ngIf="authentificated"
     [routerLink]="['/fiches_ravageur']"
     routerLinkActive="active"
     class="btn btn-link"
-    >Fiches Ravageurs
+    >Fiches Ravageur
   </a>
 
   <a *ngIf="authentificated" class="btn btn-link" (click)="logout()"
