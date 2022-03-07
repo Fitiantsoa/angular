@@ -17,6 +17,11 @@ export class AppComponent {
     return this.authService.isAuthenticated();
   }
 
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/home');
+  }
+
   get login() {
     return localStorage.getItem('login');
   }
