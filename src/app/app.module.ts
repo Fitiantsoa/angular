@@ -19,9 +19,10 @@ import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/li
 import { AuthInterceptor } from "./interceptor/auth.interceptor";
 import { InformationComponent } from './component/utilisateur/information/information.component';
 import { CommandeComponent } from './component/utilisateur/commande/commande.component';
+import { AccueilComponent } from './component/accueil/accueil.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent, InformationComponent, CommandeComponent],
+  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent, InformationComponent, CommandeComponent, AccueilComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
