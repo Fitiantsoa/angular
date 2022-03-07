@@ -8,10 +8,10 @@ import { LoginComponent } from './component/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InscriptionComponent } from './component/inscription/inscription.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
-import { IntrouvableComponent } from './component/introuvable/introuvable.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, IntrouvableComponent],
+  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

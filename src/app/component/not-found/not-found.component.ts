@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-introuvable',
-  templateUrl: './introuvable.component.html',
-  styleUrls: ['./introuvable.component.css']
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.css']
 })
-export class IntrouvableComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor() { }
 
