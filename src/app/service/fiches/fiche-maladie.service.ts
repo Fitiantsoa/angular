@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class FicheMaladieService {
-  private static URL = 'http://localhost:8080/api/fiches_maladie';
+  private static URL = 'http://localhost:4200/api/fiches_maladie';
 
   constructor(private httpClient: HttpClient) {}
 
