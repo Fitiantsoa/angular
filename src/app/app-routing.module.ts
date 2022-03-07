@@ -21,11 +21,13 @@ const routes: Routes = [
       },
       {
         path: 'informations',
-        component: InformationComponent
+        component: InformationComponent,
+        data: {title: 'Mes informations'}
       },
       {
         path: 'commandes',
-        component: CommandeComponent
+        component: CommandeComponent,
+        data: {title: 'Mes commandes'}
       }
     ]
   },
