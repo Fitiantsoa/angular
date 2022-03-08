@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Commande } from "../../model/commande";
+import { Observable } from "rxjs";
+import { CommandeService } from "../../service/commande.service";
 
 @Component({
   selector: 'app-commande',
@@ -6,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commande.component.css']
 })
 export class CommandeComponent implements OnInit {
+  commandes!: Observable<Commande[]>;
 
-  constructor() { }
+  constructor(private commandeService: CommandeService) { }
 
   ngOnInit(): void {
   }
