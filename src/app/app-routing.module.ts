@@ -10,6 +10,12 @@ import { IsLoggedInGuard } from './guard/is-logged-in/is-logged-in.guard';
 import { InformationComponent } from './component/utilisateur/information/information.component';
 import { CommandeComponent } from './component/utilisateur/commande/commande.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
+import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
+import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
+import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list-fiche-maladie/list-fiche-maladie.component';
+import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
+import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
+import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 
 const routes: Routes = [
   {
@@ -23,6 +29,54 @@ const routes: Routes = [
     component: InscriptionComponent,
     canActivate: [IsLoggedOutGuard],
   },
+
+
+  {
+    path: 'fiches_plante',
+    component: ListFichePlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/edit',
+    component: EditFichePlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/edit/:id',
+    component: EditFichePlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_maladie',
+    component: ListFicheMaladieComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_maladie/edit',
+    component: EditFicheMaladieComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_maladie/edit/:id',
+    component: EditFicheMaladieComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_ravageur',
+    component: ListFicheRavageurComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_ravageur/edit',
+    component: EditFicheRavageurComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_ravageur/edit/:id',
+    component: EditFicheRavageurComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
   {
     path: 'user',
     component: UtilisateurComponent,
