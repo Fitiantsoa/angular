@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@1,500&display=swap");
 .img-luid {
   width: 100%;
+}
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 200%;
+  color: black;
+}
+.logo:hover {
+  font-family: "Playfair Display", serif;
+  font-size: 250%;
+  color: black;
+}
+.titre {
+  font-family: "Montserrat", sans-serif;
+}
+.description {
+  font-size: 85%;
 }

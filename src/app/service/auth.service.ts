@@ -20,4 +20,8 @@ export class AuthService {
   public isAuthenticated(): string | null {
     return localStorage.getItem('token');
   }
+
+  public inscription(user: any): Observable<any> {
+    return this.http.post('http://localhost:8080/boot/api/auth', user);
+  }
 }

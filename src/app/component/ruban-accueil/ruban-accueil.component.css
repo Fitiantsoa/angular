@@ -21,6 +21,7 @@
 }
 .nav-link:hover {
   color: black;
+  font-size: 1.1em;
 }
 .search {
   height: 40px;
