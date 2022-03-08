@@ -17,18 +17,15 @@ export class AppComponent {
     return this.authService.isAuthenticated();
   }
 
-  logout() {
-    localStorage.clear();
-    this.router.navigateByUrl('/home');
-  }
-
   get login() {
     return localStorage.getItem('login');
   }
 
   logout() {
     localStorage.clear();
-    this.router.navigateByUrl('/accueil');
+    this.router.navigateByUrl('/home');
   }
-
+  getAdress(adresse: any) {
+    console.log(adresse);
+  }
 }
