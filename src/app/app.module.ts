@@ -16,20 +16,15 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
-import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { ListCommandeComponent } from './component/commande/list/list-commande.component';
-import { AccueilComponent } from './component/accueil/accueil.component';
-import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
 import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
 import { RubanAccueilComponent } from "./component/ruban-accueil/ruban-accueil.component";
-
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
-import { CommandeComponent } from './component/commande/commande.component';
 
 @NgModule({
   declarations: [
