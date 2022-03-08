@@ -6,7 +6,7 @@ import { UtilisateurComponent } from './component/utilisateur/utilisateur.compon
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { IsLoggedOutGuard } from './guard/is-logged-out/is-logged-out.guard';
 import { IsLoggedInGuard } from './guard/is-logged-in/is-logged-in.guard';
-import { CommandeComponent } from './component/commande/commande.component';
+import { ListCommandeComponent } from './component/commande/list/list-commande.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
@@ -14,6 +14,7 @@ import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list
 import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
+import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
 
 const routes: Routes = [
   {
@@ -83,7 +84,13 @@ const routes: Routes = [
   },
   {
     path: 'commandes',
-    component: CommandeComponent,
+    component: ListCommandeComponent,
+    canActivate: [IsLoggedInGuard],
+    data: {title: 'Mes commandes'}
+  },
+  {
+    path: 'commandes/:id',
+    component: DetailsCommandeComponent,
     canActivate: [IsLoggedInGuard],
     data: {title: 'Mes commandes'}
   },

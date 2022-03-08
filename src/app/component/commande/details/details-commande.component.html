@@ -1,0 +1,22 @@
+<div class="text-center" *ngIf="commande | async as c">
+  <h3>Détails de la commande #{{ c.id }} ({{ c.statut }})</h3>
+  <span>Date de la commande: {{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</span>
+
+  <table class="table">
+    <tr>
+      <th>Quantité</th>
+      <th>Nom</th>
+      <th>Prix unitaire</th>
+      <th>Prix total</th>
+    </tr>
+    <tr *ngFor="let cp of c.commandeProduits">
+      <td>{{ cp.quantite }}</td>
+      <td>{{ cp.id?.produit?.nom }}</td>
+      <td>{{ cp.id?.produit?.prix | currency:'EUR' }}</td>
+      <td><b>{{ cp.prixTotal | currency:'EUR' }}</b></td>
+    </tr>
+    <tr>
+      <td colspan="4"><b>Total: {{ c.prixTotal | currency:'EUR' }}</b></td>
+    </tr>
+  </table>
+</div>
