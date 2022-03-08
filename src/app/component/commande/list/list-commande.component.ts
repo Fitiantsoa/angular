@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 })
 export class ListCommandeComponent implements OnInit {
   commandes!: Observable<Commande[]>;
+  isLoading: boolean = true;
 
   constructor(private commandeService: CommandeService, private router: Router) { }
 
@@ -21,6 +22,8 @@ export class ListCommandeComponent implements OnInit {
         let firstCommandeId = result[0].id;
         this.router.navigate(['commandes', firstCommandeId]);
       }
+
+      this.isLoading = false;
     });
   }
 

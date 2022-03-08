@@ -1,3 +1,8 @@
+<div class="d-flex justify-content-center" *ngIf="isLoading">
+  <div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
 <div class="text-center" *ngIf="commande | async as c">
   <h3>Détails de la commande #{{ c.id }}</h3>
   <table class="table">
