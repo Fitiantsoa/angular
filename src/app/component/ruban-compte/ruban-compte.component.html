@@ -19,8 +19,20 @@
         <a class="nav-link" href="#">Potager</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" a [routerLink]="['/user/commandes']"> Commandes </a>
+        <a class="nav-link" [routerLink]="['/commandes']"> Commandes </a>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Fiches Conseils
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="/fiches_plante" routerLinkActive="active">Fiches Plante</a></li>
+          <li><a class="dropdown-item" routerLink="/fiches_maladie" routerLinkActive="active">Fiches Maladie</a></li>
+          <li><a class="dropdown-item" routerLink="/fiches_ravageur" routerLinkActive="active">Fiches Ravageur</a></li>
+        </ul>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/user" routerLinkActive="active"
           >Mon Compte</a

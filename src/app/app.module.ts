@@ -40,7 +40,6 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ListFichePlanteComponent,
     EditFicheRavageurComponent,
     ListFicheRavageurComponent,
-    InformationComponent,
     CommandeComponent,
     AccueilComponent,
     RubanAccueilComponent,
