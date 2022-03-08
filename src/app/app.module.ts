@@ -61,6 +61,7 @@ import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolte
     PlanterPlanteComponent,
     EntretienPlanteComponent,
     RecolterPlanteComponent,
+    DetailsCommandeComponent
   ],
   imports: [
     BrowserModule,
