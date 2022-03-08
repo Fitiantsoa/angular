@@ -1,22 +1,26 @@
 import { Adresse } from './adresse';
 import { Civilite } from './civilite';
 import { Compte } from './compte';
+import { Terrain } from './terrain';
 export class Utilisateur {
   private _id: number | undefined;
   private _civilite: Civilite | undefined;
   private _adresse: Adresse | undefined;
   private _compte: Compte | undefined;
+  private _terrain: Terrain | undefined;
 
   constructor(
     id?: number,
     adresse?: Adresse,
     compte?: Compte,
-    civilite?: Civilite
+    civilite?: Civilite,
+    terrain?: Terrain
   ) {
     this._id = id;
     this._adresse = adresse;
     this._compte = compte;
     this._civilite = civilite;
+    this._terrain = terrain;
   }
 
   /**
@@ -50,6 +54,22 @@ export class Utilisateur {
   public set id(value: number | undefined) {
     this._id = value;
   }
+    /**
+     * Getter terrain
+     * @return {Terrain }
+     */
+	public get terrain(): Terrain | undefined {
+		return this._terrain;
+	}
+
+    /**
+     * Setter terrain
+     * @param {Terrain } value
+     */
+	public set terrain(value: Terrain | undefined ) {
+		this._terrain = value;
+	}
+  
 
   /**
    * Setter adresse

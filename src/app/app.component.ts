@@ -49,6 +49,9 @@ export class AppComponent implements OnInit {
   get login() {
     return localStorage.getItem('login');
   }
+  get id() {
+    return localStorage.getItem('id');
+  }
 
   logout() {
     localStorage.clear();

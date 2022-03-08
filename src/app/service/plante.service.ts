@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { ReturnStatement } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Plante } from '../model/plante';
@@ -24,12 +26,19 @@ export class PlanteService {
   update(plante: Plante): Observable<Plante> {
     return this.http.put<Plante>(
       `${PlanteService.URL}/${plante.id}`,
-      this.planteToJson(plante);
+      this.planteToJson(plante)
     );
   }
 
   create(plante: Plante): Observable<Plante> {
-    const planteEnJson = { nom: plante.nom };
+    const planteEnJson = { 
+      id: plante.id,
+      typePlante:plante.typePlante,
+      croissance:plante.croissance,
+      datePlantation:plante.datePlantation,
+      arrosageOk:plante.arrosageOk,
+      dateRecolte:plante.dateRecolte
+    };
     return this.http.post<Plante>(
       PlanteService.URL, this.planteToJson
     );
@@ -53,14 +62,19 @@ export class PlanteService {
                 decoupageTerrainLongueur: plante.terrain.decoupageTerrainLongueur 
               }
           }
-        )}
+        )
+      return obj}
+
      if (plante.emplacement) {
        Object.assign(obj, 
-          {terrain: {
-            positionx: plante.emplacement.positionx,
-            positiony: plante.emplacement.positiony
-
-          }})}
+                          {emplacement: {
+                            positionx: plante.emplacement.positionx,
+                            positiony: plante.emplacement.positiony
+                                    }
+                          }
+                    )
+      }
+          return obj;
 }
-
+}
 

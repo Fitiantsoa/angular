@@ -14,6 +14,7 @@ import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list
 import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
+import { TerrainComponent } from './component/potager/terrain/terrain.component';
 
 const routes: Routes = [
   {
@@ -81,6 +82,13 @@ const routes: Routes = [
     canActivate: [IsLoggedInGuard],
     data: {title: 'Mon compte'}
   },
+
+  {
+    path: 'terrain',
+    component: TerrainComponent,
+    canActivate: [IsLoggedInGuard]
+  },
+
   {
     path: 'commandes',
     component: CommandeComponent,

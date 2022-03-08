@@ -24,6 +24,8 @@ import { FonctionnementComponent } from './component/fonctionnement/fonctionneme
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
+import { TerrainComponent } from './component/potager/terrain/terrain.component';
+import { PlanteComponent } from './component/potager/plante/plante.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { CompteComponent } from './component/inscription/compte/compte.component
     LocalisationComponent,
     RubanCompteComponent,
     CompteComponent,
+    TerrainComponent,
+    PlanteComponent,
   ],
   imports: [
     BrowserModule,
