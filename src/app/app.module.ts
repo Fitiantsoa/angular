@@ -42,6 +42,7 @@ import { RubanAccueilComponent } from "./component/ruban-accueil/ruban-accueil.c
     ListFicheRavageurComponent,
     ListCommandeComponent,
     AccueilComponent,
+    FonctionnementComponent,
     RubanAccueilComponent,
     LocalisationComponent,
     RubanCompteComponent,
