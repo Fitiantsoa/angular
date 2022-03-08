@@ -17,7 +17,7 @@ import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-f
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
-import { CommandeComponent } from './component/commande/commande.component';
+import { ListComponent } from './component/commande/list/list.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
@@ -39,7 +39,7 @@ import { CompteComponent } from './component/inscription/compte/compte.component
     ListFichePlanteComponent,
     EditFicheRavageurComponent,
     ListFicheRavageurComponent,
-    CommandeComponent,
+    ListComponent,
     AccueilComponent,
     RubanAccueilComponent,
     FonctionnementComponent,
