@@ -6,4 +6,14 @@
     <th>Prix</th>
     <th>Actions</th>
   </tr>
+  <tr *ngFor="let c of commandes | async">
+    <td>{{ c.id }}</td>
+    <td>{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</td>
+    <td>{{ c.prixTotal | currency:'EUR' }}</td>
+    <td>
+      <button class="btn btn-outline-primary">
+        Voir
+      </button>
+    </td>
+  </tr>
 </table>
