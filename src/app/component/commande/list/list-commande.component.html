@@ -11,19 +11,13 @@
           <a [routerLink]="['/commandes', c.id]" *ngFor="let c of commandes | async" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Commande #{{ c.id }}</h5>
-              <small>{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</small>
+              <div [ngSwitch]="c.statut">
+                <span *ngSwitchCase="'EN_ATTENTE'" class="badge bg-secondary">En attente</span>
+                <span *ngSwitchCase="'EN_COURS'" class="badge bg-secondary">En cours</span>
+                <span *ngSwitchCase="'TERMINE'" class="badge bg-success">Terminée</span>
+              </div>
             </div>
-            <div [ngSwitch]="c.statut">
-              <p class="mb-1" *ngSwitchCase="'EN_ATTENTE'">
-                La commande est en attente.
-              </p>
-              <p class="mb-1" *ngSwitchCase="'EN_COURS'">
-                La commande est en cours.
-              </p>
-              <p class="mb-1" *ngSwitchCase="'TERMINE'">
-                La commande est terminée.
-              </p>
-            </div>
+            <p class="mb-1">{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</p>
             <small>{{ c.prixTotal | currency:'EUR' }}</small>
           </a>
         </div>

@@ -9,3 +9,21 @@
   white-space: nowrap!important;
   border: 0!important;
 }
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.bg-secondary {
+  background-color: #6c757d!important;
+}
+.bg-success {
+  background-color: #198754!important;
+}
