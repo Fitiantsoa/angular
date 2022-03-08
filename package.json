@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~13.2.0",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
@@ -18,9 +19,17 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@ng-web-apis/geolocation": "^1.0.4",
+    "@placeme/ngx-geo-api-gouv-address": "^1.0.2",
+    "@types/googlemaps": "^3.43.3",
+    "angular-bootstrap-md": "^12.2.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3",
+    "geojson": "^0.5.0",
+    "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

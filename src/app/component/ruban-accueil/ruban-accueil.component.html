@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">VGarden</a>
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active"
+    >VGarden</a
+  >
   <button
     class="navbar-toggler"
     type="button"
@@ -14,9 +16,7 @@
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav m-auto my-2 my-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >A propos <span class="sr-only">(current)</span></a
-        >
+        <a class="nav-link">A propos <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Aide</a>
@@ -25,7 +25,14 @@
         <a class="nav-link" href="#"> contact </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">connexion</a>
+        <a class="nav-link" routerLink="/login" routerLinkActive="active"
+          >connexion</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/inscription" routerLinkActive="active"
+          >inscription</a
+        >
       </li>
     </ul>
     <form class="d-flex">

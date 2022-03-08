@@ -1,39 +1,53 @@
+import { Utilisateur } from 'src/app/model/utilisateur';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from "./component/login/login.component";
-import { InscriptionComponent } from "./component/inscription/inscription.component";
-import { UtilisateurComponent } from "./component/utilisateur/utilisateur.component";
-import { NotFoundComponent } from "./component/not-found/not-found.component";
-import { IsLoggedOutGuard } from "./guard/is-logged-out/is-logged-out.guard";
-import { IsLoggedInGuard } from "./guard/is-logged-in/is-logged-in.guard";
-import { InformationComponent } from "./component/utilisateur/information/information.component";
-import { CommandeComponent } from "./component/utilisateur/commande/commande.component";
+import { LoginComponent } from './component/login/login.component';
+import { InscriptionComponent } from './component/inscription/inscription.component';
+import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
+import { IsLoggedOutGuard } from './guard/is-logged-out/is-logged-out.guard';
+import { IsLoggedInGuard } from './guard/is-logged-in/is-logged-in.guard';
+import { InformationComponent } from './component/utilisateur/information/information.component';
+import { CommandeComponent } from './component/utilisateur/commande/commande.component';
+import { AccueilComponent } from './component/accueil/accueil.component';
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: AccueilComponent,
+    canActivate: [IsLoggedOutGuard],
+  },
   { path: 'login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
-  { path: 'inscription', component: InscriptionComponent, canActivate: [IsLoggedOutGuard] },
-  { path: 'user', component: UtilisateurComponent, canActivate: [IsLoggedInGuard],
+  {
+    path: 'inscription',
+    component: InscriptionComponent,
+    canActivate: [IsLoggedOutGuard],
+  },
+  {
+    path: 'user',
+    component: UtilisateurComponent,
+    canActivate: [IsLoggedInGuard],
     children: [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'informations'
+        redirectTo: 'informations',
       },
       {
         path: 'informations',
-        component: InformationComponent
+        component: InformationComponent,
       },
       {
         path: 'commandes',
-        component: CommandeComponent
-      }
-    ]
+        component: CommandeComponent,
+      },
+    ],
   },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

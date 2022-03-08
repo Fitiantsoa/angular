@@ -23,7 +23,9 @@ export class AppComponent {
 
   logout() {
     localStorage.clear();
-    this.router.navigateByUrl('/accueil');
+    this.router.navigateByUrl('/home');
   }
-
+  getAdress(adresse: any) {
+    console.log(adresse);
+  }
 }

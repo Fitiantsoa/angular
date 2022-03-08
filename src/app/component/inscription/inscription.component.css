@@ -1,0 +1,7 @@
+.bg-image {
+  background: url(../../../assets/images/harricot.jfif) no-repeat;
+  background-size: cover;
+  height: 500vh;
+  width: 100%;
+  background-position: 50% 50%;
+}
