@@ -1,30 +1,30 @@
 <p>edit-fiche-plante works!</p>
 <div>
   <div class="form-group">
-    <label>id:</label>
+    <label>N°:</label>
     <input class="form-control" [(ngModel)]="fichePlante.id" readonly />
   </div>
   <div class="form-group">
-    <label>nom:</label>
+    <label>Nom:</label>
     <input class="form-control" [(ngModel)]="fichePlante.nom" />
   </div>
   <div class="form-group">
-    <label>eau:</label>
+    <label>Eau:</label>
     <input type="number" class="form-control" [(ngModel)]="fichePlante.eau" />
   </div>
   <div class="form-group">
-    <label>exposition:</label>
+    <label>Exposition:</label>
     <input class="form-control" [(ngModel)]="fichePlante.exposition"
     />
   </div>
 
   <div class="form-group">
-    <label>espacement:</label>
+    <label>Espacement:</label>
     <input class="form-control" [(ngModel)]="fichePlante.espacement"
     />
   </div>
   <div class="form-group">
-    <label>graine:</label>
+    <label>Graine:</label>
     <input class="form-control" [(ngModel)]="fichePlante.dureeConservationGraine"
     />
   </div>
@@ -54,17 +54,17 @@
     />
   </div>
   <div class="form-group">
-    <label>maladies:</label>
+    <label>Maladies:</label>
     <input class="form-control" [(ngModel)]="fichePlante.maladies"
     />
   </div>
   <div class="form-group">
-    <label>ravageurs:</label>
+    <label>Ravageurs:</label>
     <input class="form-control" [(ngModel)]="fichePlante.ravageurs"
     />
   </div>
   <div class="form-group">
-    <label>exposition:</label>
+    <label>Exposition:</label>
     <input class="form-control" [(ngModel)]="fichePlante.exposition"
     />
   </div>
@@ -91,8 +91,8 @@
 
   <div>
     <button (click)="save()" class="btn btn-outline-success">
-      enregistrer
+      Enregistrer
     </button>
-    <a routerLink="/fiches_maladie" routerLinkActive="active" btn-warning>annuler</a>
+    <a routerLink="/fiches_maladie" routerLinkActive="active" btn-warning>Annuler</a>
   </div>
 </div>

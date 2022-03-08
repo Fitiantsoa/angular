@@ -25,6 +25,13 @@ import { FonctionnementComponent } from './component/fonctionnement/fonctionneme
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
+import { AfficheFicheMaladieComponent } from './component/fiches/fiche-maladie/affiche-fiche-maladie/affiche-fiche-maladie.component';
+import { AfficheFichePlanteComponent } from './component/fiches/fiche-plante/affiche-fiche-plante/affiche-fiche-plante.component';
+import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
+import { SemerPlanteComponent } from './component/fiches/fiche-plante/semer-plante/semer-plante.component';
+import { PlanterPlanteComponent } from './component/fiches/fiche-plante/planter-plante/planter-plante.component';
+import { EntretienPlanteComponent } from './component/fiches/fiche-plante/entretien-plante/entretien-plante.component';
+import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolter-plante/recolter-plante.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +55,13 @@ import { CompteComponent } from './component/inscription/compte/compte.component
     LocalisationComponent,
     RubanCompteComponent,
     CompteComponent,
+    AfficheFicheMaladieComponent,
+    AfficheFichePlanteComponent,
+    AfficheFicheRavageurComponent,
+    SemerPlanteComponent,
+    PlanterPlanteComponent,
+    EntretienPlanteComponent,
+    RecolterPlanteComponent,
   ],
   imports: [
     BrowserModule,
