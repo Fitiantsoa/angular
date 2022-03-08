@@ -15,13 +15,13 @@
             </div>
             <div [ngSwitch]="c.statut">
               <p class="mb-1" *ngSwitchCase="'EN_ATTENTE'">
-                La commande est en attente
+                La commande est en attente.
               </p>
               <p class="mb-1" *ngSwitchCase="'EN_COURS'">
-                La commande est en cours
+                La commande est en cours.
               </p>
               <p class="mb-1" *ngSwitchCase="'TERMINE'">
-                La commande est terminée
+                La commande est terminée.
               </p>
             </div>
             <small>{{ c.prixTotal | currency:'EUR' }}</small>

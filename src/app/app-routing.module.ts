@@ -141,7 +141,8 @@ const routes: Routes = [
       {
         path: ':id',
         component: DetailsCommandeComponent,
-        canActivate: [IsLoggedInGuard]
+        canActivate: [IsLoggedInGuard],
+        data: {title: 'Mes commandes'}
       }
     ]
   },
