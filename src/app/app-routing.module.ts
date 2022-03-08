@@ -22,7 +22,8 @@ import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/li
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
-import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
+import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
+import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 
 const routes: Routes = [
   {
@@ -110,7 +111,6 @@ const routes: Routes = [
     canActivate: [IsLoggedInGuard],
   },
 
-
   {
     path: 'fiches_ravageur',
     component: ListFicheRavageurComponent,
@@ -142,22 +142,22 @@ const routes: Routes = [
   {
     path: 'terrain',
     component: TerrainComponent,
-    canActivate: [IsLoggedInGuard]
+    canActivate: [IsLoggedInGuard],
   },
 
   {
     path: 'commandes',
     component: ListCommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'},
+    data: { title: 'Mes commandes' },
     children: [
       {
         path: ':id',
         component: DetailsCommandeComponent,
         canActivate: [IsLoggedInGuard],
-        data: {title: 'Mes commandes'}
-      }
-    ]
+        data: { title: 'Mes commandes' },
+      },
+    ],
   },
   { path: '**', component: NotFoundComponent },
 ];
