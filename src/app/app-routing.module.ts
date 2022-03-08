@@ -86,13 +86,14 @@ const routes: Routes = [
     path: 'commandes',
     component: ListCommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'}
-  },
-  {
-    path: 'commandes/:id',
-    component: DetailsCommandeComponent,
-    canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'}
+    data: {title: 'Mes commandes'},
+    children: [
+      {
+        path: ':id',
+        component: DetailsCommandeComponent,
+        canActivate: [IsLoggedInGuard]
+      }
+    ]
   },
   { path: '**', component: NotFoundComponent },
 ];

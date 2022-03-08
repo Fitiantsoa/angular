@@ -1,7 +1,5 @@
 <div class="text-center" *ngIf="commande | async as c">
-  <h3>Détails de la commande #{{ c.id }} ({{ c.statut }})</h3>
-  <span>Date de la commande: {{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</span>
-
+  <h3>Détails de la commande #{{ c.id }}</h3>
   <table class="table">
     <tr>
       <th>Quantité</th>
