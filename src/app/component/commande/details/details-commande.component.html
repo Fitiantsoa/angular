@@ -1,5 +1,6 @@
 <div class="text-center" *ngIf="commande | async as c">
-  <h3>Détails de la commande #{{ c.id }}</h3>
+  <h3>Détails de la commande #{{ c.id }} ({{ c.statut }})</h3>
+  <span>Date de la commande: {{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</span>
 
   <table class="table">
     <tr>
@@ -12,10 +13,10 @@
       <td>{{ cp.quantite }}</td>
       <td>{{ cp.id?.produit?.nom }}</td>
       <td>{{ cp.id?.produit?.prix | currency:'EUR' }}</td>
-      <td>{{ cp.prixTotal | currency:'EUR' }}</td>
+      <td><b>{{ cp.prixTotal | currency:'EUR' }}</b></td>
     </tr>
     <tr>
-      <td colspan="4">Total: {{ c.prixTotal }}</td>
+      <td colspan="4"><b>Total: {{ c.prixTotal | currency:'EUR' }}</b></td>
     </tr>
   </table>
 </div>

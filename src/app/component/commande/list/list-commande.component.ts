@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Commande } from "../../../model/commande";
 import { Observable } from "rxjs";
 import { CommandeService } from "../../../service/commande.service";
+import { CommandeStatut } from "../../../model/commande-statut";
 
 @Component({
   selector: 'app-commande',
@@ -10,6 +11,7 @@ import { CommandeService } from "../../../service/commande.service";
 })
 export class ListCommandeComponent implements OnInit {
   commandes!: Observable<Commande[]>;
+  commandeStatut = CommandeStatut;
 
   constructor(private commandeService: CommandeService) { }
 
