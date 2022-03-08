@@ -8,7 +8,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { IsLoggedOutGuard } from './guard/is-logged-out/is-logged-out.guard';
 import { IsLoggedInGuard } from './guard/is-logged-in/is-logged-in.guard';
 import { InformationComponent } from './component/utilisateur/information/information.component';
-import { CommandeComponent } from './component/utilisateur/commande/commande.component';
+import { CommandeComponent } from './component/commande/commande.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
@@ -81,23 +81,13 @@ const routes: Routes = [
     path: 'user',
     component: UtilisateurComponent,
     canActivate: [IsLoggedInGuard],
-    children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'informations',
-      },
-      {
-        path: 'informations',
-        component: InformationComponent,
-        data: {title: 'Mes informations'}
-      },
-      {
-        path: 'commandes',
-        component: CommandeComponent,
-        data: {title: 'Mes commandes'}
-      }
-    ]
+    data: {title: 'Mon compte'}
+  },
+  {
+    path: 'commandes',
+    component: CommandeComponent,
+    canActivate: [IsLoggedInGuard],
+    data: {title: 'Mes commandes'}
   },
   { path: '**', component: NotFoundComponent },
 ];
