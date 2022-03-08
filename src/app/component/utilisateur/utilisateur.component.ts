@@ -28,12 +28,17 @@ export class UtilisateurComponent implements OnInit {
 
   showInformations() {
     this.utilisateurService.info().subscribe((result) => {
-      if (this.utilisateur.id != null) {
-        console.log(this.utilisateur);
+      console.log(result);
+      if (result != null) {
+        console.log('ici');
         this.utilisateur = result;
         if (!this.utilisateur.adresse) {
           this.utilisateur.adresse = new Adresse();
         }
+      } else {
+        this.utilisateur = new Utilisateur();
+        this.utilisateur.civilite = Civilite.MME;
+        this.utilisateur.adresse = new Adresse();
       }
     });
   }

@@ -14,7 +14,8 @@ import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list
 import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
-import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
+import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
+import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
     canActivate: [IsLoggedOutGuard],
   },
 
+  {
+    path: 'fonctionnement',
+    component: FonctionnementComponent,
+    canActivate: [IsLoggedOutGuard],
+  },
 
   {
     path: 'fiches_plante',
@@ -80,19 +86,19 @@ const routes: Routes = [
     path: 'user',
     component: UtilisateurComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mon compte'}
+    data: { title: 'Mon compte' },
   },
   {
     path: 'commandes',
     component: ListCommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'}
+    data: { title: 'Mes commandes' },
   },
   {
     path: 'commandes/:id',
     component: DetailsCommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'}
+    data: { title: 'Mes commandes' },
   },
   { path: '**', component: NotFoundComponent },
 ];

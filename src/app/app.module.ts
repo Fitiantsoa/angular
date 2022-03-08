@@ -24,12 +24,8 @@ import { LocalisationComponent } from './component/localisation/localisation.com
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
 import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
-import { RubanAccueilComponent } from "./component/ruban-accueil/ruban-accueil.component";
-
-import { AccueilComponent } from './component/accueil/accueil.component';
-import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
-import { AuthInterceptor } from './interceptor/auth.interceptor';
-import { CommandeComponent } from './component/commande/commande.component';
+import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +49,7 @@ import { CommandeComponent } from './component/commande/commande.component';
     RubanCompteComponent,
     CompteComponent,
     DetailsCommandeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
