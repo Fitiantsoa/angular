@@ -16,20 +16,50 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
-import { AuthInterceptor } from "./interceptor/auth.interceptor";
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { InformationComponent } from './component/utilisateur/information/information.component';
 import { CommandeComponent } from './component/utilisateur/commande/commande.component';
+import { AccueilComponent } from './component/accueil/accueil.component';
+import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
+import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
+import { LocalisationComponent } from './component/localisation/localisation.component';
+import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
+import { CompteComponent } from './component/inscription/compte/compte.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InscriptionComponent, UtilisateurComponent, PotagerComponent, RubanComponent, EditFicheMaladieComponent, ListFicheMaladieComponent, EditFichePlanteComponent, ListFichePlanteComponent, EditFicheRavageurComponent, ListFicheRavageurComponent, InformationComponent, CommandeComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    InscriptionComponent,
+    UtilisateurComponent,
+    PotagerComponent,
+    RubanComponent,
+    EditFicheMaladieComponent,
+    ListFicheMaladieComponent,
+    EditFichePlanteComponent,
+    ListFichePlanteComponent,
+    EditFicheRavageurComponent,
+    ListFicheRavageurComponent,
+    InformationComponent,
+    CommandeComponent,
+    AccueilComponent,
+    RubanAccueilComponent,
+    FonctionnementComponent,
+    LocalisationComponent,
+    RubanCompteComponent,
+    CompteComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    //GeoApiGouvAddressModule.forRoot(),
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

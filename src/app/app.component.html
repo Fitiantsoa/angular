@@ -1,18 +1,3 @@
-<app-ruban></app-ruban>
-<nav>
-  <a
-    *ngIf="!authentificated"
-    routerLink="/login"
-    routerLinkActive="active"
-    class="btn btn-link"
-    >login</a
-  >
-  <a
-    *ngIf="!authentificated"
-    routerLink="/inscription"
-    routerLinkActive="active"
-    class="btn btn-link"
-    >inscription</a
-  >
-</nav>
+<app-ruban-compte *ngIf="authentificated"></app-ruban-compte>
+<app-ruban-accueil *ngIf="!authentificated"></app-ruban-accueil>
 <router-outlet></router-outlet>

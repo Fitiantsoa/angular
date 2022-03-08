@@ -1,20 +1,21 @@
 import { Adresse } from './adresse';
 import { Civilite } from './civilite';
+import { Compte } from './compte';
 export class Utilisateur {
   private _id: number | undefined;
   private _civilite: Civilite | undefined;
   private _adresse: Adresse | undefined;
-  private _login: string | undefined;
+  private _compte: Compte | undefined;
 
   constructor(
     id?: number,
     adresse?: Adresse,
-    login?: string,
+    compte?: Compte,
     civilite?: Civilite
   ) {
     this._id = id;
     this._adresse = adresse;
-    this._login = login;
+    this._compte = compte;
     this._civilite = civilite;
   }
 
@@ -35,11 +36,11 @@ export class Utilisateur {
   }
 
   /**
-   * Getter login
+   * Getter compte
    * @return {string}
    */
-  public get login(): string | undefined {
-    return this._login;
+  public get compte(): Compte | undefined {
+    return this._compte;
   }
 
   /**
@@ -59,11 +60,11 @@ export class Utilisateur {
   }
 
   /**
-   * Setter login
+   * Setter compte
    * @param {string} value
    */
-  public set login(value: string | undefined) {
-    this._login = value;
+  public set compte(value: Compte | undefined) {
+    this._compte = value;
   }
 
   /**
