@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Compte } from '../model/compte';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +20,9 @@ export class AuthService {
 
   public isAuthenticated(): string | null {
     return localStorage.getItem('token');
+  }
+
+  public inscription(user: any): Observable<any> {
+    return this.http.post('http://localhost:8080/api/auth', user);
   }
 }
