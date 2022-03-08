@@ -1,1 +1,21 @@
-<p>details works!</p>
+<div class="text-center" *ngIf="commande | async as c">
+  <h3>Détails de la commande #{{ c.id }}</h3>
+
+  <table class="table">
+    <tr>
+      <th>Quantité</th>
+      <th>Nom</th>
+      <th>Prix unitaire</th>
+      <th>Prix total</th>
+    </tr>
+    <tr *ngFor="let cp of c.commandeProduits">
+      <td>{{ cp.quantite }}</td>
+      <td>{{ cp.id?.produit?.nom }}</td>
+      <td>{{ cp.id?.produit?.prix | currency:'EUR' }}</td>
+      <td>{{ cp.prixTotal | currency:'EUR' }}</td>
+    </tr>
+    <tr>
+      <td colspan="4">Total: {{ c.prixTotal }}</td>
+    </tr>
+  </table>
+</div>

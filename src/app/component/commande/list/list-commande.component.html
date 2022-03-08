@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table text-center">
   <tr>
     <th>id</th>
     <th>Date</th>
@@ -11,7 +11,7 @@
     <td>{{ c.prixTotal | currency:'EUR' }}</td>
     <td>
       <button [routerLink]="['/commandes', c.id]" class="btn btn-outline-primary">
-        Voir
+        Consulter
       </button>
     </td>
   </tr>
