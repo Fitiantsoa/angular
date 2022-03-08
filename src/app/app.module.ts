@@ -16,15 +16,15 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
-import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
+import { LocalisationComponent } from './component/localisation/localisation.component';
+import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
+import { CompteComponent } from './component/inscription/compte/compte.component';
 import { InformationComponent } from './component/utilisateur/information/information.component';
 import { CommandeComponent } from './component/utilisateur/commande/commande.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
-import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
-import { LocalisationComponent } from './component/localisation/localisation.component';
-import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
-import { CompteComponent } from './component/inscription/compte/compte.component';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -44,10 +44,10 @@ import { CompteComponent } from './component/inscription/compte/compte.component
     CommandeComponent,
     AccueilComponent,
     RubanAccueilComponent,
-    FonctionnementComponent,
     LocalisationComponent,
     RubanCompteComponent,
     CompteComponent,
+    FonctionnementComponent,
   ],
   imports: [
     BrowserModule,

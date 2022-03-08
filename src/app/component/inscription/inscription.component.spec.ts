@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InscriptionComponent } from './inscription.component';
 
 describe('InscriptionComponent', () => {
@@ -8,9 +7,8 @@ describe('InscriptionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InscriptionComponent ]
-    })
-    .compileComponents();
+      declarations: [InscriptionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
