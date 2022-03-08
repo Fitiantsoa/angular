@@ -14,4 +14,38 @@ export class UtilisateurService {
   info(): Observable<Utilisateur> {
     return this.http.get<Utilisateur>(UtilisateurService.URL + '/info');
   }
+
+  public create(utilisateur: Utilisateur): Observable<Utilisateur> {
+    return this.http.post<Utilisateur>(
+      UtilisateurService.URL,
+      this.utilisateurToJson(utilisateur)
+    );
+  }
+
+  public update(utilisateur: Utilisateur): Observable<Utilisateur> {
+    console.log(this.utilisateurToJson(utilisateur));
+    return this.http.put<Utilisateur>(
+      UtilisateurService.URL,
+      this.utilisateurToJson(utilisateur)
+    );
+  }
+
+  private utilisateurToJson(utilisateur: Utilisateur): any {
+    const obj = {
+      id: utilisateur.id,
+      civilite: utilisateur.civilite,
+    };
+
+    if (utilisateur.adresse) {
+      Object.assign(obj, {
+        adresse: {
+          numero: utilisateur.adresse.numero,
+          voie: utilisateur.adresse.voie,
+          cp: utilisateur.adresse.cp,
+          ville: utilisateur.adresse.ville,
+        },
+      });
+    }
+    return obj;
+  }
 }

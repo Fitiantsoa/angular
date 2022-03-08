@@ -20,11 +20,11 @@ import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.comp
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
-import { InformationComponent } from './component/utilisateur/information/information.component';
-import { CommandeComponent } from './component/utilisateur/commande/commande.component';
+
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { CommandeComponent } from './component/commande/commande.component';
 
 @NgModule({
   declarations: [

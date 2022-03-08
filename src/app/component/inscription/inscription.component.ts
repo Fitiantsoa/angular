@@ -61,7 +61,7 @@ export class InscriptionComponent implements OnInit {
     };
     console.log(user);
     this.authService.inscription(user).subscribe((ok) => {
-      this.router.navigateByUrl('/acceuil');
+      this.router.navigate(['user']);
     });
   }
 

@@ -1,8 +1,99 @@
-<div>
-  <div>
-    <div>id</div>
-    <div>
-      {{ utilisateur.id }}
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">Informations personnelles</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="name">Civilité</div>
+            <div class="value">
+              <div classe="input-group">
+                <select
+                  [(ngModel)]="utilisateur.civilite"
+                  class="form-control"
+                  name="civilite"
+                >
+                  <option
+                    *ngFor="let civilite of civilites | keyvalue"
+                    [value]="civilite.key"
+                  >
+                    {{ civilite.value }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-row m-b-55">
+            <div class="name">Adresse</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-3">
+                  <div class="input-group-desc">
+                    <input
+                      class="input--style-5"
+                      [(ngModel)]="utilisateur.adresse!.numero"
+                      name="numero"
+                    />
+                    <label class="label--desc">Numéro</label>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input
+                      class="input--style-5"
+                      type="text"
+                      [(ngModel)]="utilisateur.adresse!.voie"
+                      name="voie"
+                    />
+                    <label class="label--desc">Voie</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Code postal</div>
+            <div class="value">
+              <div class="input-group">
+                <input
+                  class="input--style-5"
+                  type="text"
+                  [(ngModel)]="utilisateur.adresse!.cp"
+                  name="cp"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Ville</div>
+            <div class="value">
+              <div class="input-group">
+                <input
+                  class="input--style-5"
+                  type="email"
+                  [(ngModel)]="utilisateur.adresse!.ville"
+                  name="ville"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-between">
+            <button
+              class="btn btn--radius-2 btn--green"
+              type="submit"
+              (click)="save()"
+            >
+              Enregistrer
+            </button>
+            <button class="btn btn--radius-2 btn--red" type="submit">
+              Annuler
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
