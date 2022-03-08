@@ -1,27 +1,14 @@
 <table class="table">
   <tr>
-    <th>id</th>
+    <th width="30">N°</th>
     <th>Nom</th>
-    <th>Description</th>
-    <th>Solution(s)</th>
   </tr>
   <tr *ngFor="let fR of fichesRavageurObservable | async">
     <td>{{ fR.id }}</td>
-    <td>{{ fR.nom }}</td>
-    <td>{{ fR.description }}</td>
-    <td>{{ fR.solution }}</td>
-    <td>
-      <a
-        [routerLink]="['/fiches_ravageur', 'edit', fR.id]"
-        routerLinkActive="active"
-        class="btn btn-outline-primary"
-        >editer</a
-      >
-    </td>
-    <td>
-      <button (click)="delete(fR.id!)" class="btn btn-outline-danger">
-        supprimer
-      </button>
+    <td><a
+      [routerLink]="['/fiches_ravageur', 'perso', fR.id]"
+      routerLinkActive="active"
+      >{{ fR.nom }}</a>
     </td>
   </tr>
 </table>

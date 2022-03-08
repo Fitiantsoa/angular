@@ -10,10 +10,17 @@ import { ListCommandeComponent } from './component/commande/list/list-commande.c
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
+import { AfficheFichePlanteComponent } from './component/fiches/fiche-plante/affiche-fiche-plante/affiche-fiche-plante.component';
+import { SemerPlanteComponent } from './component/fiches/fiche-plante/semer-plante/semer-plante.component';
+import { PlanterPlanteComponent } from './component/fiches/fiche-plante/planter-plante/planter-plante.component';
+import { EntretienPlanteComponent } from './component/fiches/fiche-plante/entretien-plante/entretien-plante.component';
+import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolter-plante/recolter-plante.component';
 import { ListFicheMaladieComponent } from './component/fiches/fiche-maladie/list-fiche-maladie/list-fiche-maladie.component';
 import { EditFicheMaladieComponent } from './component/fiches/fiche-maladie/edit-fiche-maladie/edit-fiche-maladie.component';
+import { AfficheFicheMaladieComponent } from './component/fiches/fiche-maladie/affiche-fiche-maladie/affiche-fiche-maladie.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
+import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
 import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
 
 const routes: Routes = [
@@ -46,6 +53,37 @@ const routes: Routes = [
     canActivate: [IsLoggedInGuard],
   },
   {
+    path: 'fiches_plante/edit/:id',
+    component: EditFichePlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/perso/:id',
+    component: AfficheFichePlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/semer/:id',
+    component: SemerPlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/planter/:id',
+    component: PlanterPlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/entretien/:id',
+    component: EntretienPlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_plante/recolter/:id',
+    component: RecolterPlanteComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+  {
     path: 'fiches_maladie',
     component: ListFicheMaladieComponent,
     canActivate: [IsLoggedInGuard],
@@ -61,6 +99,13 @@ const routes: Routes = [
     canActivate: [IsLoggedInGuard],
   },
   {
+    path: 'fiches_maladie/perso/:id',
+    component: AfficheFicheMaladieComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+
+  {
     path: 'fiches_ravageur',
     component: ListFicheRavageurComponent,
     canActivate: [IsLoggedInGuard],
@@ -73,6 +118,11 @@ const routes: Routes = [
   {
     path: 'fiches_ravageur/edit/:id',
     component: EditFicheRavageurComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+  {
+    path: 'fiches_ravageur/perso/:id',
+    component: AfficheFicheRavageurComponent,
     canActivate: [IsLoggedInGuard],
   },
 
