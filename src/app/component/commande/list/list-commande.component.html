@@ -10,7 +10,7 @@
     <td>{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</td>
     <td>{{ c.prixTotal | currency:'EUR' }}</td>
     <td>
-      <button class="btn btn-outline-primary">
+      <button [routerLink]="['/commandes', c.id]" class="btn btn-outline-primary">
         Voir
       </button>
     </td>

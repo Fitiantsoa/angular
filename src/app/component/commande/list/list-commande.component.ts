@@ -5,10 +5,10 @@ import { CommandeService } from "../../../service/commande.service";
 
 @Component({
   selector: 'app-commande',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  templateUrl: './list-commande.component.html',
+  styleUrls: ['./list-commande.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListCommandeComponent implements OnInit {
   commandes!: Observable<Commande[]>;
 
   constructor(private commandeService: CommandeService) { }
