@@ -1,6 +1,23 @@
-<br><h3>{{ ficheRavageur.nom }}</h3><br>
-
-<table class="table">
-  <tr><th>Description</th><td [innerHTML]="ficheRavageur.description"></td></tr>
-  <tr><th>Solution(s)</th><td [innerHTML]="ficheRavageur.solution"></td></tr>
-</table>
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <div class="card-heading-item">
+        <a
+            [routerLink]="['/fiches_ravageur']"
+            routerLinkActive="active"
+            ><img class="retour" src="../../../../../assets/images/iconeretour.png" alt="icone retour" width="30">
+          </a>
+        </div>
+        <div class="card-heading-item"><h2 class="title">{{ ficheRavageur.nom }}</h2></div>
+    </div>
+      <div class="card-body">
+        <img class="centrer" src="../../../../../assets/images/fiche-ravageur/{{ficheRavageur.id}}.png" alt="img-photo-{{ficheRavageur.nom}}" width="400">
+        <table class="table">
+          <tr><th>Description</th><td [innerHTML]="ficheRavageur.description"></td></tr>
+          <tr><th>Solution(s)</th><td [innerHTML]="ficheRavageur.solution"></td></tr>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
