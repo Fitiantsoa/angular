@@ -1,0 +1,102 @@
+#containerTerrain {
+  width: 50%;
+}
+
+.containerPelouse {
+  display: flex;
+  flex-direction: row;
+  background-image: url("/assets/images/fondPelouse.JPG");
+  justify-content: flex-start;
+  width: 98%;
+  height: 650px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 10px;
+}
+
+.containerGauche {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 25px;
+}
+
+#containerPotager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /*border: solid 5px rgb(194, 98, 8);
+      ;
+      background-color: rgb(245, 211, 166);*/
+  background-image: url("/assets/images/fondTerre.JPG");
+  border-radius: 15px;
+  background-size: cover;
+  width: 630px;
+  height: 520px;
+  z-index: 3;
+  margin-bottom: 8px;
+}
+
+.containerRangeePlante {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.containerUneRangee {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  align-items: center;
+}
+
+.plante {
+  width: 30px;
+  z-index: 2;
+}
+
+.zoneBouton {
+  display: flex;
+  margin: 20px;
+  width: 600px;
+  justify-content: space-around;
+}
+
+.btn-light {
+  border: solid black 2px;
+  font-weight: bold;
+  background-color: rgb(213, 212, 212);
+}
+.btn-light .long {
+  width: 200px;
+}
+
+.containerDroite {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.card {
+  display: flex;
+  width: 90%;
+
+  margin: 10px;
+  background: rgb(255, 255, 255);
+  border: solid black 2px;
+  border-radius: 15px;
+  z-index: 2;
+  text-align: center;
+}

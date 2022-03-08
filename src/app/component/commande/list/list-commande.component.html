@@ -1,20 +1,30 @@
-<table class="table text-center">
-  <tr>
-    <th>id</th>
-    <th>Date</th>
-    <th>Prix</th>
-    <th>Statut</th>
-    <th>Actions</th>
-  </tr>
-  <tr *ngFor="let c of commandes | async" data-toggle="collapse" data-target="#accordion" class="clickable">
-    <td>{{ c.id }}</td>
-    <td>{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</td>
-    <td>{{ c.prixTotal | currency:'EUR' }}</td>
-    <td>{{ c.statut }}</td>
-    <td>
-      <button [routerLink]="['/commandes', c.id]" class="btn btn-outline-primary">
-        Consulter
-      </button>
-    </td>
-  </tr>
-</table>
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 vh-100 border-right">
+        <div class="d-flex justify-content-center" *ngIf="isLoading">
+          <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div class="list-group list-group-flush">
+          <a [routerLink]="['/commandes', c.id]" *ngFor="let c of commandes | async" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Commande #{{ c.id }}</h5>
+              <div [ngSwitch]="c.statut">
+                <span *ngSwitchCase="'EN_ATTENTE'" class="badge bg-secondary">En attente</span>
+                <span *ngSwitchCase="'EN_COURS'" class="badge bg-secondary">En cours</span>
+                <span *ngSwitchCase="'TERMINE'" class="badge bg-success">Terminée</span>
+              </div>
+            </div>
+            <p class="mb-1">{{ c.dateCreation | date:'dd/MM/yyyy à HH:mm' }}</p>
+            <small>{{ c.prixTotal | currency:'EUR' }}</small>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>

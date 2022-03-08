@@ -11,13 +11,18 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class DetailsCommandeComponent implements OnInit {
   commande!: Observable<Commande>;
+  isLoading: boolean = true;
 
   constructor(private activatedRoute: ActivatedRoute, private commandeService: CommandeService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       if (params['id']) {
+        this.isLoading = true;
         this.commande = this.commandeService.getById(params['id']);
+        this.commande.subscribe(() => {
+          this.isLoading = false;
+        })
       }
     });
   }
