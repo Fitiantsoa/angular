@@ -21,7 +21,6 @@ export class ProduitsComponent implements OnInit {
   list() {
     this.produitService.getAll().subscribe((result) => {
       this.produits = result;
-      console.log(this.produits);
       for (var produit of this.produits) {
         if (!produit.plante) {
           produit.plante = new Plante();

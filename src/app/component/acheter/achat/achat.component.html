@@ -1,29 +1,47 @@
-<div>
-  <div class="form-group">
-    <label>id:</label>
-    <input
-      [(ngModel)]="produit.id"
-      class="form-control"
-      readonly
-      placeholder="generation automatique"
-    />
-  </div>
-  <div class="form-group">
-    <label>stock:</label>
-    <input
-      [(ngModel)]="produit.stock"
-      class="form-control"
-      readonly
-      placeholder="generation automatique"
-    />
-  </div>
-  <div class="form-group">
-    <label>quantite:</label>
-    <select [(ngModel)]="quantite">
-      <option value="1">1</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <button (click)="achat()" class="btn btn-outline-success">Acheter</button>
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="card lg-7 col-md-7 col-xs-7 mx-auto">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-1">
+        <img
+          class="col-lg-11 col-md-6 col-xs-2 imageCss"
+          src="../../../assets/images/fiche-plante/plante/{{
+            produit.plante!.typePlante
+          }}.png"
+          alt="{{ produit.plante!.typePlante }}"
+        />
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-1 mt">
+        <div>
+          <h1>{{ produit.plante!.typePlante }}</h1>
+        </div>
+        <div class="row d-flex justify-content-between mr-5 mt-5">
+          <label>Quantité disponible : </label>
+          <p class="text-black-50">{{ produit.stock }} Kg</p>
+        </div>
+        <div class="row d-flex justify-content-between mr-5">
+          <label>Prix : </label>
+          <p class="text-black-50">{{ produit.prix }} €/Kg</p>
+        </div>
+        <div class="row d-flex justify-content-between mr-5">
+          <label>Quantité (Kg): </label>
+          <select [(ngModel)]="quantite">
+            <option *ngFor="let n of choix_quantite" name="q" ngDefaultControl>
+              {{ n }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <button
+            class="btn btn--green mt-5 d-flex ml-auto mr-5 col-lg-9 col-md-11 col-xs-5"
+            (click)="achat()"
+          >
+            <div class="row">
+              <div class="pr-2">Acheter</div>
+              <div><i class="bi bi-basket"></i></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

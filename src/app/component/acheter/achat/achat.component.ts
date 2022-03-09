@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produit } from 'src/app/model/produit';
 import { ProduitService } from 'src/app/sercice/produit/produit.service';
-import { CommandeService } from "../../../service/commande.service";
-import { Commande } from "../../../model/commande";
-import { CommandeProduit } from "../../../model/commande-produit";
-import { CommandeProduitKey } from "../../../model/commande-produit-key";
+import { CommandeService } from '../../../service/commande.service';
+import { Commande } from '../../../model/commande';
+import { CommandeProduit } from '../../../model/commande-produit';
+import { CommandeProduitKey } from '../../../model/commande-produit-key';
 
 @Component({
   selector: 'app-achat',
@@ -15,6 +15,8 @@ import { CommandeProduitKey } from "../../../model/commande-produit-key";
 export class AchatComponent implements OnInit {
   produit: Produit = new Produit();
   quantite: number = 0;
+  choix_quantite: number[] = [];
+  prix_total: number = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -32,6 +34,12 @@ export class AchatComponent implements OnInit {
       if (params['id']) {
         this.produitService.get(params['id']).subscribe((result) => {
           this.produit = result;
+          if (this.produit.stock) {
+            for (let i = 1; i <= this.produit.stock; i++) {
+              this.choix_quantite.push(i);
+            }
+          }
+          console.log(this.choix_quantite);
         });
       }
     });
@@ -41,10 +49,13 @@ export class AchatComponent implements OnInit {
     if (this.produit.stock) {
       let commande: Commande = new Commande();
       let commandeProduits: CommandeProduit[] = [];
-      commandeProduits.push(new CommandeProduit(new CommandeProduitKey(this.produit), this.quantite));
+      commandeProduits.push(
+        new CommandeProduit(new CommandeProduitKey(this.produit), this.quantite)
+      );
       commande.commandeProduits = commandeProduits;
 
       this.produit.stock -= this.quantite;
+      console.log(this.quantite);
 
       this.commandeService.create(commande).subscribe((ok) => {
         this.produitService
