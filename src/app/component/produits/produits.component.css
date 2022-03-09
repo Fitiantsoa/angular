@@ -1,6 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@1,500&display=swap");
-body {
-  background-color: rgb(248, 230, 214);
+.bg-gra-03 {
+  background: -webkit-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgb(247, 230, 210) 80%
+  );
+  background: -moz-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgba(247, 230, 210) 80%
+  );
+  background: -o-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgba(247, 230, 210) 80%
+  );
+  background: linear-gradient(
+    to top right,
+    rgb(171 70 36) 0%,
+    rgb(247, 230, 210) 100%
+  );
 }
 
 .col-lg-2,
@@ -12,13 +31,13 @@ body {
 .card {
   margin-left: 10%;
   margin-right: 5%;
-  border-color: rgba(171, 70, 36, 0.548);
+  border-color: rgba(248, 248, 248, 0.548);
   border-width: 2px;
 }
 
 .card:hover {
-  border-color: rgba(171, 70, 36, 0.548);
-  box-shadow: 10px 5px 5px rgba(171, 70, 36, 0.226);
+  border-color: rgba(241, 239, 238, 0.548);
+  box-shadow: 10px 5px 5px rgba(68, 20, 3, 0.76);
 }
 
 h6,
