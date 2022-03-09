@@ -3,9 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 import { Observable } from 'rxjs';
+import { Emplacement } from 'src/app/model/emplacement';
 import { Plante } from 'src/app/model/plante';
 import { Terrain } from 'src/app/model/terrain';
+import { TypePlante } from 'src/app/model/type-plante';
 import { Utilisateur } from 'src/app/model/utilisateur';
+import { PlanteService } from 'src/app/service/plante.service';
 import { TerrainService } from 'src/app/service/terrain.service';
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
@@ -21,19 +24,22 @@ export class TerrainComponent implements OnInit {
    terrains: Terrain[]= [];
    plantes: Plante[]= [];
    //id: number =101;
+   plante: Plante = new Plante();
+   typesPlante= TypePlante;
    
 
   constructor  (
     private activatedRoute: ActivatedRoute,
     private terrainService: TerrainService, 
     //private login: string|undefined,
-    private router: Router
-    
+    private router: Router,
+    private planteService: PlanteService
   ) {
     if (!this.utilisateur.terrain){
       this.utilisateur.terrain= new Terrain();
       console.log("ici" + this.utilisateur.id);
     }
+    //this.plante.typePlante = TypePlante.Ail;
     }
 
  
@@ -44,7 +50,7 @@ export class TerrainComponent implements OnInit {
     //  this.terrains = result;
     //})
     this.showInformation();
-    this.affichagePlante(1);
+    //this.affichagePlante();
     
   }
 
@@ -54,11 +60,25 @@ export class TerrainComponent implements OnInit {
     });
   }
   
-  affichagePlante(id: number) {
-      this.terrainService.getTerrainWithPlantes(id).subscribe((result) => {
+  affichagePlante(e: any) {
+    console.log(this.utilisateur!.terrain!.id!);
+    this.terrainService.getTerrainWithPlantes(this.utilisateur!.terrain!.id!).subscribe((result) => {
       this.plantes = result;
-      this.router.navigate(['/terrain']);
+      
+     // this.router.navigate(['/terrain']);
     });}
+
+  ajoutPlante(p: any){
+    console.log(this.plante.typePlante);
+    
+    console.log(this.utilisateur!.terrain!);
+    this.plante.terrain=this.utilisateur!.terrain!;
+    console.log(this.plante);
+  console.log("PLANTE AVEC EMPLACEMENT ZERO"+this.plante);
+    this.planteService.create(this.plante!).subscribe((ok) => {})
+  }
+
+  
     //this.terrainService.getTerrainWithPlantes(id).subscribe((ok) => {
     // this.plantes = const result;
       
@@ -73,6 +93,16 @@ export class TerrainComponent implements OnInit {
       case 'Ail': pathImage='../assets/images/Ail.png';
       break;
       case 'Aubergine': pathImage='./assets/images/Auberginepetite.PNG';
+      break;
+      case 'Carotte': pathImage='../assets/images/carotte.png';
+      break;
+      case 'Brocoli': pathImage='../assets/images/brocoli.png';
+      break;
+      case 'Choux': pathImage='./assets/images/fiche-plante/plante/10.PNG';
+      break;
+      case 'Choux_Fleurs': pathImage='../assets/images/fiche-plante/plante/15.PNG';
+      break;
+      case 'Courgette': pathImage='../assets/images/fiche-plante/plante/14.png';
       break;
      default: pathImage='../assets/images/bebecarotte.png';
     }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { ReturnStatement } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Emplacement } from '../model/emplacement';
 import { Plante } from '../model/plante';
 
 @Injectable({
@@ -9,6 +10,7 @@ import { Plante } from '../model/plante';
 })
 export class PlanteService {
   static URL: string = 'http://localhost:8080/api/plante';
+  
   constructor(private http: HttpClient) {}
 
   
@@ -30,7 +32,7 @@ export class PlanteService {
     );
   }
 
-  create(plante: Plante): Observable<Plante> {
+ /* create(plante: Plante): Observable<Plante> {
     const planteEnJson = { 
       id: plante.id,
       typePlante:plante.typePlante,
@@ -42,39 +44,50 @@ export class PlanteService {
     return this.http.post<Plante>(
       PlanteService.URL, this.planteToJson
     );
+  }*/
+  public create(plante: Plante): Observable<Plante> {
+    console.log("Methode create"+plante);
+    
+    return this.http.post<Plante>(
+      PlanteService.URL,
+      this.planteToJson(plante)
+    );
   }
 
   private planteToJson(plante: Plante): any {
+    console.log("début service"+plante);
     const obj = {
       id: plante.id,
       typePlante:plante.typePlante,
       croissance:plante.croissance,
       datePlantation:plante.datePlantation,
       arrosageOk:plante.arrosageOk,
-      dateRecolte:plante.dateRecolte
-    };
+      dateRecolte:plante.dateRecolte,                          
+     };
+
     if (plante.terrain) {
       Object.assign(obj, 
           {terrain: 
-              {id: plante.terrain.id, 
+              {id: plante.terrain.id,
                 surface: plante.terrain.surface,
                 decoupageTerrainLargeur: plante.terrain.decoupageTerrainLargeur,
                 decoupageTerrainLongueur: plante.terrain.decoupageTerrainLongueur 
               }
           }
         )
-      return obj}
 
-     if (plante.emplacement) {
-       Object.assign(obj, 
-                          {emplacement: {
-                            positionx: plante.emplacement.positionx,
-                            positiony: plante.emplacement.positiony
-                                    }
-                          }
-                    )
-      }
-          return obj;
+      Object.assign(obj, 
+                  {emplacement: {
+                                  positionx: 1,
+                                  positiony: 1
+                                  }
+                  }        
+                  )
+      console.log("passe par là?");
+      console.log(obj);
+      return obj;
+     
+          
 }
 }
-
+}
