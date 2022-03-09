@@ -1,11 +1,10 @@
-
-<body>
-  <div class="row">
+<div class="page-wrapper bg-gra-03">
+    <div class="row">
     <div
       class="col-lg-3 col-md-3 col-xs-6 mt-5 mb-3 box"
       *ngFor="let p of produitsObservable | async"
     >
-      <a [routerLink]="['/edit', p.id]" routerLinkActive="active">
+      <a [routerLink]="['/vendre', 'edit', p.id]" routerLinkActive="active">
         <div class="card">
           <div>
             <img
@@ -33,22 +32,5 @@
       </a>
     </div>
   </div>
-</body>
+</div>
 
-<!-- <table class="table">
-  <tr>
-        <td>
-    <a
-      [routerLink]="['/produit','edit', p.id]"
-      routerLinkActive="active"
-      class="btn btn--radius-2 btn--blue"
-      >Editer</a
-    >
-  </td>
-
-
-  <td>
-    <button (click)="delete(p.id!)" class="btn btn--radius-2 btn--red">
-        supprimer
-    </button>
-  </td> -->

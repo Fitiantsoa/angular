@@ -25,7 +25,6 @@ export class FicheRavageurService {
   }
 
   public create(ficheRavageur: FicheRavageur): Observable<FicheRavageur> {
-    console.log(ficheRavageur);
     return this.httpClient.post<FicheRavageur>(
       FicheRavageurService.URL,
       this.ficheRavageurToJson(ficheRavageur)
