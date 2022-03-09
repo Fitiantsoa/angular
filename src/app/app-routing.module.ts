@@ -23,6 +23,7 @@ import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/ed
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
 import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
+import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
 
 const routes: Routes = [
   {
@@ -154,7 +155,6 @@ const routes: Routes = [
       {
         path: ':id',
         component: DetailsCommandeComponent,
-        canActivate: [IsLoggedInGuard],
         data: {title: 'Mes commandes'}
       }
     ]
