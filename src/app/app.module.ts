@@ -77,7 +77,7 @@ import { ListVenteComponent } from './component/commande/vente/list/list-vente.c
     ListProduitsAcheterComponent,
     ListProduitsVendreComponent,
     CommandeComponent,
-    ListVenteComponent
+    ListVenteComponent,
     ContactComponent,
   ],
   imports: [
