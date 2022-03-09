@@ -24,6 +24,7 @@ import { TerrainComponent } from './component/potager/terrain/terrain.component'
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
 import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
 import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
+import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
 
 const routes: Routes = [
   {
@@ -158,6 +159,13 @@ const routes: Routes = [
       }
     ]
   },
+
+  {
+    path: 'acheter',
+    component: ListProduitsAcheterComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
   { path: '**', component: NotFoundComponent },
 ];
 
