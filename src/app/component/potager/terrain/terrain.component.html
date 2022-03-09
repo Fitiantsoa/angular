@@ -1,3 +1,12 @@
+<style>
+   select:invalid{
+        color: gray;
+    }
+    option{
+        color: black;
+    }
+</style>
+
 <div class="containerPelouse">
     <div class="containerGauche">
             <div class="zoneBouton">
@@ -21,13 +30,31 @@
               <div class="zoneBouton">
                   
                 <button class="btn btn-light long" style ="font-size: 0.8rem" >Ajouter un terrain</button>
-                  
+
+
+                        <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem
+                           " [(ngModel)]="plante.typePlante" name="typePlante"
+                              (change)="ajoutPlante($event)"> ajouter 
+                                        
+                          <!--<option selected>Choix du terrain</option>-->
+                                <option value="" disabled selected>Ajouter</option>
+                                <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
+                                  {{t.value}}
+                                </option>
+                          
+
+                        </select>
+
                       
-                        <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem, font-weight: bold" [(ngModel)]="utilisateur.terrain">
+                        <select class="form-select" aria-label="Default select example" 
+                                style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
+                                (change)="affichagePlante($event)">
                                 
                           <!--<option selected>Choix du terrain</option>-->
                                 <option selected>Choix du terrain</option>
-                                <option *ngFor="let terrain of terrains" [ngValue]="terrain" (click)="affichagePlante(terrain.id!)">
+
+                                <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
+                                
                                         
                                   {{terrain.id}} <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
                                 </option>

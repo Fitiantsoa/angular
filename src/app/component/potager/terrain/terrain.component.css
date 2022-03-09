@@ -54,13 +54,6 @@
   width: 80px;
 }
 
-.form-select {
-  border: solid black 2px;
-  border-radius: 5px;
-  background-color: rgb(213, 212, 212);
-  width: 150px;
-}
-
 .containerUneRangee {
   display: flex;
   flex-direction: column;
