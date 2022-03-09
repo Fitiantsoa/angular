@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
                 this.form.controls['password'].value
             )
           );
-          this.router.navigate(['produits']);
+          this.router.navigateByUrl('achat');
         },
         error: (error) => {
           this.error = true;

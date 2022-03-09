@@ -37,7 +37,7 @@ const routes: Routes = [
     component: AccueilComponent,
     canActivate: [IsLoggedOutGuard],
   },
-  { path: 'login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
+  { path: 'login', component: LoginComponent },
   {
     path: 'inscription',
     component: InscriptionComponent,
@@ -48,6 +48,11 @@ const routes: Routes = [
     path: 'fonctionnement',
     component: FonctionnementComponent,
     canActivate: [IsLoggedOutGuard],
+  },
+  {
+    path: 'achat',
+    component: ProduitsComponent,
+    canActivate: [IsLoggedInGuard],
   },
 
   {
@@ -203,11 +208,6 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
-    canActivate: [IsLoggedOutGuard],
-  },
-  {
-    path: 'produits',
-    component: ProduitsComponent,
     canActivate: [IsLoggedOutGuard],
   },
 
