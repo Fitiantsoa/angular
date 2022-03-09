@@ -16,7 +16,7 @@ export class ListAchatComponent implements OnInit {
   constructor(private commandeService: CommandeService, private router: Router) { }
 
   ngOnInit(): void {
-    this.commandes = this.commandeService.getAll();
+    this.commandes = this.commandeService.getAllAchat();
     this.commandes.subscribe((result) => {
       if(result.length > 0) {
         let firstCommandeId = result[0].id;

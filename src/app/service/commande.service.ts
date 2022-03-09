@@ -11,7 +11,7 @@ export class CommandeService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Commande[]> {
+  getAllAchat(): Observable<Commande[]> {
     return this.http.get<Commande[]>(`${environment.commandeAPIEndPoint}`);
   }
 

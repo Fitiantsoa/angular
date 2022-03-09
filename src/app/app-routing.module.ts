@@ -22,13 +22,12 @@ import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/li
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
-import { DetailsAchatComponent } from "./component/commande/achat/details/details-achat.component";
+import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
 import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
 import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
 import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
 import { CommandeComponent } from "./component/commande/commande.component";
 import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
-import { DetailsVenteComponent } from "./component/commande/vente/details/details-vente.component";
 
 const routes: Routes = [
   {
@@ -167,7 +166,7 @@ const routes: Routes = [
         children: [
           {
             path: ':id',
-            component: DetailsAchatComponent,
+            component: DetailsCommandeComponent,
             data: {title: 'Mes achats'}
           }
         ]
@@ -179,7 +178,7 @@ const routes: Routes = [
         children: [
           {
             path: ':id',
-            component: DetailsVenteComponent,
+            component: DetailsCommandeComponent,
             data: {title: 'Mes ventes'}
           }
         ]

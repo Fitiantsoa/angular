@@ -22,7 +22,7 @@ import { ListAchatComponent } from './component/commande/achat/list/list-achat.c
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
-import { DetailsAchatComponent } from './component/commande/achat/details/details-achat.component';
+import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
 import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
@@ -40,7 +40,6 @@ import { ListProduitsAcheterComponent } from './component/acheter/list-produits-
 import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
 import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
-import { DetailsVenteComponent } from './component/commande/vente/details/details-vente.component';
 
 @NgModule({
   declarations: [
@@ -72,13 +71,12 @@ import { DetailsVenteComponent } from './component/commande/vente/details/detail
     PlanterPlanteComponent,
     EntretienPlanteComponent,
     RecolterPlanteComponent,
-    DetailsAchatComponent,
+    DetailsCommandeComponent,
     FooterComponent,
     ListProduitsAcheterComponent,
     ListProduitsVendreComponent,
     CommandeComponent,
-    ListVenteComponent,
-    DetailsVenteComponent,
+    ListVenteComponent
   ],
   imports: [
     BrowserModule,
