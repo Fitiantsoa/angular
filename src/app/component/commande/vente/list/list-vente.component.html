@@ -6,6 +6,7 @@
       </div>
     </div>
     <div class="list-group list-group-flush">
+      <span class="text-center" *ngIf="(commandes | async)?.length == 0">Aucune vente</span>
       <a [routerLink]="['/commandes/vente', c.id]" routerLinkActive="list-group-item-light" *ngFor="let c of commandes | async" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Commande #{{ c.id }}</h5>
