@@ -20,7 +20,7 @@ export class ListVenteComponent implements OnInit {
     this.commandes.subscribe((result) => {
       if(result.length > 0) {
         let firstCommandeId = result[0].id;
-        this.router.navigate(['commandes/venete', firstCommandeId]);
+        this.router.navigate(['commandes/vente', firstCommandeId]);
       }
 
       this.isLoading = false;
