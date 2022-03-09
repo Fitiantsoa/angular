@@ -59,6 +59,7 @@ export class FichePlanteService {
       methodeEntretien: fichePlante.methodeEntretien,
       methodeRecolte: fichePlante.methodeRecolte,
     };
+    return obj;
 
 }
 

@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/service/auth.service';
 import { Observable } from 'rxjs';
 import { FicheRavageurService } from './../../../../service/fiches/fiche-ravageur.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class ListFicheRavageurComponent implements OnInit {
 
   fichesRavageurObservable!: Observable<FicheRavageur[]>;
 
-  constructor(private ficheRavageurService: FicheRavageurService) {}
+  constructor(private ficheRavageurService: FicheRavageurService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.fichesRavageurObservable = this.ficheRavageurService.getAll();
@@ -25,5 +26,8 @@ export class ListFicheRavageurComponent implements OnInit {
     });
   }
 
+  get role() {
+    return this.authService.role();
+  }
 
 }
