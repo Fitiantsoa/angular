@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Produit } from 'src/app/model/produit';
+import { ProduitService } from 'src/app/sercice/produit/produit.service';
 
 @Component({
   selector: 'app-list-produits-vendre',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListProduitsVendreComponent implements OnInit {
 
-  constructor() { }
+  produitsObservable!: Observable<Produit[]>;
+
+  constructor(private produitService: ProduitService) {}
 
   ngOnInit(): void {
+    this.produitsObservable = this.produitService.getByUtilisateur();
+  }
+
+
+  delete(id: number) {
+    this.produitService.delete(id).subscribe((ok) => {
+      this.produitsObservable = this.produitService.getByUtilisateur();
+    });
   }
 
 }
