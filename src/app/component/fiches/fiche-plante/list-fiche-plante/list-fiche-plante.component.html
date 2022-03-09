@@ -6,15 +6,20 @@
       </div>
       <div class="card-body">
         <table class="table">
-
           <tr *ngFor="let fP of fichesPlanteObservable | async">
-              <td>
-                <img src="../../../../../assets/images/fiche-plante/plante/{{fP.id}}.png" alt="logo-{{fP.nom}}" width="60">
+            <td>
+              <img
+                src="../../../../../assets/images/fiche-plante/plante/{{
+                  fP.nom
+                }}.png"
+                alt="logo-{{ fP.nom }}"
+                width="60"
+              />
               <a
-              [routerLink]="['/fiches_plante', 'perso', fP.id]"
-              routerLinkActive="active"
-              >{{ fP.nom }}</a>
-
+                [routerLink]="['/fiches_plante', 'perso', fP.id]"
+                routerLinkActive="active"
+                >{{ fP.nom }}</a
+              >
             </td>
 
             <td
@@ -53,6 +58,3 @@
     </div>
   </div>
 </div>
-
-
-

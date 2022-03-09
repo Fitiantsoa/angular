@@ -1,118 +1,170 @@
 <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
   <div class="wrapper wrapper--w790">
     <div class="card card-5">
-
       <div class="card-heading">
-          <div class="card-heading-item">
-          <a
-              [routerLink]="['/fiches_plante']"
-              routerLinkActive="active"
-              ><img class="retour" src="../../../../../assets/images/iconeretour.png" alt="icone retour" width="30">
-            </a>
-          </div>
-          <div class="card-heading-item"><h2 class="title">{{ fichePlante.nom }}</h2></div>
+        <div class="card-heading-item">
+          <a [routerLink]="['/fiches_plante']" routerLinkActive="active"
+            ><img
+              class="retour"
+              src="../../../../../assets/images/iconeretour.png"
+              alt="icone retour"
+              width="30"
+            />
+          </a>
+        </div>
+        <div class="card-heading-item">
+          <h2 class="title">{{ fichePlante.nom }}</h2>
+        </div>
       </div>
 
       <div class="card-body">
-        <img class="centrer" src="../../../../../assets/images/fiche-plante/plante/{{fichePlante.id}}.png" alt="logo-{{fichePlante.nom}}" width="125">
+        <img
+          class="centrer"
+          src="../../../../../assets/images/fiche-plante/plante/{{
+            fichePlante.nom
+          }}.png"
+          alt="logo-{{ fichePlante.nom }}"
+          width="125"
+        />
 
-          <div class="methode">
-            <button
-              *ngIf="fichePlante.methodeSemer"
-              class="btn btn--radius-2 btn--blue"
-              type="submit"
-              [routerLink]="['/fiches_plante', 'semer', fichePlante.id]"
-              routerLinkActive="active"
-            >
-              Semer
-            </button>
-            <button
-            *ngIf="fichePlante.methodePlanter"
-              class="btn btn--radius-2 btn--blue"
-              type="submit"
-              [routerLink]="['/fiches_plante', 'planter', fichePlante.id]"
-              routerLinkActive="active"
-            >
-              Planter
-            </button>
-            <button
-            *ngIf="fichePlante.methodeEntretien"
-              class="btn btn--radius-2 btn--blue"
-              type="submit"
-              [routerLink]="['/fiches_plante', 'entretien', fichePlante.id]"
-              routerLinkActive="active"
-            >
-              Entretenir
-            </button>
-            <button
-            *ngIf="fichePlante.methodeRecolte"
-              class="btn btn--radius-2 btn--blue"
-              type="submit"
-              [routerLink]="['/fiches_plante', 'recolter', fichePlante.id]"
+        <div class="methode">
+          <button
+            *ngIf="fichePlante.methodeSemer"
+            class="btn btn--radius-2 btn--blue"
+            type="submit"
+            [routerLink]="['/fiches_plante', 'semer', fichePlante.id]"
             routerLinkActive="active"
-            >
-              Récolter
-            </button>
-          </div>
+          >
+            Semer
+          </button>
+          <button
+            *ngIf="fichePlante.methodePlanter"
+            class="btn btn--radius-2 btn--blue"
+            type="submit"
+            [routerLink]="['/fiches_plante', 'planter', fichePlante.id]"
+            routerLinkActive="active"
+          >
+            Planter
+          </button>
+          <button
+            *ngIf="fichePlante.methodeEntretien"
+            class="btn btn--radius-2 btn--blue"
+            type="submit"
+            [routerLink]="['/fiches_plante', 'entretien', fichePlante.id]"
+            routerLinkActive="active"
+          >
+            Entretenir
+          </button>
+          <button
+            *ngIf="fichePlante.methodeRecolte"
+            class="btn btn--radius-2 btn--blue"
+            type="submit"
+            [routerLink]="['/fiches_plante', 'recolter', fichePlante.id]"
+            routerLinkActive="active"
+          >
+            Récolter
+          </button>
+        </div>
 
-        <br>
+        <br />
         <div>
           <h3>Caractéristiques</h3>
-        <table class="table">
-          <tr>
-            <td><img class="centrertab" src="../../../../../assets/images/fiche-plante/caracteristique/eau.png" alt="logo-eau" width="50"></td>
-            <td><img class="centrertab" src="../../../../../assets/images/fiche-plante/caracteristique/soleil.png" alt="logo-soleil" width="60"></td>
-            <td><img class="centrertab" src="../../../../../assets/images/fiche-plante/caracteristique/espacement.png" alt="logo-espacement" width="50"></td>
-            <td><img
-              *ngIf="fichePlante.dureeConservationGraine"
-              class="centrertab" src="../../../../../assets/images/fiche-plante/caracteristique/graine.png" alt="logo-graine" width="50"></td>
-          </tr>
-          <tr>
-            <td align="center">{{ fichePlante.eau }}</td>
-            <td align="center">{{ fichePlante.exposition }}</td>
-            <td align="center">{{ fichePlante.espacement }}</td>
-            <td align="center">{{ fichePlante.dureeConservationGraine }}</td>
-          </tr>
-        </table>
+          <table class="table">
+            <tr>
+              <td>
+                <img
+                  class="centrertab"
+                  src="../../../../../assets/images/fiche-plante/caracteristique/eau.png"
+                  alt="logo-eau"
+                  width="50"
+                />
+              </td>
+              <td>
+                <img
+                  class="centrertab"
+                  src="../../../../../assets/images/fiche-plante/caracteristique/soleil.png"
+                  alt="logo-soleil"
+                  width="60"
+                />
+              </td>
+              <td>
+                <img
+                  class="centrertab"
+                  src="../../../../../assets/images/fiche-plante/caracteristique/espacement.png"
+                  alt="logo-espacement"
+                  width="50"
+                />
+              </td>
+              <td>
+                <img
+                  *ngIf="fichePlante.dureeConservationGraine"
+                  class="centrertab"
+                  src="../../../../../assets/images/fiche-plante/caracteristique/graine.png"
+                  alt="logo-graine"
+                  width="50"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td align="center">{{ fichePlante.eau }}</td>
+              <td align="center">{{ fichePlante.exposition }}</td>
+              <td align="center">{{ fichePlante.espacement }}</td>
+              <td align="center">{{ fichePlante.dureeConservationGraine }}</td>
+            </tr>
+          </table>
 
-        <br>
-        <h3>Calendriers</h3>
-        <table class="table">
-          <tr *ngIf="fichePlante.calendrierSemer"><th width="200">Période semis</th><td>{{ fichePlante.calendrierSemer }}</td></tr>
-          <tr *ngIf="fichePlante.calendrierPlanter"><th width="200">Période pour planter</th><td>{{ fichePlante.calendrierPlanter }}</td></tr>
-          <tr *ngIf="fichePlante.calendrierRecolter"><th width="200">Période pour récolter</th><td>{{ fichePlante.calendrierRecolter }}</td></tr>
-        </table>
+          <br />
+          <h3>Calendriers</h3>
+          <table class="table">
+            <tr *ngIf="fichePlante.calendrierSemer">
+              <th width="200">Période semis</th>
+              <td>{{ fichePlante.calendrierSemer }}</td>
+            </tr>
+            <tr *ngIf="fichePlante.calendrierPlanter">
+              <th width="200">Période pour planter</th>
+              <td>{{ fichePlante.calendrierPlanter }}</td>
+            </tr>
+            <tr *ngIf="fichePlante.calendrierRecolter">
+              <th width="200">Période pour récolter</th>
+              <td>{{ fichePlante.calendrierRecolter }}</td>
+            </tr>
+          </table>
 
-        <br>
-        <h3>Le compagnonnage</h3>
-        <table class="table">
-          <tr *ngIf="fichePlante.bonsCopains"><th width="200">Les bons Copains</th><td>{{ fichePlante.bonsCopains }}</td></tr>
-          <tr *ngIf="fichePlante.mauvaisCopains"><th width="200">Les mauvais Copains</th><td>{{ fichePlante.mauvaisCopains }}</td></tr>
-        </table>
+          <br />
+          <h3>Le compagnonnage</h3>
+          <table class="table">
+            <tr *ngIf="fichePlante.bonsCopains">
+              <th width="200">Les bons Copains</th>
+              <td>{{ fichePlante.bonsCopains }}</td>
+            </tr>
+            <tr *ngIf="fichePlante.mauvaisCopains">
+              <th width="200">Les mauvais Copains</th>
+              <td>{{ fichePlante.mauvaisCopains }}</td>
+            </tr>
+          </table>
 
-        <br>
-        <h3>Petit coup de mou?</h3>
-        <table class="table">
-          <tr *ngIf="fichePlante.maladies"><th width="200">
-            <a
-            [routerLink]="['/fiches_maladie']"
-            routerLinkActive="active"
-            >Maladies</a>
-            </th><td>{{ fichePlante.maladies }}</td></tr>
-          <tr *ngIf="fichePlante.ravageurs"><th width="200">
-            <a
-            [routerLink]="['/fiches_ravageur']"
-            routerLinkActive="active"
-            >Ravageurs</a>
-          </th><td>{{ fichePlante.ravageurs }}</td></tr>
-        </table>
+          <br />
+          <h3>Petit coup de mou?</h3>
+          <table class="table">
+            <tr *ngIf="fichePlante.maladies">
+              <th width="200">
+                <a [routerLink]="['/fiches_maladie']" routerLinkActive="active"
+                  >Maladies</a
+                >
+              </th>
+              <td>{{ fichePlante.maladies }}</td>
+            </tr>
+            <tr *ngIf="fichePlante.ravageurs">
+              <th width="200">
+                <a [routerLink]="['/fiches_ravageur']" routerLinkActive="active"
+                  >Ravageurs</a
+                >
+              </th>
+              <td>{{ fichePlante.ravageurs }}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-

@@ -1,3 +1,4 @@
+import { Plante } from './../plante';
 import { Utilisateur } from '../utilisateur';
 
 export class Produit {
@@ -6,19 +7,22 @@ export class Produit {
   private _prix: number | undefined;
   private _stock: number | undefined;
   private _utilisateur: Utilisateur | undefined;
+  private _plante: Plante | undefined;
 
   constructor(
     id: number,
     nom: string,
     prix: number,
     stock: number,
-    utilisateur: Utilisateur
+    utilisateur: Utilisateur,
+    plante: Plante
   ) {
     this._id = id;
     this._nom = nom;
     this._prix = prix;
     this._stock = stock;
     this._utilisateur = utilisateur;
+    this._plante = plante;
   }
 
   /**
@@ -99,5 +103,21 @@ export class Produit {
    */
   public set utilisateur(value: Utilisateur | undefined) {
     this._utilisateur = value;
+  }
+
+  /**
+   * Getter plante
+   * @return {Plante }
+   */
+  public get plante(): Plante | undefined {
+    return this._plante;
+  }
+
+  /**
+   * Setter plante
+   * @param {Plante } value
+   */
+  public set plante(value: Plante | undefined) {
+    this._plante = value;
   }
 }
