@@ -37,7 +37,7 @@ export class AchatComponent implements OnInit {
       this.produit.stock -= this.quantite;
       this.produitService
         .update(this.produit)
-        .subscribe((ok) => this.router.navigate(['/produits']));
+        .subscribe((ok) => this.router.navigate(['/achat']));
     }
   }
 }
