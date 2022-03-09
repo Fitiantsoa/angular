@@ -37,6 +37,7 @@ import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolte
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { PlanteComponent } from './component/potager/plante/plante.component';
 import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
+import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { ListProduitsAcheterComponent } from './component/acheter/list-produits-
     DetailsCommandeComponent,
     FooterComponent,
     ListProduitsAcheterComponent,
+    ListProduitsVendreComponent,
   ],
   imports: [
     BrowserModule,
