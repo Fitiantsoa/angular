@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Commande } from "../../../model/commande";
+import { Commande } from "../../../../model/commande";
 import { Observable } from "rxjs";
-import { CommandeService } from "../../../service/commande.service";
+import { CommandeService } from "../../../../service/commande.service";
 import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-commande',
-  templateUrl: './list-commande.component.html',
-  styleUrls: ['./list-commande.component.css']
+  templateUrl: './list-achat.component.html',
+  styleUrls: ['./list-achat.component.css']
 })
-export class ListCommandeComponent implements OnInit {
+export class ListAchatComponent implements OnInit {
   commandes!: Observable<Commande[]>;
   isLoading: boolean = true;
 
@@ -20,7 +20,7 @@ export class ListCommandeComponent implements OnInit {
     this.commandes.subscribe((result) => {
       if(result.length > 0) {
         let firstCommandeId = result[0].id;
-        this.router.navigate(['commandes', firstCommandeId]);
+        this.router.navigate(['commandes/achat', firstCommandeId]);
       }
 
       this.isLoading = false;

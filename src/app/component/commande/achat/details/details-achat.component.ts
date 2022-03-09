@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { CommandeService } from "../../../service/commande.service";
+import { CommandeService } from "../../../../service/commande.service";
 import { Observable } from "rxjs";
-import { Commande } from "../../../model/commande";
+import { Commande } from "../../../../model/commande";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-details',
-  templateUrl: './details-commande.component.html',
-  styleUrls: ['./details-commande.component.css']
+  templateUrl: './details-achat.component.html',
+  styleUrls: ['./details-achat.component.css']
 })
-export class DetailsCommandeComponent implements OnInit {
+export class DetailsAchatComponent implements OnInit {
   commande!: Observable<Commande>;
   isLoading: boolean = true;
 

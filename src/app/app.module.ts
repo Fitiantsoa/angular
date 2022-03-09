@@ -18,11 +18,11 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
-import { ListCommandeComponent } from './component/commande/list/list-commande.component';
+import { ListAchatComponent } from './component/commande/achat/list/list-achat.component';
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
-import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
+import { DetailsAchatComponent } from './component/commande/achat/details/details-achat.component';
 import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
@@ -37,6 +37,9 @@ import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolte
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { PlanteComponent } from './component/potager/plante/plante.component';
 import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
+import { CommandeComponent } from './component/commande/commande.component';
+import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
+import { DetailsVenteComponent } from './component/commande/vente/details/details-vente.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,7 @@ import { ListProduitsAcheterComponent } from './component/acheter/list-produits-
     ListFichePlanteComponent,
     EditFicheRavageurComponent,
     ListFicheRavageurComponent,
-    ListCommandeComponent,
+    ListAchatComponent,
     AccueilComponent,
     FonctionnementComponent,
     RubanAccueilComponent,
@@ -68,9 +71,12 @@ import { ListProduitsAcheterComponent } from './component/acheter/list-produits-
     PlanterPlanteComponent,
     EntretienPlanteComponent,
     RecolterPlanteComponent,
-    DetailsCommandeComponent,
+    DetailsAchatComponent,
     FooterComponent,
     ListProduitsAcheterComponent,
+    CommandeComponent,
+    ListVenteComponent,
+    DetailsVenteComponent,
   ],
   imports: [
     BrowserModule,

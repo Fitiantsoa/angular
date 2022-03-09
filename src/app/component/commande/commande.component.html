@@ -1,0 +1,20 @@
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w960">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">Mes commandes</h2>
+      </div>
+      <div class="card-body">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a [routerLink]="['/commandes/achat']" routerLinkActive="active" class="nav-link">Mes achats</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/commandes/vente']" routerLinkActive="active" class="nav-link">Mes ventes</a>
+          </li>
+        </ul>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
