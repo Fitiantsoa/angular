@@ -22,14 +22,14 @@ import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/li
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
-import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
-import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
-import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
-import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
-import { CommandeComponent } from "./component/commande/commande.component";
-import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
-import { ContactComponent } from "./component/contact/contact.component";
+import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
+import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
+import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
+import { CommandeComponent } from './component/commande/commande.component';
+import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
+import { ContactComponent } from './component/contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AchatComponent } from './component/acheter/achat/achat.component';
 
 const routes: Routes = [
   {
@@ -159,7 +159,7 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'achat'
+        redirectTo: 'achat',
       },
       {
         path: 'achat',
@@ -169,9 +169,9 @@ const routes: Routes = [
           {
             path: ':id',
             component: DetailsCommandeComponent,
-            data: {title: 'Mes achats'}
-          }
-        ]
+            data: { title: 'Mes achats' },
+          },
+        ],
       },
       {
         path: 'vente',
@@ -181,16 +181,16 @@ const routes: Routes = [
           {
             path: ':id',
             component: DetailsCommandeComponent,
-            data: {title: 'Mes ventes'}
-          }
-        ]
-      }
-    ]
+            data: { title: 'Mes ventes' },
+          },
+        ],
+      },
+    ],
   },
 
   {
-    path: 'acheter',
-    component: ListProduitsAcheterComponent,
+    path: 'acheter/:id',
+    component: AchatComponent,
     canActivate: [IsLoggedInGuard],
   },
 
@@ -206,8 +206,10 @@ const routes: Routes = [
     canActivate: [IsLoggedOutGuard],
   },
   {
-    path: 'produits', component: ProduitsComponent, canActivate: [IsLoggedOutGuard],
-  }
+    path: 'produits',
+    component: ProduitsComponent,
+    canActivate: [IsLoggedOutGuard],
+  },
 
   { path: '**', component: NotFoundComponent },
 ];

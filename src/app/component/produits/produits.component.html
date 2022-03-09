@@ -1,1 +1,14 @@
-<p>produits works!</p>
+<table class="table">
+  <tr *ngFor="let p of produits">
+    <td>{{ p.id }}</td>
+    <td>{{ p.nom }}</td>
+    <td>
+      <a
+        [routerLink]="['acheter', p.id]"
+        routerLinkActive="active"
+        class="btn btn-outline-primary"
+        >Acheter</a
+      >
+    </td>
+  </tr>
+</table>

@@ -1,3 +1,4 @@
+import { ProduitsComponent } from './component/produits/produits.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { IconsModule } from './icons/icons.module';
 import { FooterComponent } from './component/footer/footer.component';
@@ -35,12 +36,12 @@ import { EntretienPlanteComponent } from './component/fiches/fiche-plante/entret
 import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolter-plante/recolter-plante.component';
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { PlanteComponent } from './component/potager/plante/plante.component';
-import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
 import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AchatComponent } from './component/acheter/achat/achat.component';
 
 @NgModule({
   declarations: [
@@ -74,11 +75,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RecolterPlanteComponent,
     DetailsCommandeComponent,
     FooterComponent,
-    ListProduitsAcheterComponent,
     ListProduitsVendreComponent,
     CommandeComponent,
     ListVenteComponent,
     ContactComponent,
+    ProduitsComponent,
+    AchatComponent,
   ],
   imports: [
     BrowserModule,
