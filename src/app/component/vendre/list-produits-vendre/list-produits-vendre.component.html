@@ -1,10 +1,45 @@
 <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
   <div class="wrapper wrapper--w790">
     <div class="card card-5">
-      <div class="card-heading">
-        <h2 class="title">Mon espace vente</h2>
-      </div>
-      <div class="card-body">
 
+        <div class="card-heading">
+          <h2 class="title">Mon espace vente</h2>
+        </div>
+
+        <div class="card-body">
+
+          <table class="table">
+            <tr *ngFor="let p of produitsObservable | async">
+            <td>{{ p.id }}</td>
+            <td>{{ p.nom }}</td>
+            <td>{{ p.stock }}</td>
+            <td>{{ p.prix }}</td>
+
+            <td>
+              <a
+                [routerLink]="['/produit','edit', p.id]"
+                routerLinkActive="active"
+                class="btn btn--radius-2 btn--blue"
+                >Editer</a
+              >
+            </td>
+
+
+            <td>
+              <button (click)="delete(p.id!)" class="btn btn--radius-2 btn--red">
+                  supprimer
+              </button>
+            </td>
+
+
+           </tr>
+          </table>
+
+        </div>
 
     </div>
+  </div>
+</div>
+
+
+
