@@ -18,7 +18,7 @@ import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-f
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFicheRavageurComponent } from './component/fiches/fiche-ravageur/edit-fiche-ravageur/edit-fiche-ravageur.component';
 import { ListFicheRavageurComponent } from './component/fiches/fiche-ravageur/list-fiche-ravageur/list-fiche-ravageur.component';
-import { ListCommandeComponent } from './component/commande/list/list-commande.component';
+import { ListAchatComponent } from './component/commande/achat/list/list-achat.component';
 import { LocalisationComponent } from './component/localisation/localisation.component';
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
@@ -36,6 +36,11 @@ import { EntretienPlanteComponent } from './component/fiches/fiche-plante/entret
 import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolter-plante/recolter-plante.component';
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { PlanteComponent } from './component/potager/plante/plante.component';
+import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
+import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { CommandeComponent } from './component/commande/commande.component';
+import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +56,7 @@ import { PlanteComponent } from './component/potager/plante/plante.component';
     ListFichePlanteComponent,
     EditFicheRavageurComponent,
     ListFicheRavageurComponent,
-    ListCommandeComponent,
+    ListAchatComponent,
     AccueilComponent,
     FonctionnementComponent,
     RubanAccueilComponent,
@@ -69,6 +74,11 @@ import { PlanteComponent } from './component/potager/plante/plante.component';
     RecolterPlanteComponent,
     DetailsCommandeComponent,
     FooterComponent,
+    ListProduitsAcheterComponent,
+    ListProduitsVendreComponent,
+    CommandeComponent,
+    ListVenteComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

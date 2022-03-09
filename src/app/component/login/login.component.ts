@@ -28,9 +28,10 @@ export class LoginComponent implements OnInit {
         this.form.controls['password'].value
       )
       .subscribe({
-        next: (ok) => {
+        next: (compte) => {
           this.error = false;
           localStorage.setItem('login', this.form.controls['login'].value);
+          localStorage.setItem('role', compte.role!);
           localStorage.setItem(
             'token',
             btoa(
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
                 this.form.controls['password'].value
             )
           );
-          this.router.navigate(['user']);
+          this.router.navigate(['acheter']);
         },
         error: (error) => {
           this.error = true;

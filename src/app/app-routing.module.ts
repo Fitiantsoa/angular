@@ -6,7 +6,7 @@ import { UtilisateurComponent } from './component/utilisateur/utilisateur.compon
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { IsLoggedOutGuard } from './guard/is-logged-out/is-logged-out.guard';
 import { IsLoggedInGuard } from './guard/is-logged-in/is-logged-in.guard';
-import { ListCommandeComponent } from './component/commande/list/list-commande.component';
+import { ListAchatComponent } from './component/commande/achat/list/list-achat.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { ListFichePlanteComponent } from './component/fiches/fiche-plante/list-fiche-plante/list-fiche-plante.component';
 import { EditFichePlanteComponent } from './component/fiches/fiche-plante/edit-fiche-plante/edit-fiche-plante.component';
@@ -24,6 +24,11 @@ import { TerrainComponent } from './component/potager/terrain/terrain.component'
 import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur/affiche-fiche-ravageur/affiche-fiche-ravageur.component';
 import { DetailsCommandeComponent } from "./component/commande/details/details-commande.component";
 import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
+import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
+import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
+import { CommandeComponent } from "./component/commande/commande.component";
+import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
+import { ContactComponent } from "./component/contact/contact.component";
 
 const routes: Routes = [
   {
@@ -147,17 +152,59 @@ const routes: Routes = [
 
   {
     path: 'commandes',
-    component: ListCommandeComponent,
+    component: CommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: { title: 'Mes commandes' },
     children: [
       {
-        path: ':id',
-        component: DetailsCommandeComponent,
-        data: {title: 'Mes commandes'}
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'achat'
+      },
+      {
+        path: 'achat',
+        component: ListAchatComponent,
+        data: { title: 'Mes achats' },
+        children: [
+          {
+            path: ':id',
+            component: DetailsCommandeComponent,
+            data: {title: 'Mes achats'}
+          }
+        ]
+      },
+      {
+        path: 'vente',
+        component: ListVenteComponent,
+        data: { title: 'Mes ventes' },
+        children: [
+          {
+            path: ':id',
+            component: DetailsCommandeComponent,
+            data: {title: 'Mes ventes'}
+          }
+        ]
       }
     ]
   },
+
+  {
+    path: 'acheter',
+    component: ListProduitsAcheterComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'vendre',
+    component: ListProduitsVendreComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'contact',
+    component: ContactComponent,
+    canActivate: [IsLoggedOutGuard],
+  },
+
   { path: '**', component: NotFoundComponent },
 ];
 

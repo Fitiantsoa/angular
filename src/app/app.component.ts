@@ -53,6 +53,10 @@ export class AppComponent implements OnInit {
     return localStorage.getItem('id');
   }
 
+  get role() {
+    return this.authService.role();
+  }
+
   logout() {
     localStorage.clear();
     this.router.navigateByUrl('/home');

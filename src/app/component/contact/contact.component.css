@@ -1,0 +1,17 @@
+.bg-image {
+  background: url(../../../assets/images/harricot.jfif) no-repeat;
+  background-size: cover;
+  height: 500vh;
+  width: 100%;
+  background-position: 50% 50%;
+}
+
+.card {
+  opacity: 0.85;
+  border-radius: 25px;
+}
+
+#champMessage {
+  height: 200px;
+  text-align: top;
+}
