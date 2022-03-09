@@ -1,1 +1,14 @@
-<p>panier works!</p>
+<div class="text-center">
+  <div *ngIf="produits.size > 0; else panier_vide">
+    <table class="table">
+      <tr *ngFor="let p of produits | keyvalue">
+        <td>{{ p.value.produit!.nom }}</td>
+        <td>{{ p.value.quantite }}</td>
+      </tr>
+    </table>
+    <a>Passer la commande</a>
+  </div>
+  <ng-template #panier_vide>
+    <h3>Le panier est vide</h3>
+  </ng-template>
+</div>
