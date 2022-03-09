@@ -17,8 +17,8 @@ export class ProduitService {
     return this.httpClient.get<Produit>(ProduitService.URL + '/' + id);
   }
 
-  public getByUtilisateur(): Observable<Produit> {
-    return this.httpClient.get<Produit>(ProduitService.URL + '/user');
+  public getByUtilisateur(): Observable<Produit[]> {
+    return this.httpClient.get<Produit[]>(ProduitService.URL + '/user');
   }
 
   public update(produit: Produit): Observable<Produit> {
@@ -27,6 +27,10 @@ export class ProduitService {
       ProduitService.URL,
       this.produitToJson(produit)
     );
+  }
+
+  public delete(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`${ProduitService.URL}/${id}`);
   }
 
   /*public achat(id: number, quantite:number): Observable<ArrayBuffer> {
