@@ -1,17 +1,34 @@
-<table class="table">
-  <tr>
-    <th width="30">N°</th>
-    <th>Nom</th>
-  </tr>
-  <tr *ngFor="let fR of fichesRavageurObservable | async">
-    <td>{{ fR.id }}</td>
-    <td><a
-      [routerLink]="['/fiches_ravageur', 'perso', fR.id]"
-      routerLinkActive="active"
-      >{{ fR.nom }}</a>
-    </td>
-  </tr>
-</table>
-<a routerLink="/fiches_ravageur/edit" routerLinkActive="active" class="btn btn-link"
-  >Ajouter une fiche</a
->
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">Les Ravageurs</h2>
+      </div>
+      <div class="card-body">
+        <table class="table">
+
+          <tr *ngFor="let fR of fichesRavageurObservable | async">
+              <td>
+              <a
+              [routerLink]="['/fiches_ravageur', 'perso', fR.id]"
+              routerLinkActive="active"
+              >{{ fR.nom }}</a>
+
+            </td>
+          </tr>
+        </table>
+        <br>
+        <!-- <div class="row justify-content-between">
+          <button
+            routerLink="/fiches_plante/edit"
+            routerLinkActive="active"
+            class="btn btn--radius-2 btn--green"
+            type="submit"
+          >
+            Ajouter une fiche
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

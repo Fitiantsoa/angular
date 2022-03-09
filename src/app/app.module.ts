@@ -1,3 +1,5 @@
+import { IconsModule } from './icons/icons.module';
+import { FooterComponent } from './component/footer/footer.component';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +23,7 @@ import { LocalisationComponent } from './component/localisation/localisation.com
 import { RubanCompteComponent } from './component/ruban-compte/ruban-compte.component';
 import { CompteComponent } from './component/inscription/compte/compte.component';
 import { DetailsCommandeComponent } from './component/commande/details/details-commande.component';
-import { RubanAccueilComponent } from "./component/ruban-accueil/ruban-accueil.component";
+import { RubanAccueilComponent } from './component/ruban-accueil/ruban-accueil.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FonctionnementComponent } from './component/fonctionnement/fonctionnement.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
@@ -65,7 +67,8 @@ import { PlanteComponent } from './component/potager/plante/plante.component';
     PlanterPlanteComponent,
     EntretienPlanteComponent,
     RecolterPlanteComponent,
-    DetailsCommandeComponent
+    DetailsCommandeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,7 @@ import { PlanteComponent } from './component/potager/plante/plante.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    IconsModule,
     //GeoApiGouvAddressModule.forRoot(),
   ],
   providers: [

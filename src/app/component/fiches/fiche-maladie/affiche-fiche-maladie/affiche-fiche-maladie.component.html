@@ -1,6 +1,27 @@
-<br><h3>{{ ficheMaladie.nom }}</h3><br>
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
 
-<table class="table">
-    <tr><th>Description</th><td [innerHTML]="ficheMaladie.description"></td></tr>
-    <tr><th>Solution(s)</th><td [innerHTML]="ficheMaladie.solution"></td></tr>
-</table>
+
+        <div class="card-heading">
+          <div class="card-heading-item">
+          <a
+              [routerLink]="['/fiches_maladie']"
+              routerLinkActive="active"
+              ><img class="retour" src="../../../../../assets/images/iconeretour.png" alt="icone retour" width="30">
+            </a>
+          </div>
+          <div class="card-heading-item"><h2 class="title">{{ ficheMaladie.nom }}</h2></div>
+      </div>
+
+
+      <div class="card-body">
+        <img class="centrer" src="../../../../../assets/images/fiche-maladie/{{ficheMaladie.id}}.png" alt="img-photo-{{ficheMaladie.nom}}" width="300">
+        <table class="table">
+          <tr><th>Description</th><td [innerHTML]="ficheMaladie.description"></td></tr>
+          <tr><th>Solution(s)</th><td [innerHTML]="ficheMaladie.solution"></td></tr>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

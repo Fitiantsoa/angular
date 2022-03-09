@@ -111,7 +111,6 @@ const routes: Routes = [
     canActivate: [IsLoggedInGuard],
   },
 
-
   {
     path: 'fiches_ravageur',
     component: ListFicheRavageurComponent,
@@ -143,14 +142,14 @@ const routes: Routes = [
   {
     path: 'terrain',
     component: TerrainComponent,
-    canActivate: [IsLoggedInGuard]
+    canActivate: [IsLoggedInGuard],
   },
 
   {
     path: 'commandes',
     component: ListCommandeComponent,
     canActivate: [IsLoggedInGuard],
-    data: {title: 'Mes commandes'},
+    data: { title: 'Mes commandes' },
     children: [
       {
         path: ':id',
