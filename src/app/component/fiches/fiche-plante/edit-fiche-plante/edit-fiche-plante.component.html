@@ -1,98 +1,114 @@
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">Ajouter une plante</h2>
+      </div>
+      <div class="card-body">
 
-<div>
-  <div class="form-group">
-    <label>N°:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.id" readonly />
-  </div>
-  <div class="form-group">
-    <label>Nom:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.nom" />
-  </div>
-  <div class="form-group">
-    <label>Eau:</label>
-    <input type="number" class="form-control" [(ngModel)]="fichePlante.eau" />
-  </div>
-  <div class="form-group">
-    <label>Exposition:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.exposition"
-    />
-  </div>
+        <div>
+          <div class="form-group">
+            <label>N°:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.id" readonly />
+          </div>
 
-  <div class="form-group">
-    <label>Espacement:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.espacement"
-    />
-  </div>
-  <div class="form-group">
-    <label>Graine:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.dureeConservationGraine"
-    />
-  </div>
-  <div class="form-group">
-    <label>Période Semis:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.calendrierSemer"
-    />
-  </div>
-  <div class="form-group">
-    <label>Période plantation:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.calendrierPlanter"
-    />
-  </div>
-  <div class="form-group">
-    <label>Période récolte:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.calendrierRecolter"
-    />
-  </div>
-  <div class="form-group">
-    <label>Bons copains:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.bonsCopains"
-    />
-  </div>
-  <div class="form-group">
-    <label>Mauvais Copains:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.mauvaisCopains"
-    />
-  </div>
-  <div class="form-group">
-    <label>Maladies:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.maladies"
-    />
-  </div>
-  <div class="form-group">
-    <label>Ravageurs:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.ravageurs"
-    />
-  </div>
-  <div class="form-group">
-    <label>Exposition:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.exposition"
-    />
-  </div>
-  <div class="form-group">
-    <label>Comment semer?:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.methodeSemer"
-    />
-  </div>
-  <div class="form-group">
-    <label>Comment planter?:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.methodePlanter"
-    />
-  </div>
-  <div class="form-group">
-    <label>Entretien:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.methodeEntretien"
-    />
-  </div>
-  <div class="form-group">
-    <label>Comment récolter?:</label>
-    <input class="form-control" [(ngModel)]="fichePlante.methodeRecolte"
-    />
-  </div>
+          <div class="form-group">
+            <label>Nom:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.nom" />
+          </div>
 
-  <div>
-    <button (click)="save()" class="btn btn-outline-success">
-      Enregistrer
-    </button>
-    <a routerLink="/fiches_maladie" routerLinkActive="active" btn-warning>Annuler</a>
+          <div class="form-group">
+            <label>Eau:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.eau" />
+          </div>
+
+          <div class="form-group">
+            <label>Exposition:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.exposition" />
+          </div>
+
+          <div class="form-group">
+            <label>Espacement:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.espacement" />
+          </div>
+
+          <div class="form-group">
+            <label>Graine:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.dureeConservationGraine" />
+          </div>
+
+          <div class="form-group">
+            <label>Période pour semer:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.calendrierSemer" />
+          </div>
+
+          <div class="form-group">
+            <label>Période pour planter:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.calendrierPlanter" />
+          </div>
+
+          <div class="form-group">
+            <label>Période pour récolter:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.calendrierRecolter" />
+          </div>
+
+          <div class="form-group">
+            <label>Les bons copains:</label>
+            <input class="form-control" [(ngModel)]="fichePlante.bonsCopains" />
+          </div>
+
+          <div class="form-group">
+            <label>Les mauvais copains</label>
+            <input class="form-control" [(ngModel)]="fichePlante.mauvaisCopains" />
+          </div>
+
+          <div class="form-group">
+            <label>Maladies</label>
+            <input class="form-control" [(ngModel)]="fichePlante.maladies" />
+          </div>
+
+          <div class="form-group">
+            <label>Ravageurs</label>
+            <input class="form-control" [(ngModel)]="fichePlante.ravageurs" />
+          </div>
+
+          <div class="form-group">
+            <label>Méthode pour semer:</label>
+            <textarea class="form-control" [(ngModel)]="fichePlante.methodeSemer"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Méthode pour planter:</label>
+            <textarea class="form-control" [(ngModel)]="fichePlante.methodePlanter"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Méthode pour entretenir:</label>
+            <textarea class="form-control" [(ngModel)]="fichePlante.methodeEntretien"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Méthode pour récolter:</label>
+            <textarea class="form-control" [(ngModel)]="fichePlante.methodeRecolte"></textarea>
+          </div>
+
+          <br>
+          <div class="row justify-content-between"
+        >
+          <button
+            (click)="save()"
+            class="btn btn--radius-2 btn--green"
+            type="submit"
+          >
+           Enregistrer
+          </button>
+          <a
+          routerLink="/fiches_plante"
+          routerLinkActive="active"
+          class= "btn btn--radius-2 btn--red">Annuler</a>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>

@@ -46,6 +46,7 @@ export class FicheMaladieService {
       description: ficheMaladie.description,
       solution: ficheMaladie.solution,
     };
+    return obj;
 
 }
 

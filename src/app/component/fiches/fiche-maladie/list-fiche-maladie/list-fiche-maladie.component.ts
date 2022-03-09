@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/service/auth.service';
 import { Observable } from 'rxjs';
 import { FicheMaladieService } from './../../../../service/fiches/fiche-maladie.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class ListFicheMaladieComponent implements OnInit {
 
   fichesMaladieObservable!: Observable<FicheMaladie[]>;
 
-  constructor(private ficheMaladieService: FicheMaladieService) {}
+  constructor(private ficheMaladieService: FicheMaladieService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.fichesMaladieObservable = this.ficheMaladieService.getAll();
@@ -25,4 +26,7 @@ export class ListFicheMaladieComponent implements OnInit {
     });
   }
 
+  get role() {
+    return this.authService.role();
+  }
 }

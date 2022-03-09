@@ -8,7 +8,7 @@
   background-image: url("/assets/images/fondPelouse.JPG");
   justify-content: flex-start;
   width: 98%;
-  height: 650px;
+  height: 700px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin: 10px;
@@ -25,13 +25,15 @@
 }
 
 #containerPotager {
+  padding: 25px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   /*display: flex;
   flex-direction: column;*/
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-content: flex-start;
   /*border: solid 5px rgb(194, 98, 8);
       ;
       background-color: rgb(245, 211, 166);*/
@@ -68,6 +70,17 @@
 
 .zoneBouton {
   display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  width: 600px;
+  justify-content: space-around;
+  border-radius: 5px;
+  background-color: darkseagreen;
+  border: solid black 3px;
+}
+.zoneBoutonHaut {
+  display: flex;
+  flex-direction: row;
   margin: 20px;
   width: 600px;
   justify-content: space-around;
@@ -103,4 +116,32 @@
   border-radius: 15px;
   z-index: 2;
   text-align: center;
+}
+
+.separationBouton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.ajoutTerrain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 220px;
+}
+
+.zoneParam {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  width: 670px;
+  justify-content: space-around;
+  border-radius: 10px;
+  align-items: center;
 }
