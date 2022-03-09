@@ -12,10 +12,14 @@ export class CommandeService {
   constructor(private http: HttpClient) { }
 
   getAllAchat(): Observable<Commande[]> {
-    return this.http.get<Commande[]>(`${environment.commandeAPIEndPoint}`);
+    return this.http.get<Commande[]>(`${environment.commandeAPIEndPoint}/achat`);
+  }
+
+  getAllVente(): Observable<Commande[]> {
+    return this.http.get<Commande[]>(`${environment.commandeAPIEndPoint}/vente`);
   }
 
   getById(id: number): Observable<Commande> {
-    return this.http.get<Commande>(`${environment.commandeAPIEndPoint}/${id}`);
+    return this.http.get<Commande>(`${environment.commandeAPIEndPoint}/id/${id}`);
   }
 }
