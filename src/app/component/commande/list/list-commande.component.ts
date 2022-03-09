@@ -18,16 +18,13 @@ export class ListCommandeComponent implements OnInit {
   ngOnInit(): void {
     this.commandes = this.commandeService.getAll();
     this.commandes.subscribe((result) => {
-      this.isLoading = false;
-    });
-    /*this.commandes.subscribe((result) => {
       if(result.length > 0) {
         let firstCommandeId = result[0].id;
         this.router.navigate(['commandes', firstCommandeId]);
       }
 
       this.isLoading = false;
-    });*/
+    });
   }
 
 }
