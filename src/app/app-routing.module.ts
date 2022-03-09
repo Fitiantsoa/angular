@@ -28,6 +28,7 @@ import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-
 import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
 import { CommandeComponent } from "./component/commande/commande.component";
 import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
+import { ContactComponent } from "./component/contact/contact.component";
 
 const routes: Routes = [
   {
@@ -196,6 +197,12 @@ const routes: Routes = [
     path: 'vendre',
     component: ListProduitsVendreComponent,
     canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'contact',
+    component: ContactComponent,
+    canActivate: [IsLoggedOutGuard],
   },
 
   { path: '**', component: NotFoundComponent },

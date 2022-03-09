@@ -38,6 +38,7 @@ import { TerrainComponent } from './component/potager/terrain/terrain.component'
 import { PlanteComponent } from './component/potager/plante/plante.component';
 import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
 import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
+import { ContactComponent } from './component/contact/contact.component';
 import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 
@@ -77,6 +78,7 @@ import { ListVenteComponent } from './component/commande/vente/list/list-vente.c
     ListProduitsVendreComponent,
     CommandeComponent,
     ListVenteComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,100 @@
+<section class="h-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-5 mb-5">
+          <div class="card">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Contact</h2>
+
+              <form (ngSubmit)="sendForm()" [formGroup]="form">
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    formControlName="name"
+                    [(ngModel)]="name"
+                    required
+                  />
+                  <label class="form-label">Votre nom</label>
+                </div>
+                <div
+                  class="alert alert-danger"
+                  *ngIf="
+                    form.controls['name'].dirty &&
+                    form.controls['name'].invalid
+                  "
+                >
+                  <span *ngIf="form.controls['mail'].hasError('required')"
+                    >Veuillez indiquer votre nom</span
+                  >
+                </div>
+
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    formControlName="mail"
+                    [(ngModel)]="email"
+                    required
+                    email
+                  />
+                  <label class="form-label">Votre adresse mail</label>
+                </div>
+                <div
+                  class="alert alert-danger"
+                  *ngIf="
+                    form.controls['mail'].dirty &&
+                    form.controls['mail'].invalid
+                  "
+                >
+                  <span *ngIf="form.controls['mail'].hasError('required')"
+                    >Veuillez indiquer votre email</span
+                  >
+                  <span *ngIf="form.controls['mail'].hasError('email')"
+                  >Veuillez indiquer un email valide</span
+                >
+                </div>
+
+                <div class="form-outline mb-4">
+                  <textarea
+                    type="text"
+                    class="form-control form-control-lg"
+                    formControlName="message"
+                    id="champMessage"
+                    [(ngModel)]="message"
+                    required
+                  ></textarea>
+                  <label class="form-label">Votre message</label>
+                </div>
+                <div
+                  class="alert alert-danger"
+                  *ngIf="
+                    form.controls['message'].dirty &&
+                    form.controls['message'].invalid
+                  "
+                >
+                  <span *ngIf="form.controls['message'].hasError('required')"
+                    >Veuillez écrire un message</span
+                  >
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                    [disabled]="form.invalid"
+                    >
+                    Envoyer
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
