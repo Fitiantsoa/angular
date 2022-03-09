@@ -16,10 +16,13 @@
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav m-auto my-2 my-lg-0">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/terrain']">Potager</a>
+        <a class="nav-link" [routerLink]="['/acheter']"> Acheter </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/commandes']"> Commandes </a>
+        <a class="nav-link" [routerLink]="['/vendre']"> Vendre </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/terrain']">Potager</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -88,11 +91,8 @@
           </li>
           <li>
             <a class="dropdown-item text-center" [routerLink]="['/commandes']">
-              Commandes
+              Mes Commandes
             </a>
-          </li>
-          <li>
-            <a class="dropdown-item text-center" href="#">Mon potager</a>
           </li>
         </ul>
       </li>
