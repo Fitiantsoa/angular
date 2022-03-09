@@ -1,8 +1,7 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { IconsModule } from './icons/icons.module';
 import { FooterComponent } from './component/footer/footer.component';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,6 +40,7 @@ import { ListProduitsVendreComponent } from './component/vendre/list-produits-ve
 import { ContactComponent } from './component/contact/contact.component';
 import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

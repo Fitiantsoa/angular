@@ -1,5 +1,5 @@
+import { ProduitsComponent } from './component/produits/produits.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
 import { InscriptionComponent } from './component/inscription/inscription.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
@@ -29,6 +29,7 @@ import { ListProduitsVendreComponent } from "./component/vendre/list-produits-ve
 import { CommandeComponent } from "./component/commande/commande.component";
 import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
 import { ContactComponent } from "./component/contact/contact.component";
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -204,6 +205,9 @@ const routes: Routes = [
     component: ContactComponent,
     canActivate: [IsLoggedOutGuard],
   },
+  {
+    path: 'produits', component: ProduitsComponent, canActivate: [IsLoggedOutGuard],
+  }
 
   { path: '**', component: NotFoundComponent },
 ];
