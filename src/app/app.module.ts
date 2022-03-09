@@ -42,7 +42,6 @@ import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AchatComponent } from './component/acheter/achat/achat.component';
-import { PanierComponent } from './component/panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -81,8 +80,7 @@ import { PanierComponent } from './component/panier/panier.component';
     ListVenteComponent,
     ContactComponent,
     ProduitsComponent,
-    AchatComponent,
-    PanierComponent,
+    AchatComponent
   ],
   imports: [
     BrowserModule,
