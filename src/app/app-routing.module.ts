@@ -26,6 +26,7 @@ import { DetailsCommandeComponent } from "./component/commande/details/details-c
 import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
 import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
 import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
+import { ContactComponent } from "./component/contact/contact.component";
 
 const routes: Routes = [
   {
@@ -171,6 +172,12 @@ const routes: Routes = [
     path: 'vendre',
     component: ListProduitsVendreComponent,
     canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'contact',
+    component: ContactComponent,
+    canActivate: [IsLoggedOutGuard],
   },
 
   { path: '**', component: NotFoundComponent },
