@@ -15,13 +15,14 @@ import { Router } from "@angular/router";
 export class PanierComponent implements OnInit {
   produits: Map<number, PanierProduit> = new Map<number, PanierProduit>();
 
-  constructor(private router: Router, private panierService: PanierService, private commandeService: CommandeService) { }
+  constructor(private router: Router,
+              private panierService: PanierService,
+              private commandeService: CommandeService) { }
 
   ngOnInit(): void {
     this.produits = this.panierService.getProduits();
   }
-
-  // TODO: finir
+  
   createCommande() {
     let commande: Commande = new Commande();
     let commandeProduits: CommandeProduit[] = [];
