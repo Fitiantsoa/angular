@@ -1,8 +1,10 @@
 export class Compte {
   private _login: string | undefined;
+  private _role: string | undefined;
 
-  constructor(login?: string) {
+  constructor(login?: string, role?: string) {
     this._login = login;
+    this._role = role;
   }
 
   /**
@@ -19,5 +21,13 @@ export class Compte {
    */
   public set login(value: string | undefined) {
     this._login = value;
+  }
+
+  get role(): string | undefined {
+    return this._role;
+  }
+
+  set role(value: string | undefined) {
+    this._role = value;
   }
 }
