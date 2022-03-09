@@ -25,6 +25,7 @@ import { AfficheFicheRavageurComponent } from './component/fiches/fiche-ravageur
 import { DetailsAchatComponent } from "./component/commande/achat/details/details-achat.component";
 import { FonctionnementComponent } from "./component/fonctionnement/fonctionnement.component";
 import { ListProduitsAcheterComponent } from "./component/acheter/list-produits-acheter/list-produits-acheter.component";
+import { ListProduitsVendreComponent } from "./component/vendre/list-produits-vendre/list-produits-vendre.component";
 import { CommandeComponent } from "./component/commande/commande.component";
 import { ListVenteComponent } from "./component/commande/vente/list/list-vente.component";
 import { DetailsVenteComponent } from "./component/commande/vente/details/details-vente.component";
@@ -189,6 +190,12 @@ const routes: Routes = [
   {
     path: 'acheter',
     component: ListProduitsAcheterComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'vendre',
+    component: ListProduitsVendreComponent,
     canActivate: [IsLoggedInGuard],
   },
 

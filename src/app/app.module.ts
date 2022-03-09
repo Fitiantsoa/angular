@@ -37,6 +37,7 @@ import { RecolterPlanteComponent } from './component/fiches/fiche-plante/recolte
 import { TerrainComponent } from './component/potager/terrain/terrain.component';
 import { PlanteComponent } from './component/potager/plante/plante.component';
 import { ListProduitsAcheterComponent } from './component/acheter/list-produits-acheter/list-produits-acheter.component';
+import { ListProduitsVendreComponent } from './component/vendre/list-produits-vendre/list-produits-vendre.component';
 import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 import { DetailsVenteComponent } from './component/commande/vente/details/details-vente.component';
@@ -74,6 +75,7 @@ import { DetailsVenteComponent } from './component/commande/vente/details/detail
     DetailsAchatComponent,
     FooterComponent,
     ListProduitsAcheterComponent,
+    ListProduitsVendreComponent,
     CommandeComponent,
     ListVenteComponent,
     DetailsVenteComponent,
