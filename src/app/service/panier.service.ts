@@ -13,17 +13,17 @@ export class PanierService {
     return JSON.parse(localStorage.getItem('panier') || '[]');
   }
 
-  addProduit(produit: Produit) {
+  addProduit(produit: Produit, quantite: number) {
     let storedProduits = this.getProduits();
 
     let alreadyExistProduit = storedProduits.get(produit.id!);
     if(alreadyExistProduit != undefined) {
       alreadyExistProduit.quantite!++;
     } else {
-      storedProduits.set(produit.id!, new PanierProduit(produit, 1));
+      storedProduits.set(produit.id!, new PanierProduit(produit, quantite));
     }
 
-    localStorage.setItem('panier', JSON.stringify(storedProduits));
+    this.saveLocalStorage(storedProduits);
   }
 
   deleteProduit(produit: Produit) {
@@ -34,5 +34,11 @@ export class PanierService {
     if(storedProduits.get(produit.id) != null) {
       storedProduits.delete(produit.id);
     }
+
+    this.saveLocalStorage(storedProduits);
+  }
+
+  private saveLocalStorage(produits: Map<number, PanierProduit>) {
+    localStorage.setItem('panier', JSON.stringify(produits));
   }
 }
