@@ -69,12 +69,10 @@ export class TerrainComponent implements OnInit {
     });}
 
   ajoutPlante(p: any){
-    console.log(this.plante.typePlante);
     
-    console.log(this.utilisateur!.terrain!);
     this.plante.terrain=this.utilisateur!.terrain!;
-    console.log(this.plante);
-  console.log("PLANTE AVEC EMPLACEMENT ZERO"+this.plante);
+    
+
     this.planteService.create(this.plante!).subscribe((ok) => {})
   }
 

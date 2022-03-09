@@ -77,9 +77,9 @@ export class PlanteService {
         )
 
       Object.assign(obj, 
-                  {emplacement: {
-                                  positionx: 1,
-                                  positiony: 1
+                  {emplacementPlante: {
+                                  positionX: 1,
+                                  positionY: 1
                                   }
                   }        
                   )

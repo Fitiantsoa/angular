@@ -21,10 +21,29 @@
                 >{{ fP.nom }}</a
               >
             </td>
+
+            <td
+            *ngIf="role=='ROLE_ADMIN'">
+              <a
+                [routerLink]="['/fiches_plante', 'edit', fP.id]"
+                routerLinkActive="active"
+                class="btn btn--radius-2 btn--blue"
+                >editer</a
+              >
+            </td>
+            <td
+            *ngIf="role=='ROLE_ADMIN'">
+              <button (click)="delete(fP.id!)" class="btn btn--radius-2 btn--red">
+                supprimer
+              </button>
+            </td>
+
           </tr>
         </table>
-        <br />
-        <!-- <div class="row justify-content-between">
+        <br>
+
+        <div class="row justify-content-between"
+        *ngIf="role=='ROLE_ADMIN'">
           <button
             routerLink="/fiches_plante/edit"
             routerLinkActive="active"
@@ -33,7 +52,8 @@
           >
             Ajouter une fiche
           </button>
-        </div> -->
+        </div>
+
       </div>
     </div>
   </div>

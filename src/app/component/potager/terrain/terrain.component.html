@@ -9,7 +9,7 @@
 
 <div class="containerPelouse">
     <div class="containerGauche">
-            <div class="zoneBouton">
+            <div class="zoneBoutonHaut">
               <button class="btn btn-light" style="font-size: 0.8rem">Tout sélectionner</button>
               <button class="btn btn-light" style="font-size: 0.8rem">Mettre en vente</button>
               <button class="btn btn-light" style="font-size: 0.8rem">Arrosage réalisé</button>
@@ -27,13 +27,16 @@
           </div>-->
 
 
-              <div class="zoneBouton">
-                  
-                <button class="btn btn-light long" style ="font-size: 0.8rem" >Ajouter un terrain</button>
-
-
-                        <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem
-                           " [(ngModel)]="plante.typePlante" name="typePlante"
+             
+               <div class="zoneParam">
+                <div class="ajoutTerrain"> 
+                  <button type="button" class="btn btn-light"> Ajouter un terrain</button>
+                </div>
+                <div class="zoneBouton"> 
+                <div class="separationBouton">
+                        <p>Planter<p>
+                        <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem"
+                            [(ngModel)]="plante.typePlante" name="typePlante"
                               (change)="ajoutPlante($event)"> ajouter 
                                         
                           <!--<option selected>Choix du terrain</option>-->
@@ -44,8 +47,9 @@
                           
 
                         </select>
-
-                      
+                </div>
+                <div class="separationBouton">
+                         <p>Choix terrain<p>
                         <select class="form-select" aria-label="Default select example" 
                                 style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
                                 (change)="affichagePlante($event)">
@@ -61,7 +65,8 @@
                           
 
                         </select>
-                        
+                </div>  
+              </div>    
               </div>
           </div>
     
