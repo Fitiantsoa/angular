@@ -11,6 +11,7 @@ import { Utilisateur } from '../model/utilisateur';
 
 
 export class TerrainService {
+  
   static URL: string = 'http://localhost:8080/api/terrain';
   constructor(private http: HttpClient) {}
   
@@ -33,10 +34,12 @@ update(terrain: Terrain): Observable<Terrain> {
   );
 }
 
-
+getTerrainWithPlantes(id: number) {
+    return this.http.get<Plante[]>(`${TerrainService.URL}/${id}/plantes`);
+  }
 
 create(terrain: Terrain): Observable<Terrain> {
-  const terrainEnJson = 
+  const terrainEnJson =  
   { id: terrain.id,
     surface: terrain.surface,
     localisation: terrain.localisation,
