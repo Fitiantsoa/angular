@@ -1,3 +1,9 @@
+.list-group{
+  max-height: 100%;
+  margin-bottom: 10px;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}
 .visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute!important;
   width: 1px!important;
