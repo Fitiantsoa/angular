@@ -39,7 +39,7 @@ getTerrainWithPlantes(id: number) {
   }
 
 create(terrain: Terrain): Observable<Terrain> {
-  const terrainEnJson =  
+ /* const terrainEnJson =  
   { id: terrain.id,
     surface: terrain.surface,
     localisation: terrain.localisation,
@@ -47,9 +47,12 @@ create(terrain: Terrain): Observable<Terrain> {
     decoupageTerrainLargeur: terrain.decoupageTerrainLargeur,
     decoupageTerrainLongueur: terrain.decoupageTerrainLongueur,
     typeDeSol: terrain.typeDeSol,
-};
+};*/
+  console.log(terrain);
+  console.log(this.terrainToJson(terrain)+"le terrain dans service");
   return this.http.post<Terrain>(
-    TerrainService.URL, this.terrainToJson
+    
+    TerrainService.URL, terrain
   );
 }
 

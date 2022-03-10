@@ -10,10 +10,10 @@
 <div class="containerPelouse">
     <div class="containerGauche">
             <div class="zoneBoutonHaut">
-              <button class="btn btn-light" style="font-size: 0.8rem">Tout sélectionner</button>
-              <button class="btn btn-light" style="font-size: 0.8rem">Mettre en vente</button>
-              <button class="btn btn-light" style="font-size: 0.8rem">Arrosage réalisé</button>
-              <button class="btn btn-light" style="font-size: 0.8rem">Croissance </button>
+              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Tout sélectionner</button>
+              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Mettre en vente</button>
+              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Arrosage réalisé</button>
+              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Croissance </button>
             </div>
             <div id="containerPotager">
               <span *ngFor="let p of plantes"  style="z-index: 10" class="containerRangeePlante">
@@ -29,44 +29,48 @@
 
              
                <div class="zoneParam">
-                <div class="ajoutTerrain"> 
-                  <button type="button" class="btn btn-light"> Ajouter un terrain</button>
-                </div>
-                <div class="zoneBouton"> 
-                <div class="separationBouton">
-                        <p>Planter<p>
-                        <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem"
-                            [(ngModel)]="plante.typePlante" name="typePlante"
-                              (change)="ajoutPlante($event)"> ajouter 
-                                        
-                          <!--<option selected>Choix du terrain</option>-->
-                                <option value="" disabled selected>Ajouter</option>
-                                <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
-                                  {{t.value}}
-                                </option>
+                      
+                      <div class="ajoutTerrain"> 
+                        <button type="button" class="btn btn-light" (click)="ajoutTerrain()"> Ajouter un terrain</button>
+                      </div>
+
+                    <div class="zoneBouton"> 
                           
+                          <div class="separationBouton">
+                                  <p>Planter<p>
+                                  <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem"
+                                      [(ngModel)]="plante.typePlante" name="typePlante"
+                                        (change)="ajoutPlante($event)"> ajouter 
+                                                  
+                                    <!--<option selected>Choix du terrain</option>-->
+                                          <option value="" disabled selected>Ajouter</option>
+                                          <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
+                                            {{t.value}}
+                                          </option>
+                                    
 
-                        </select>
-                </div>
-                <div class="separationBouton">
-                         <p>Choix terrain<p>
-                        <select class="form-select" aria-label="Default select example" 
-                                style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
-                                (change)="affichagePlante($event)">
-                                
-                          <!--<option selected>Choix du terrain</option>-->
-                                <option selected>Choix du terrain</option>
+                                  </select>
+                          </div>
 
-                                <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
-                                
-                                        
-                                  {{terrain.id}} <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
-                                </option>
-                          
+                            <div class="separationBouton">
+                                    <p>Choix terrain<p>
+                                    <select class="form-select" aria-label="Default select example" 
+                                            style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
+                                            (change)="affichagePlante($event)">
+                                            
+                                      <!--<option selected>Choix du terrain</option>-->
+                                            <option selected>Choix du terrain</option>
 
-                        </select>
-                </div>  
-              </div>    
+                                            <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
+                                            
+                                                    
+                                              {{terrain.id}} <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
+                                            </option>
+                                      
+
+                                    </select>
+                            </div>  
+                      </div>    
               </div>
           </div>
     
