@@ -3,8 +3,9 @@
     <div
       class="col-lg-3 col-md-3 col-xs-6 mt-5 mb-3 box"
       *ngFor="let p of produitsObservable | async"
-    >
+      >
       <a [routerLink]="['/vendre', 'edit', p.id]" routerLinkActive="active">
+
         <div class="card">
           <div>
             <img
@@ -31,6 +32,28 @@
         </div>
       </a>
     </div>
+
+    <div
+    class="col-lg-3 col-md-3 col-xs-6 mt-5 mb-3 box"
+    >
+    <a [routerLink]="['/vendre', 'edit']" routerLinkActive="active">
+    <div class="card">
+      <div>
+        <img
+          class="col-lg-11"
+          src="../../../assets/images/plus.png"
+          alt="icone-plus"
+          id="icone-plus"
+        />
+      </div>
+      <div class="ajouter-annonce">
+        <h3 class="font-weight-bold" id="ajouter-annonce">Ajouter une annonce</h3>
+      </div>
+    </div>
+    </a>
+    </div>
+
   </div>
 </div>
+
 

@@ -14,7 +14,12 @@
 
           <div class="form-group">
             <label>Nom:</label>
-            <input class="form-control" [(ngModel)]="produit.plante!.typePlante" readonly/>
+            <input class="form-control" [(ngModel)]="produit.plante!.typePlante"/>
+          </div>
+
+          <div class="form-group">
+            <label>Nom:</label>
+            <input class="form-control" [(ngModel)]="produit.nom"/>
           </div>
 
           <div class="form-group">
@@ -45,6 +50,7 @@
           class= "btn btn--radius-2 btn--grey">Annuler</a>
 
           <button
+            *ngIf="produit.id!"
             (click)="delete(produit.id!)"
             class="btn btn--radius-2 btn--red"
             type="submit"
