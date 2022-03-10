@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-
 export class FichePlanteService {
   private static URL = 'http://localhost:8080/api/fiches_plante';
 
@@ -18,6 +17,10 @@ export class FichePlanteService {
 
   public get(id: number): Observable<FichePlante> {
     return this.httpClient.get<FichePlante>(`${FichePlanteService.URL}/${id}`);
+  }
+
+  public getByNom(nom: string): Observable<FichePlante> {
+    return this.httpClient.get<FichePlante>(`${FichePlanteService.URL}/${nom}`);
   }
 
   public delete(id: number): Observable<void> {
@@ -60,7 +63,5 @@ export class FichePlanteService {
       methodeRecolte: fichePlante.methodeRecolte,
     };
     return obj;
-
-}
-
+  }
 }

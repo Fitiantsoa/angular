@@ -1,3 +1,21 @@
 export enum TypePlante {
-    Ail, Aubergine, Betterave, Carotte, Concombre, Céléri, Chou, Courge, Courgette, Fenouil, Fraisier, Haricot, Laitue, Melon, Poireau, Pois, Poivron, Radis, Tomate
-    }
+  Ail = 'Ail',
+  Aubergine = 'Ail',
+  Betterave = 'Ail',
+  Carotte = 'Ail',
+  Concombre = 'Ail',
+  Céléri = 'Ail',
+  Chou = 'Ail',
+  Courge = 'Ail',
+  Courgette = 'Ail',
+  Fenouil = 'Ail',
+  Fraisier = 'Ail',
+  Haricot = 'Ail',
+  Laitue = 'Ail',
+  Melon = 'Ail',
+  Poireau = 'Ail',
+  Pois = 'Ail',
+  Poivron = 'Ail',
+  Radis = 'Ail',
+  Tomate = 'Ail',
+}

@@ -1,93 +1,118 @@
 <style>
-   select:invalid{
-        color: gray;
-    }
-    option{
-        color: black;
-    }
+  select:invalid {
+    color: gray;
+  }
+  option {
+    color: black;
+  }
 </style>
 
 <div class="containerPelouse">
-    <div class="containerGauche">
-            <div class="zoneBoutonHaut">
-              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Tout sélectionner</button>
-              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Mettre en vente</button>
-              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Arrosage réalisé</button>
-              <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Croissance </button>
-            </div>
-            <div id="containerPotager">
-              <button type="button" class="btn btn-primary-outline" *ngFor="let p of plantes"  style="z-index: 10" >
-                <img [src]="giveImage(p.typePlante)" class="plante"/>
-              </button>
-            </div>
-                      
-               <div class="zoneParam">
-                      
-                      <div class="ajoutTerrain"> 
-                        <button type="button" class="btn btn-light" (click)="ajoutTerrain()"> Ajouter un terrain</button>
-                      </div>
+  <div class="containerGauche">
+    <div class="zoneBoutonHaut">
+      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
+        Tout sélectionner
+      </button>
+      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
+        Mettre en vente
+      </button>
+      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
+        Arrosage réalisé
+      </button>
+      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
+        Croissance
+      </button>
+    </div>
+    <div id="containerPotager">
+      <button
+        type="button"
+        class="btn btn-primary-outline"
+        *ngFor="let p of plantes"
+        style="z-index: 10"
+      >
+        <img [src]="giveImage(p.typePlante)" class="plante" />
+      </button>
+    </div>
 
-                    <div class="zoneBouton"> 
-                          
-                          <div class="separationBouton">
-                                  <p>Planter &nbsp; <p>
-                                  <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem"
-                                      [(ngModel)]="plante.typePlante" name="typePlante"
-                                        (change)="ajoutPlante($event)"> ajouter :&nbsp
-                                                  
-                                    <!--<option selected>Choix du terrain</option>-->
-                                          
-                                          <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
-                                            {{t.value}}
-                                          </option>
-                                    
+    <div class="zoneParam">
+      <div class="ajoutTerrain">
+        <button type="button" class="btn btn-light" (click)="ajoutTerrain()">
+          Ajouter un terrain
+        </button>
+      </div>
 
-                                  </select>
-                          </div>
+      <div class="zoneBouton">
+        <div class="separationBouton">
+          <p>Planter &nbsp;</p>
+          <p>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              style="font-size: 0.8rem"
+              [(ngModel)]="plante.typePlante"
+              name="typePlante"
+              (change)="ajoutPlante($event)"
+            >
+              ajouter :&nbsp
 
-                            <div class="separationBouton">
-                                    <p>Choix terrain &nbsp; <p>
-                                    <select class="form-select" aria-label="Default select example" 
-                                            style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
-                                            (change)="affichagePlante($event)">
-                                            
-                                      <!--<option selected>Choix du terrain</option>-->
+              <!--<option selected>Choix du terrain</option>-->
 
-                                            <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
-                                            
-                                                    
-                                              {{terrain.id}} <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
-                                            </option>
-                                      
-
-                                    </select>
-                            </div>  
-                      </div>    
-              </div>
-          </div>
-    
-      <div class="containerDroite">
-
-            <div class="card" style="height:20%">
-              <h5 class="card-header">Ail</h5>
-              <p>Ail planté le 07/03/2022 à Montluçon </p>
-          
-            </div>
-
-            <div class="card" (click)="routeConseil()" style="height:25%">
-                <h5 class="card-header">Conseil</h5>
-                <i style="cursor: pointer"><u> Cliquez dans cette zone pour accéder aux fiches conseils.</u></i>
-            </div>
-
-            <div class="card" style="height:35%; display:flex; align-items: center">
-                <h5 class="card-header" style="width:100%">Mise en vente</h5>
-                <br>
-                <p>Plant d'ail :</p>
-                  <input type="text" placeholder="prix" style="width:95%"/>
-                  <input type="text" placeholder="quantite" style="width:95%"/>
-                  <br>
-                  <button type="button" class="btn btn-light" style="width:95%"> Valider </button>
-                
-            </div>
+              <option
+                *ngFor="let t of typesPlante | keyvalue"
+                [ngValue]="t.value"
+              >
+                {{ t.value }}
+              </option>
+            </select>
+          </p>
         </div>
+
+        <div class="separationBouton">
+          <p>Choix terrain &nbsp;</p>
+          <p>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              style="font-size: 0.8rem"
+              [(ngModel)]="utilisateur.terrain"
+              (change)="affichagePlante($event)"
+            >
+              <!--<option selected>Choix du terrain</option>-->
+
+              <option *ngFor="let terrain of terrains" [ngValue]="terrain">
+                {{ terrain.id }}
+                <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
+              </option>
+            </select>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="containerDroite">
+    <div class="card" style="height: 20%">
+      <h5 class="card-header">Ail</h5>
+      <p>Ail planté le 07/03/2022 à Montluçon</p>
+    </div>
+
+    <div class="card" *ngFor="let p of plantes" style="height: 25%">
+      <h5 class="card-header">Conseil {{ p.typePlante }}</h5>
+      <i style="cursor: pointer"
+        ><u> Cliquez dans cette zone pour accéder aux fiches conseils.</u></i
+      >
+    </div>
+
+    <div class="card" style="height: 35%; display: flex; align-items: center">
+      <h5 class="card-header" style="width: 100%">Mise en vente</h5>
+      <br />
+      <p>Plant d'ail :</p>
+      <input type="text" placeholder="prix" style="width: 95%" />
+      <input type="text" placeholder="quantite" style="width: 95%" />
+      <br />
+      <button type="button" class="btn btn-light" style="width: 95%">
+        Valider
+      </button>
+    </div>
+  </div>
+</div>
