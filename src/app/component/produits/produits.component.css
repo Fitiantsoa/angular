@@ -41,6 +41,10 @@
   box-shadow: 10px 5px 5px rgba(68, 20, 3, 0.76);
 }
 
+.margin {
+  margin-left: 5%;
+}
+
 h6,
 h3 {
   color: black;

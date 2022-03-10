@@ -1,21 +1,24 @@
 <div class="page-wrapper bg-gra-03">
-  <div class="row">
+  <div class="row margin">
     <div
-      class="col-lg-3 col-md-3 col-xs-6 mt-5 mb-3 box"
+      class="col-lg-3 col-md-4 col-xs-6 mt-5 d-flex justify-content-between ml-3 box mb-4"
       *ngFor="let p of produits"
     >
       <a [routerLink]="['/acheter', p.id]" routerLinkActive="active">
         <div>
           <div>
             <img
-              class="col-lg-11"
+              class="col-lg-11 ml-2"
               src="../../../assets/images/fiche-plante/plante/{{
                 p.plante!.typePlante
               }}.png"
               alt="{{ p.plante!.typePlante }}"
             />
           </div>
-          <div class="row d-flex justify-content-between">
+          <div class="text-center">
+            <h3>{{ p.plante!.typePlante }}</h3>
+          </div>
+          <div class="row d-flex justify-content-between ml-3 mr-3">
             <h6 class="text-black-50 font-italic font-weight-light">
               {{ p.prix }} €/Kg
             </h6>
@@ -23,8 +26,10 @@
               {{ p.stock }} Kg
             </h6>
           </div>
-          <div>
-            <h6>{{ p.utilisateur!.pseudo }}</h6>
+          <div class="row d-flex justify-content-between ml-3 mr-3">
+            <h6 class="text-black-50 font-weight-light text-center">
+              {{ p.utilisateur!.pseudo }}
+            </h6>
           </div>
         </div>
       </a>
