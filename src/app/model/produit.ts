@@ -1,3 +1,4 @@
+import { Utilisateur } from 'src/app/model/utilisateur';
 import { Plante } from "./plante";
 
 export class Produit {
@@ -6,14 +7,16 @@ export class Produit {
   private _stock: number | undefined;
   private _prix: number | undefined;
   private _plante: Plante | undefined;
+  private _utilisateur: Utilisateur | undefined;
 
 
-  constructor(id?: number, nom?: string, stock?: number, prix?: number, plante?: Plante) {
+  constructor(id?: number, nom?: string, stock?: number, prix?: number, plante?: Plante, utilisateur?: Utilisateur) {
     this._id = id;
     this._nom = nom;
     this._stock = stock;
     this._prix = prix;
     this._plante = plante;
+    this._utilisateur = utilisateur;
   }
 
   get id(): number | undefined {
@@ -54,5 +57,13 @@ export class Produit {
 
   set plante(value: Plante | undefined) {
     this._plante = value;
+  }
+
+  get utilisateur(): Utilisateur | undefined {
+    return this._utilisateur;
+  }
+
+  set utilisateur(value: Utilisateur | undefined) {
+    this._utilisateur = value;
   }
 }

@@ -42,6 +42,7 @@ import { CommandeComponent } from './component/commande/commande.component';
 import { ListVenteComponent } from './component/commande/vente/list/list-vente.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AchatComponent } from './component/acheter/achat/achat.component';
+import { EditProduitVendreComponent } from './component/vendre/edit-produit-vendre/edit-produit-vendre.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { AchatComponent } from './component/acheter/achat/achat.component';
     ListVenteComponent,
     ContactComponent,
     ProduitsComponent,
-    AchatComponent
+    AchatComponent,
+    EditProduitVendreComponent
   ],
   imports: [
     BrowserModule,

@@ -43,7 +43,9 @@ export class ContactComponent implements OnInit {
 
     sendForm() {
 
-      alert('Votre message a été envoyé!')
+
+      this.router.navigate(['/home']);
+      alert('Votre message a bien été envoyé!')
     }
 
 }

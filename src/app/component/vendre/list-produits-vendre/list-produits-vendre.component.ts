@@ -19,10 +19,4 @@ export class ListProduitsVendreComponent implements OnInit {
   }
 
 
-  delete(id: number) {
-    this.produitService.delete(id).subscribe((ok) => {
-      this.produitsObservable = this.produitService.getByUtilisateur();
-    });
-  }
-
 }
