@@ -35,7 +35,7 @@ export class AchatComponent implements OnInit {
         this.produitService.get(params['id']).subscribe((result) => {
           this.produit = result;
           if (this.produit.stock) {
-            for (let i = 1; i < this.produit.stock; i++) {
+            for (let i = 1; i <= this.produit.stock; i++) {
               this.choix_quantite.push(i);
             }
           }
