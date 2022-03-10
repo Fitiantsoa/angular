@@ -1,3 +1,5 @@
+import { UtilisateurService } from './../../../service/utilisateur.service';
+import { Utilisateur } from 'src/app/model/utilisateur';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produit } from 'src/app/model/produit';
@@ -17,11 +19,13 @@ export class AchatComponent implements OnInit {
   quantite: number = 0;
   choix_quantite: number[] = [];
   prix_total: number = 0;
+  utilisateur: Utilisateur = new Utilisateur();
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private produitService: ProduitService,
     private commandeService: CommandeService,
+    private utilisateurService: UtilisateurService,
     private router: Router
   ) {}
 
@@ -54,12 +58,18 @@ export class AchatComponent implements OnInit {
       commande.commandeProduits = commandeProduits;
 
       this.produit.stock -= this.quantite;
-      console.log(this.quantite);
 
-      this.commandeService.create(commande).subscribe((ok) => {
-        this.produitService
-          .update(this.produit)
-          .subscribe((ok) => this.router.navigate(['/achat']));
+      this.utilisateurService.info().subscribe((result) => {
+        this.utilisateur = result;
+        if (!this.utilisateur.adresse) {
+          this.router.navigate(['/user']);
+        } else {
+          this.commandeService.create(commande).subscribe((ok) => {
+            this.produitService
+              .update(this.produit)
+              .subscribe((ok) => this.router.navigate(['/achat']));
+          });
+        }
       });
     }
   }

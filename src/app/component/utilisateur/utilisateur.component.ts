@@ -1,7 +1,7 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Adresse } from './../../model/adresse';
 import { Component, OnInit } from '@angular/core';
 import { Utilisateur } from '../../model/utilisateur';
-import { ActivatedRoute } from '@angular/router';
 import { UtilisateurService } from '../../service/utilisateur.service';
 import { Civilite } from 'src/app/model/civilite';
 
@@ -16,7 +16,8 @@ export class UtilisateurComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private utilisateurService: UtilisateurService
+    private utilisateurService: UtilisateurService,
+    private router: Router
   ) {
     this.utilisateur.civilite = Civilite.MME;
     this.utilisateur.adresse = new Adresse();
@@ -45,7 +46,9 @@ export class UtilisateurComponent implements OnInit {
 
   save() {
     if (this.utilisateur.id != null) {
-      this.utilisateurService.update(this.utilisateur).subscribe((ok) => {});
+      this.utilisateurService.update(this.utilisateur).subscribe((ok) => {
+        this.router.navigate(['/achat']);
+      });
     } else {
       this.utilisateurService.create(this.utilisateur).subscribe((ok) => {});
     }
