@@ -66,7 +66,7 @@ export class TerrainComponent implements OnInit {
     this.terrainService.getTerrainWithPlantes(this.utilisateur!.terrain!.id!).subscribe((result) => {
       this.plantes = result;
       
-     // this.router.navigate(['/terrain']);
+     this.router.navigate(['/terrain']);
     });}
 
   ajoutPlante(p: any){
@@ -74,12 +74,14 @@ export class TerrainComponent implements OnInit {
     console.log(this.plante+" this plante");
     this.plante.terrain=this.utilisateur!.terrain!;
     this.planteService.create(this.plante!).subscribe((ok) => {})
+    this.router.navigate(['/terrain'])
   }
 
   ajoutTerrain(){
     console.log(this.terrain);
     this.terrainService.create(this.terrain).subscribe((ok)=> {})
     this.showInformation();
+    this.router.navigate(['/terrain']);
   }
   
     //this.terrainService.getTerrainWithPlantes(id).subscribe((ok) => {
@@ -97,37 +99,37 @@ export class TerrainComponent implements OnInit {
       break;
       case 'Aubergine': pathImage='./assets/images/Auberginepetite.PNG';
       break;
-      case 'Betterave': pathImage='../assets/images/fiche-plante/plante/3.png';
+      case 'Betterave': pathImage='../assets/images/fiche-plante/plante/Betterave.png';
       break;
       case 'Carotte': pathImage='../assets/images/carotte.png';
       break;
-      case 'Concombre': pathImage='../assets/images/fiche-plante/plante/7.png';
+      case 'Concombre': pathImage='../assets/images/fiche-plante/plante/Concombre.png';
       break;
-      case 'Céléri': pathImage='../assets/images/fiche-plante/plante/5.png';
+      case 'Céléri': pathImage='../assets/images/fiche-plante/plante/Céléri.png';
       break;
-      case 'Chou': pathImage='./assets/images/fiche-plante/plante/6.png';
+      case 'Chou': pathImage='./assets/images/fiche-plante/plante/Chou.png';
       break;
-      case 'Courge': pathImage='./assets/images/fiche-plante/plante/8.png';
+      case 'Courge': pathImage='./assets/images/fiche-plante/plante/Courge.png';
       break;
-      case 'Courgette': pathImage='./assets/images/fiche-plante/plante/9.png';
+      case 'Courgette': pathImage='./assets/images/fiche-plante/plante/Courgette.png';
       break;
-      case 'Fenouil': pathImage='./assets/images/fiche-plante/plante/11.png';
+      case 'Fenouil': pathImage='./assets/images/fiche-plante/plante/Fenouil.png';
       break;
-      case 'Fraisier': pathImage='./assets/images/fiche-plante/plante/13.png';
+      case 'Fraisier': pathImage='./assets/images/fiche-plante/plante/Fraisier.png';
       break;
-      case 'Haricot': pathImage='./assets/images/fiche-plante/plante/7.png';
+      case 'Haricot': pathImage='./assets/images/fiche-plante/plante/Haricotpng';
       break;
-      case 'Laitue': pathImage='../assets/images/fiche-plante/plante/6.png';
+      case 'Laitue': pathImage='../assets/images/fiche-plante/plante/Laitue.png';
       break;
-      case 'Melon': pathImage='./assets/images/fiche-plante/plante/18.png';
+      case 'Melon': pathImage='./assets/images/fiche-plante/plante/Melon.png';
       break;
-      case 'Poireau': pathImage='./assets/images/fiche-plante/plante/24.png';
+      case 'Poireau': pathImage='./assets/images/fiche-plante/plante/Poireau.png';
       break;
-      case 'Pois': pathImage='./assets/images/fiche-plante/plante/25.png';
+      case 'Pois': pathImage='./assets/images/fiche-plante/plante/Pois.png';
       break;
-      case 'Radis': pathImage='./assets/images/fiche-plante/plante/28.png';
+      case 'Radis': pathImage='./assets/images/fiche-plante/plante/Radis.png';
       break;
-      case 'Tomate': pathImage='../assets/images/fiche-plante/plante/31.png';
+      case 'Tomate': pathImage='../assets/images/fiche-plante/plante/Tomate.png';
       break;
      default: pathImage='../assets/images/carotte.png';
     }
