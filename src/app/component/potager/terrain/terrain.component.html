@@ -20,14 +20,7 @@
                 <img [src]="giveImage(p.typePlante)" class="plante"/>
             </span>
             </div>
-         <!--   class="containerRangeePlante"> 
-          <span *ngFor="let d of departements" class="containerUneRangee">
-                <img [src]="giveImage(d.id)" class="plante"/>
-            </span>
-          </div>-->
-
-
-             
+                      
                <div class="zoneParam">
                       
                       <div class="ajoutTerrain"> 
@@ -74,25 +67,27 @@
               </div>
           </div>
     
-    <div class="containerDroite">
-          <div class="card" style="height:20%">
-            <h5 class="card-header">Ail</h5>
-            <p>Ail planté le 07/03/2022 à Montluçon </p>
-        
-          </div>
-          <div class="card" (click)="routeConseil()" style="height:25%">
-            <h5 class="card-header">Conseil</h5>
-            <i style="cursor: pointer"><u> Cliquez dans cette zone pour accéder aux fiches conseils.</u></i>
-          </div>
-          <div class="card" style="height:25%; display:flex; align-items: center">
-            <h5 class="card-header" style="width:100%">Mise en vente</h5>
-            <br>
-            <input type="text" placeholder="prix" style="width:95%">
-            <input type="text" placeholder="quantite" style="width:95%">
-          </div>
-    </div>
+      <div class="containerDroite">
 
+            <div class="card" style="height:20%">
+              <h5 class="card-header">Ail</h5>
+              <p>Ail planté le 07/03/2022 à Montluçon </p>
+          
+            </div>
 
+            <div class="card" (click)="routeConseil()" style="height:25%">
+                <h5 class="card-header">Conseil</h5>
+                <i style="cursor: pointer"><u> Cliquez dans cette zone pour accéder aux fiches conseils.</u></i>
+            </div>
+
+            <div class="card" style="height:30%; display:flex; align-items: center">
+                <h5 class="card-header" style="width:100%">Mise en vente</h5>
+                <br>
+                  <input type="text" placeholder="prix" style="width:95%"/>
+                  <input type="text" placeholder="quantite" style="width:95%"/>
+                  <br>
+                  <button type="button" class="btn btn-light" style="width:95%"> Valider </button>
+                
+            </div>
+        </div>
   </div>
-
-<br>
