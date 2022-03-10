@@ -1,18 +1,19 @@
-.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  padding: 0!important;
-  margin: -1px!important;
-  overflow: hidden!important;
-  clip: rect(0,0,0,0)!important;
-  white-space: nowrap!important;
-  border: 0!important;
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 .badge {
   display: inline-block;
   padding: 0.35em 0.65em;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 700;
   line-height: 1;
   color: #fff;
@@ -22,10 +23,10 @@
   border-radius: 0.25rem;
 }
 .bg-secondary {
-  background-color: #6c757d!important;
+  background-color: #6c757d !important;
 }
 .bg-success {
-  background-color: #198754!important;
+  background-color: #198754 !important;
 }
 /* ==========================================================================
    #FONT
@@ -327,23 +328,23 @@ h6 {
 .bg-gra-03 {
   background: -webkit-linear-gradient(
     bottom left,
-    rgb(171 70 36) 0%,
-    rgb(247, 230, 210) 80%
+    rgba(71, 28, 13, 0.26) 0%,
+    rgba(247, 230, 210, 0.288) 80%
   );
   background: -moz-linear-gradient(
     bottom left,
-    rgb(171 70 36) 0%,
-    rgba(247, 230, 210) 80%
+    rgba(71, 28, 13, 0.26) 0%,
+    rgba(247, 230, 210, 0.288) 80%
   );
   background: -o-linear-gradient(
     bottom left,
-    rgb(171 70 36) 0%,
-    rgba(247, 230, 210) 80%
+    rgba(71, 28, 13, 0.26) 0%,
+    rgba(247, 230, 210, 0.288) 80%
   );
   background: linear-gradient(
     to top right,
-    rgb(171 70 36) 0%,
-    rgb(247, 230, 210) 100%
+    rgba(71, 28, 13, 0.26) 0%,
+    rgba(247, 230, 210, 0.288) 80%
   );
 }
 

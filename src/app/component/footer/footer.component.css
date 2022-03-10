@@ -13,7 +13,7 @@
   color: rgb(248, 230, 214);
 }
 .footer-10 p {
-  color: rgba(243, 221, 188, 0.712);
+  color: rgba(248, 215, 187, 0.712);
 }
 .footer-10 a {
   color: rgba(243, 221, 188, 0.712);
@@ -30,7 +30,7 @@
   border-radius: 0;
 }
 .footer-10 .subscribe-form .form-group input {
-  background: rgba(245, 228, 204, 0.712) !important;
+  background: rgba(247, 230, 210, 0.541) 80% !important;
   border: none !important;
   outline: none !important;
   color: rgb(37, 11, 3) !important;
