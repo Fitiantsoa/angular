@@ -207,8 +207,7 @@ const routes: Routes = [
 
   {
     path: 'contact',
-    component: ContactComponent,
-    canActivate: [IsLoggedOutGuard],
+    component: ContactComponent
   },
 
   {
