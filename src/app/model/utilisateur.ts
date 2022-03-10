@@ -8,19 +8,22 @@ export class Utilisateur {
   private _adresse: Adresse | undefined;
   private _compte: Compte | undefined;
   private _terrain: Terrain | undefined;
+  private _pseudo: string | undefined;
 
   constructor(
     id?: number,
     adresse?: Adresse,
     compte?: Compte,
     civilite?: Civilite,
-    terrain?: Terrain
+    terrain?: Terrain,
+    pseudo?: string
   ) {
     this._id = id;
     this._adresse = adresse;
     this._compte = compte;
     this._civilite = civilite;
     this._terrain = terrain;
+    this._pseudo = pseudo;
   }
 
   /**
@@ -54,22 +57,21 @@ export class Utilisateur {
   public set id(value: number | undefined) {
     this._id = value;
   }
-    /**
-     * Getter terrain
-     * @return {Terrain }
-     */
-	public get terrain(): Terrain | undefined {
-		return this._terrain;
-	}
+  /**
+   * Getter terrain
+   * @return {Terrain }
+   */
+  public get terrain(): Terrain | undefined {
+    return this._terrain;
+  }
 
-    /**
-     * Setter terrain
-     * @param {Terrain } value
-     */
-	public set terrain(value: Terrain | undefined ) {
-		this._terrain = value;
-	}
-  
+  /**
+   * Setter terrain
+   * @param {Terrain } value
+   */
+  public set terrain(value: Terrain | undefined) {
+    this._terrain = value;
+  }
 
   /**
    * Setter adresse
@@ -101,5 +103,21 @@ export class Utilisateur {
    */
   public set civilite(value: Civilite | undefined) {
     this._civilite = value;
+  }
+
+  /**
+   * Getter pseudo
+   * @return {string }
+   */
+  public get pseudo(): string | undefined {
+    return this._pseudo;
+  }
+
+  /**
+   * Setter pseudo
+   * @param {string } value
+   */
+  public set pseudo(value: string | undefined) {
+    this._pseudo = value;
   }
 }

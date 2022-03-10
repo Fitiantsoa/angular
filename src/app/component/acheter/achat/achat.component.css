@@ -1,0 +1,231 @@
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+.font-robo {
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.font-opensans {
+  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+}
+
+/* ==========================================================================
+       #BOX-SIZING
+       ========================================================================== */
+/**
+     * More sensible default box-sizing:
+     * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+     */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(68, 20, 3, 0.76);
+}
+
+.imageCss {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* ==========================================================================
+       #PAGE WRAPPER
+       ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@1,500&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================================================================
+       #BACKGROUND
+       ========================================================================== */
+.bg-blue {
+  background: #2c6ed5;
+}
+
+.bg-red {
+  background: #fa4251;
+}
+
+.bg-gra-03 {
+  background: -webkit-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgb(247, 230, 210) 80%
+  );
+  background: -moz-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgba(247, 230, 210) 80%
+  );
+  background: -o-linear-gradient(
+    bottom left,
+    rgb(171 70 36) 0%,
+    rgba(247, 230, 210) 80%
+  );
+  background: linear-gradient(
+    to top right,
+    rgb(171 70 36) 0%,
+    rgb(247, 230, 210) 100%
+  );
+}
+
+/* ==========================================================================
+       #SPACING
+       ========================================================================== */
+.p-t-100 {
+  padding-top: 100px;
+}
+
+.p-t-130 {
+  padding-top: 130px;
+}
+
+.p-t-180 {
+  padding-top: 180px;
+}
+
+.p-t-45 {
+  padding-top: 45px;
+}
+
+.p-t-20 {
+  padding-top: 20px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-t-30 {
+  padding-top: 30px;
+}
+
+.p-b-100 {
+  padding-bottom: 100px;
+}
+
+.p-b-50 {
+  padding-bottom: 50px;
+}
+
+.m-r-45 {
+  margin-right: 45px;
+}
+
+.m-r-55 {
+  margin-right: 55px;
+}
+
+.m-b-55 {
+  margin-bottom: 55px;
+}
+
+/* ==========================================================================
+       #WRAPPER
+       ========================================================================== */
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.wrapper--w790 {
+  max-width: 790px;
+}
+
+.wrapper--w780 {
+  max-width: 780px;
+}
+
+.wrapper--w680 {
+  max-width: 680px;
+}
+
+/* ==========================================================================
+       #BUTTON
+       ========================================================================== */
+.btn {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 50px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  font-family: inherit;
+}
+
+.btn--radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn--radius-2 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn--pill {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.btn--green {
+  background: #52b649;
+}
+
+.btn--green:hover {
+  background: #52b649;
+}
+
+.btn--blue {
+  background: #4272d7;
+}
+
+.btn--blue:hover {
+  background: #3868cd;
+}
+
+.btn--red {
+  background: #d41a1a;
+}
+
+.btn--red:hover {
+  background: #d41a1a;
+}

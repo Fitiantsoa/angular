@@ -30,7 +30,6 @@ export class ProduitService {
     );
   }
 
-
   public update(produit: Produit): Observable<Produit> {
     return this.httpClient.put<Produit>(
       ProduitService.URL,

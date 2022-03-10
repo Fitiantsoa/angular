@@ -28,15 +28,16 @@
   margin-top: 30px !important;
 }
 
-.card {
+.box {
   margin-left: 10%;
   margin-right: 5%;
   border-color: rgba(248, 248, 248, 0.548);
   border-width: 2px;
+  border-radius: 15px;
+  background-color: aliceblue;
 }
 
-.card:hover {
-  border-color: rgba(241, 239, 238, 0.548);
+.box:hover {
   box-shadow: 10px 5px 5px rgba(68, 20, 3, 0.76);
 }
 

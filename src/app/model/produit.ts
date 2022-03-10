@@ -1,5 +1,5 @@
 import { Utilisateur } from 'src/app/model/utilisateur';
-import { Plante } from "./plante";
+import { Plante } from './plante';
 
 export class Produit {
   private _id: number | undefined;
@@ -9,8 +9,14 @@ export class Produit {
   private _plante: Plante | undefined;
   private _utilisateur: Utilisateur | undefined;
 
-
-  constructor(id?: number, nom?: string, stock?: number, prix?: number, plante?: Plante, utilisateur?: Utilisateur) {
+  constructor(
+    id?: number,
+    nom?: string,
+    stock?: number,
+    prix?: number,
+    plante?: Plante,
+    utilisateur?: Utilisateur
+  ) {
     this._id = id;
     this._nom = nom;
     this._stock = stock;
