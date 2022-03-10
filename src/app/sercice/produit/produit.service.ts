@@ -28,7 +28,6 @@ export class ProduitService {
     );
   }
 
-
   public update(produit: Produit): Observable<Produit> {
     console.log(this.produitToJson(produit));
     return this.httpClient.put<Produit>(
@@ -51,7 +50,6 @@ export class ProduitService {
       nom: produit.nom,
       prix: produit.prix,
       stock: produit.stock,
-      plante: produit.plante,
       utilisateur: produit.utilisateur,
     };
     return obj;

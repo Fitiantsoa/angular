@@ -5,7 +5,7 @@
       *ngFor="let p of produits"
     >
       <a [routerLink]="['/acheter', p.id]" routerLinkActive="active">
-        <div class="card">
+        <div>
           <div>
             <img
               class="col-lg-11"
@@ -15,19 +15,16 @@
               alt="{{ p.plante!.typePlante }}"
             />
           </div>
-          <div>
-            <h3 class="font-weight-bold">{{ p.plante!.typePlante }}</h3>
+          <div class="row d-flex justify-content-between">
+            <h6 class="text-black-50 font-italic font-weight-light">
+              {{ p.prix }} €/Kg
+            </h6>
+            <h6 class="text-black-50 font-italic font-weight-light">
+              {{ p.stock }} Kg
+            </h6>
           </div>
           <div>
-            <div class="column">
-              <h6 class="text-right">{{ p.prix }} €/Kg</h6>
-              <h6
-                class="text-right text-black-50 font-italic font-weight-light"
-              >
-                {{ p.stock }} Kg
-              </h6>
-              <h6></h6>
-            </div>
+            <h6>{{ p.utilisateur!.pseudo }}</h6>
           </div>
         </div>
       </a>
