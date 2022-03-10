@@ -26,13 +26,19 @@
 .col-md-3,
 .col-xs-6 {
   margin-top: 30px !important;
+  display: flex;
+  align-items: center;
 }
+
+
+
 
 .card {
   margin-left: 10%;
   margin-right: 5%;
   border-color: rgba(248, 248, 248, 0.548);
   border-width: 2px;
+
 }
 
 .card:hover {
@@ -50,7 +56,32 @@ h3 {
   font-size: 20px;
   margin-left: 3%;
 }
+
 h6 {
   font-size: 13px;
   margin-right: 3%;
+}
+
+#ajouter-annonce {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media(max-width: 780px){
+  #icone-plus{
+  height: 160px;
+  }
+
+.col-lg-2,
+.col-md-3,
+.col-xs-6 {
+  margin-top: 30px !important;
+  display: flex;
+  flex-flow: column;
+}
 }

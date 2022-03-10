@@ -52,6 +52,7 @@ export class ProduitService {
       prix: produit.prix,
       stock: produit.stock,
       plante: produit.plante,
+      utilisateur: produit.utilisateur,
     };
     return obj;
   }
