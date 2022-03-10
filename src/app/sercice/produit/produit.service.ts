@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produit } from 'src/app/model/produit';
+import { Plante } from "../../model/plante";
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +23,7 @@ export class ProduitService {
   }
 
   public create(produit: Produit): Observable<Produit> {
+    produit.plante = new Plante(164);
     return this.httpClient.post<Produit>(
       ProduitService.URL,
       this.produitToJson(produit)
@@ -30,7 +32,6 @@ export class ProduitService {
 
 
   public update(produit: Produit): Observable<Produit> {
-    console.log(this.produitToJson(produit));
     return this.httpClient.put<Produit>(
       ProduitService.URL,
       this.produitToJson(produit)
@@ -51,7 +52,9 @@ export class ProduitService {
       nom: produit.nom,
       prix: produit.prix,
       stock: produit.stock,
-      plante: produit.plante,
+      plante: {
+        "id": produit.plante?.id
+      },
       utilisateur: produit.utilisateur,
     };
     return obj;
