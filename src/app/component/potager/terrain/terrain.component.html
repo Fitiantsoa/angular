@@ -37,13 +37,13 @@
                     <div class="zoneBouton"> 
                           
                           <div class="separationBouton">
-                                  <p>Planter<p>
+                                  <p>Planter &nbsp; <p>
                                   <select class="form-select" aria-label="Default select example" style ="font-size: 0.8rem"
                                       [(ngModel)]="plante.typePlante" name="typePlante"
-                                        (change)="ajoutPlante($event)"> ajouter 
+                                        (change)="ajoutPlante($event)"> ajouter :&nbsp
                                                   
                                     <!--<option selected>Choix du terrain</option>-->
-                                          <option value="" disabled selected>Ajouter</option>
+                                          <option value="" disabled selected>Ajouter </option>
                                           <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
                                             {{t.value}}
                                           </option>
@@ -53,13 +53,13 @@
                           </div>
 
                             <div class="separationBouton">
-                                    <p>Choix terrain<p>
+                                    <p>Choix terrain &nbsp; <p>
                                     <select class="form-select" aria-label="Default select example" 
                                             style ="font-size: 0.8rem" [(ngModel)]="utilisateur.terrain" 
                                             (change)="affichagePlante($event)">
                                             
                                       <!--<option selected>Choix du terrain</option>-->
-                                            <option selected>Choix du terrain</option>
+                                            <option selected>Choix du terrain  </option>
 
                                             <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
                                             
@@ -75,16 +75,17 @@
           </div>
     
     <div class="containerDroite">
-          <div class="card" style="height:15%">
-            <h5 class="card-header">Lorem, ipsum dolor</h5>
-            sit amet consectetur adipisicing elit. Quisquam deserunt porro,  explicabo.
+          <div class="card" style="height:20%">
+            <h5 class="card-header">Ail</h5>
+            <p>Ail planté le 07/03/2022 à Montluçon </p>
+        
           </div>
-          <div class="card" style="height:25%">
-            <h5 class="card-header">Lorem, ipsum dolor</h5>
-            sit amet consectetur adipisicing elit. Quisquam deserunt porro, pariatur tempora ad dolorem autem molestiae sed! Assumenda quaerat fuga nisi voluptas, deserunt explicabo.
+          <div class="card" (click)="routeConseil()" style="height:25%">
+            <h5 class="card-header">Conseil</h5>
+            <i style="cursor: pointer"><u> Cliquez dans cette zone pour accéder aux fiches conseils.</u></i>
           </div>
           <div class="card" style="height:25%; display:flex; align-items: center">
-            <h5 class="card-header" style="width:100%">Lorem, ipsum dolor</h5>
+            <h5 class="card-header" style="width:100%">Mise en vente</h5>
             <br>
             <input type="text" placeholder="prix" style="width:95%">
             <input type="text" placeholder="quantite" style="width:95%">
