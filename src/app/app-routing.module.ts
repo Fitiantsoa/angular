@@ -31,6 +31,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AchatComponent } from './component/acheter/achat/achat.component';
 import { EditProduitVendreComponent } from './component/vendre/edit-produit-vendre/edit-produit-vendre.component';
+import { CreateProduitVendreComponent } from './component/vendre/create-produit-vendre/create-produit-vendre.component';
 
 const routes: Routes = [
   {
@@ -218,6 +219,12 @@ const routes: Routes = [
   {
     path: 'vendre/edit/:id',
     component: EditProduitVendreComponent,
+    canActivate: [IsLoggedInGuard],
+  },
+
+  {
+    path: 'vendre/create',
+    component: CreateProduitVendreComponent,
     canActivate: [IsLoggedInGuard],
   },
 

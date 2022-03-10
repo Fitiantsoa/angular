@@ -72,7 +72,11 @@ img {
   margin-right: auto;
 }
 
-@media(max-width: 780px){
+#icone-plus{
+  height: 130px;
+}
+
+@media(max-width: 765px){
   #icone-plus{
   height: 160px;
   }
