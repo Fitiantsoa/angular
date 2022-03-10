@@ -5,7 +5,6 @@
 .containerPelouse {
   display: flex;
   flex-direction: row;
-  background-image: url("/assets/images/fondPelouse.JPG");
   justify-content: flex-start;
   width: 98%;
   height: 700px;
@@ -22,6 +21,9 @@
   align-items: center;
   justify-content: flex-start;
   margin-left: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-image: url("/assets/images/fondPelouse.JPG");
 }
 
 #containerPotager {
@@ -40,7 +42,7 @@
   background-image: url("/assets/images/fondTerre.JPG");
   border-radius: 15px;
   background-size: cover;
-  width: 630px;
+  width: 640px;
   height: 520px;
   z-index: 3;
   margin-bottom: 8px;
@@ -100,9 +102,9 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 50%;
+  width: 42%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: 30px;
 }
 
@@ -116,6 +118,11 @@
   border-radius: 15px;
   z-index: 2;
   text-align: center;
+}
+.card-header {
+  background-color: rgba(102, 42, 22, 0.753);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .separationBouton {

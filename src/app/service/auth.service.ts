@@ -21,6 +21,8 @@ export class AuthService {
   public isAuthenticated(): string | null {
     return localStorage.getItem('token');
   }
+ 
+  
 
   public role(): string | null {
     return localStorage.getItem('role');

@@ -57,7 +57,8 @@ export class TerrainComponent implements OnInit {
 
   showInformation() {
       this.terrainService.get().subscribe((result) => {
-      this.terrains = result;
+      console.log(result);
+        this.terrains = result;
     });
   }
   
@@ -74,6 +75,7 @@ export class TerrainComponent implements OnInit {
     console.log(this.plante+" this plante");
     this.plante.terrain=this.utilisateur!.terrain!;
     this.planteService.create(this.plante!).subscribe((ok) => {})
+    this.affichagePlante(p);
     this.router.navigate(['/terrain'])
   }
 
@@ -88,7 +90,9 @@ export class TerrainComponent implements OnInit {
     // this.plantes = const result;
       
     //});}
-
+  routeConseil() {
+    this.router.navigate(['/fiches_plante']);
+  }
 
   giveImage(value: any){
     let pathImage: string='';
@@ -117,7 +121,7 @@ export class TerrainComponent implements OnInit {
       break;
       case 'Fraisier': pathImage='./assets/images/fiche-plante/plante/Fraisier.png';
       break;
-      case 'Haricot': pathImage='./assets/images/fiche-plante/plante/Haricotpng';
+      case 'Haricot': pathImage='./assets/images/fiche-plante/plante/Haricot.png';
       break;
       case 'Laitue': pathImage='../assets/images/fiche-plante/plante/Laitue.png';
       break;
@@ -126,6 +130,8 @@ export class TerrainComponent implements OnInit {
       case 'Poireau': pathImage='./assets/images/fiche-plante/plante/Poireau.png';
       break;
       case 'Pois': pathImage='./assets/images/fiche-plante/plante/Pois.png';
+      break;
+      case 'Poivron': pathImage='./assets/images/fiche-plante/plante/Poivron.png';
       break;
       case 'Radis': pathImage='./assets/images/fiche-plante/plante/Radis.png';
       break;
