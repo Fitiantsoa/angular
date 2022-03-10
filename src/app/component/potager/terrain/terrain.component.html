@@ -16,9 +16,9 @@
               <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">Croissance </button>
             </div>
             <div id="containerPotager">
-              <span *ngFor="let p of plantes"  style="z-index: 10" class="containerRangeePlante">
+              <button type="button" class="btn btn-primary-outline" *ngFor="let p of plantes"  style="z-index: 10" >
                 <img [src]="giveImage(p.typePlante)" class="plante"/>
-            </span>
+              </button>
             </div>
                       
                <div class="zoneParam">

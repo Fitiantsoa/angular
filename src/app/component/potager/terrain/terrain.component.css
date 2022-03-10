@@ -107,6 +107,17 @@
   justify-content: flex-start;
   margin-left: 30px;
 }
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80px;
+}
 
 .card {
   display: flex;
