@@ -76,7 +76,6 @@ export class TerrainComponent implements OnInit {
     this.plante.terrain=this.utilisateur!.terrain!;
     this.planteService.create(this.plante!).subscribe((ok) => {})
     this.affichagePlante(p);
-    this.router.navigate(['/terrain'])
   }
 
   ajoutTerrain(){

@@ -36,7 +36,7 @@
                                         (change)="ajoutPlante($event)"> ajouter :&nbsp
                                                   
                                     <!--<option selected>Choix du terrain</option>-->
-                                          <option value="" disabled selected>Ajouter </option>
+                                          
                                           <option *ngFor="let t of typesPlante | keyvalue" [ngValue]="t.value">
                                             {{t.value}}
                                           </option>
@@ -52,7 +52,6 @@
                                             (change)="affichagePlante($event)">
                                             
                                       <!--<option selected>Choix du terrain</option>-->
-                                            <option selected>Choix du terrain  </option>
 
                                             <option *ngFor="let terrain of terrains" [ngValue]="terrain"> 
                                             
