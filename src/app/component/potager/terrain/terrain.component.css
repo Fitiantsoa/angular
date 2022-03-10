@@ -107,6 +107,17 @@
   justify-content: flex-start;
   margin-left: 30px;
 }
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80px;
+}
 
 .card {
   display: flex;
@@ -121,8 +132,8 @@
 }
 .card-header {
   background-color: rgba(102, 42, 22, 0.753);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
 }
 
 .separationBouton {
