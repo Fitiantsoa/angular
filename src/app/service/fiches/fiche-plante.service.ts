@@ -1,4 +1,3 @@
-import { TypePlante } from 'src/app/model/type-plante';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FichePlante } from '../../model/fiches/fiche-plante';
 import { Observable } from 'rxjs';
@@ -20,7 +19,7 @@ export class FichePlanteService {
     return this.httpClient.get<FichePlante>(`${FichePlanteService.URL}/${id}`);
   }
 
-  public getByNom(typePlante: TypePlante): Observable<FichePlante> {
+  public getByNom(typePlante: string): Observable<FichePlante> {
     return this.httpClient.get<FichePlante>(
       `${FichePlanteService.URL}/${typePlante}`
     );

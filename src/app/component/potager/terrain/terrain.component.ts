@@ -26,7 +26,7 @@ export class TerrainComponent implements OnInit {
   //id: number =101;
   plante: Plante = new Plante();
   terrain: Terrain = new Terrain();
-  typesPlante = TypePlante;
+  typesPlante: string[] = [];
   fichesPlanteId: number[] = [];
 
   constructor(
@@ -49,6 +49,7 @@ export class TerrainComponent implements OnInit {
     //  this.terrains = result;
     //})
     this.showInformation();
+    this.getListPlante();
     //this.affichagePlante();
   }
 
@@ -56,6 +57,14 @@ export class TerrainComponent implements OnInit {
     this.terrainService.get().subscribe((result) => {
       console.log(result);
       this.terrains = result;
+    });
+  }
+
+  getListPlante() {
+    this.ficheService.getAll().subscribe((result) => {
+      for (let f of result) {
+        this.typesPlante.push(f.nom!);
+      }
     });
   }
 
