@@ -8,115 +8,165 @@
 </style>
 
 <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-<div class="wrapper wrapper--w790">
-<div class="containerPelouse">
-  <div class="containerGauche">
-    <div class="zoneBoutonHaut">
-      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
-        Tout sélectionner
-      </button>
-      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
-        Mettre en vente
-      </button>
-      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
-        Arrosage réalisé
-      </button>
-      <button class="btn btn-light" style="font-size: 0.8rem" disabled="true">
-        Croissance
-      </button>
-    </div>
-    <div id="containerPotager">
-      <button
-        type="button"
-        class="btn btn-primary-outline"
-        *ngFor="let p of plantes"
-        style="z-index: 10"
-      >
-        <img [src]="giveImage(p.typePlante)" class="plante" />
-      </button>
-    </div>
-
-    <div class="zoneParam">
-      <div class="ajoutTerrain">
-        <button type="button" class="btn btn-light" (click)="ajoutTerrain()">
-          Ajouter un terrain
-        </button>
-      </div>
-
-      <div class="zoneBouton">
-        <div class="separationBouton">
-          <p>Planter &nbsp;</p>
-          <p>
-            <select
-              class="form-select"
-              aria-label="Default select example"
-              style="font-size: 0.8rem"
-              [(ngModel)]="plante.typePlante"
-              name="typePlante"
-              (change)="ajoutPlante($event)"
-            >
-              ajouter :&nbsp
-
-              <!--<option selected>Choix du terrain</option>-->
-
-              <option
-                *ngFor="let t of typesPlante | keyvalue"
-                [ngValue]="t.value"
-              >
-                {{ t.value }}
-              </option>
-            </select>
-          </p>
+  <div class="wrapper wrapper--w790">
+    <div class="containerPelouse">
+      <div class="containerGauche">
+        <div class="zoneBoutonHaut">
+          <button
+            class="btn btn-light"
+            style="font-size: 0.8rem"
+            disabled="true"
+          >
+            Tout sélectionner
+          </button>
+          <button
+            class="btn btn-light"
+            style="font-size: 0.8rem"
+            disabled="true"
+          >
+            Mettre en vente
+          </button>
+          <button
+            class="btn btn-light"
+            style="font-size: 0.8rem"
+            disabled="true"
+          >
+            Arrosage réalisé
+          </button>
+          <button
+            class="btn btn-light"
+            style="font-size: 0.8rem"
+            disabled="true"
+          >
+            Croissance
+          </button>
+        </div>
+        <div id="containerPotager">
+          <button
+            type="button"
+            class="btn btn-primary-outline"
+            *ngFor="let p of plantes"
+            style="z-index: 10"
+          >
+            <img [src]="giveImage(p.typePlante)" class="plante" />
+          </button>
         </div>
 
-        <div class="separationBouton">
-          <p>Choix terrain &nbsp;</p>
-          <p>
-            <select
-              class="form-select"
-              aria-label="Default select example"
-              style="font-size: 0.8rem"
-              [(ngModel)]="utilisateur.terrain"
-              (change)="affichagePlante($event)"
+        <div class="zoneParam">
+          <div class="ajoutTerrain">
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="ajoutTerrain()"
             >
-              <!--<option selected>Choix du terrain</option>-->
+              Ajouter un terrain
+            </button>
+          </div>
 
-              <option *ngFor="let terrain of terrains" [ngValue]="terrain">
-                {{ terrain.id }}
-                <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
-              </option>
-            </select>
-          </p>
+          <div class="zoneBouton">
+            <div class="separationBouton">
+              <p>Planter &nbsp;</p>
+              <p>
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="font-size: 0.8rem"
+                  [(ngModel)]="plante.typePlante"
+                  name="typePlante"
+                  (change)="ajoutPlante($event)"
+                >
+                  ajouter :&nbsp
+
+                  <!--<option selected>Choix du terrain</option>-->
+
+                  <option
+                    *ngFor="let t of typesPlante | keyvalue"
+                    [ngValue]="t.value"
+                  >
+                    {{ t.value }}
+                  </option>
+                </select>
+              </p>
+            </div>
+
+            <div class="separationBouton">
+              <p>Choix terrain &nbsp;</p>
+              <p>
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="font-size: 0.8rem"
+                  [(ngModel)]="utilisateur.terrain"
+                  (change)="affichagePlante($event)"
+                >
+                  <!--<option selected>Choix du terrain</option>-->
+
+                  <option *ngFor="let terrain of terrains" [ngValue]="terrain">
+                    {{ terrain.id }}
+                    <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
+                  </option>
+                </select>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="containerDroite">
-
-    <!--<div class="card" style="height: 20%">
+      <div class="containerDroite">
+        <!--<div class="card" style="height: 20%">
       <h5 class="card-header">Ail</h5>
       <p>Ail planté le 07/03/2022 à Montluçon</p>
     </div> -->
 
-    <div class="card card-5">
-      <div class="card-heading">
-        <h2 class="title">Conseils</h2>
-      </div>
-      <div class="card-body">
+        <div class="card card-5">
+          <div class="card-heading">
+            <h2 class="title">Conseils</h2>
+          </div>
+          <div class="card-body">
+            <i *ngFor="let i of fichesPlanteId" style="cursor: pointer"
+              ><a [routerLink]="['/fiches_plante/perso', i]">
+                <img
+                  height="60px"
+                  src="../../../assets/images/fiche-plante/planteById/{{
+                    i
+                  }}.png"
+                  alt=""
+                /> </a
+            ></i>
+          </div>
+        </div>
 
-        <i *ngFor="let i of fichesPlanteId" style="cursor: pointer"
-        ><a [routerLink]="['/fiches_plante/perso', i]">
-          <img
-            height="60px"
-            src="../../../assets/images/fiche-plante/planteById/{{ i }}.png"
-            alt=""
-          /> </a
-      ></i>
+        <div class="card card-5">
+          <div class="card-heading">
+            <h2 class="title">Mise en vente</h2>
+          </div>
+          <div class="card-body">
+            <div>
+              <select name="produits" class="produits-select">
+                <option value="">Choisissez un produit</option>
+                <option *ngFor="let nom of fichesPlanteNom">{{ nom }}</option>
+              </select>
+            </div>
 
-      </div>
-    </div>
+            <div>
+              <div class="form-group">
+                <label class="label">Quantité:</label>
+                <input
+                  class="form-control input input--style-5"
+                  type="number"
+                  required
+                />
+              </div>
 
+              <div class="form-group">
+                <label class="label">Prix:</label>
+                <input
+                  class="form-control input input--style-5"
+                  type="number"
+                  required
+                />
+              </div>
+            </div>
 
     <div class="card card-5">
       <div class="card-heading">
@@ -157,11 +207,5 @@
 
       </div>
     </div>
-
-
-
-    </div>
   </div>
 </div>
-</div>
-
