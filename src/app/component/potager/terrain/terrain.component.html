@@ -96,14 +96,15 @@
       <p>Ail planté le 07/03/2022 à Montluçon</p>
     </div>
 
-    <div class="card" style="height: 25%">
+    <div class="card scroller" style="height: 25%">
       <h5 class="card-header">Conseils</h5>
       <i *ngFor="let i of fichesPlanteId" style="cursor: pointer"
-        ><u [routerLink]="['/fiches_plante/perso', i]">
+        ><a [routerLink]="['/fiches_plante/perso', i]">
           <img
+            height="60px"
             src="../../../assets/images/fiche-plante/planteById/{{ i }}.png"
             alt=""
-          /> </u
+          /> </a
       ></i>
     </div>
 
