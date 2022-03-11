@@ -11,10 +11,10 @@ import { Utilisateur } from '../model/utilisateur';
 
 
 export class TerrainService {
-  
+
   static URL: string = 'http://localhost:8080/api/terrain';
   constructor(private http: HttpClient) {}
-  
+
 //getAll(): Observable<Terrain[]> {
 //  return this.http.get<Terrain[]>(TerrainService.URL);
 //}
@@ -39,7 +39,7 @@ getTerrainWithPlantes(id: number) {
   }
 
 create(terrain: Terrain): Observable<Terrain> {
- /* const terrainEnJson =  
+ /* const terrainEnJson =
   { id: terrain.id,
     surface: terrain.surface,
     localisation: terrain.localisation,
@@ -51,7 +51,7 @@ create(terrain: Terrain): Observable<Terrain> {
   console.log(terrain);
   console.log(this.terrainToJson(terrain)+"le terrain dans service");
   return this.http.post<Terrain>(
-    
+
     TerrainService.URL, terrain
   );
 }
@@ -68,21 +68,21 @@ private terrainToJson(terrain: Terrain): any {
 
         };
         if (terrain.utilisateur) {
-          Object.assign(obj, 
-              {utilisateur: 
+          Object.assign(obj,
+              {utilisateur:
                   {id: terrain.utilisateur.civilite
                   }
               }
             )}
 
         if (terrain.plante) {
-          Object.assign(obj, 
+          Object.assign(obj,
                               {plante: {
                                 id: terrain.id,
                                         }
                               }
                         )
-        
+
               return obj;  }
       }
 

@@ -27,7 +27,8 @@ export class TerrainComponent implements OnInit {
   plante: Plante = new Plante();
   terrain: Terrain = new Terrain();
   typesPlante: string[] = [];
-  fichesPlanteId: number[] = [];
+  fichesPlanteId = new Set<number>();
+  fichesPlanteNom = new Set<string>();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -75,8 +76,11 @@ export class TerrainComponent implements OnInit {
       .subscribe((result) => {
         this.plantes = result;
         for (let plante of this.plantes) {
+          this.fichesPlanteId = new Set<number>();
+          this.fichesPlanteNom = new Set<string>();
           this.ficheService.getByNom(plante.typePlante!).subscribe((result) => {
-            this.fichesPlanteId.push(result.id!);
+            this.fichesPlanteNom.add(result.nom!);
+            this.fichesPlanteId.add(result.id!);
           });
         }
 
