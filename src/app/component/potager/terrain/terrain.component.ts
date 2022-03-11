@@ -115,9 +115,6 @@ export class TerrainComponent implements OnInit {
   giveImage(value: any) {
     let pathImage: string = '';
     switch (value) {
-      case 'Carotte':
-        pathImage = '../assets/images/carotte.png';
-        break;
       case 'Ail':
         pathImage = '../assets/images/Ail.png';
         break;
@@ -148,6 +145,9 @@ export class TerrainComponent implements OnInit {
       case 'Fenouil':
         pathImage = './assets/images/fiche-plante/plante/Fenouil.png';
         break;
+        case 'Fève':
+          pathImage = './assets/images/fiche-plante/plante/Fève.png';
+          break;
       case 'Fraisier':
         pathImage = './assets/images/fiche-plante/plante/Fraisier.png';
         break;
@@ -157,9 +157,21 @@ export class TerrainComponent implements OnInit {
       case 'Laitue':
         pathImage = '../assets/images/fiche-plante/plante/Laitue.png';
         break;
+      case 'Maïs':
+        pathImage = '../assets/images/fiche-plante/plante/Maïs.png';
+        break;      
+      case 'Mâche':
+        pathImage = '../assets/images/fiche-plante/plante/Mâche.png';
+        break;
       case 'Melon':
         pathImage = './assets/images/fiche-plante/plante/Melon.png';
         break;
+      case 'Patate Douce':
+        pathImage = './assets/images/fiche-plante/plante/Patate douce.png';
+        break;
+        case 'Piment Cayenne':
+          pathImage = './assets/images/fiche-plante/plante/Piment Cayenne.png';
+          break;
       case 'Poireau':
         pathImage = './assets/images/fiche-plante/plante/Poireau.png';
         break;
