@@ -21,7 +21,7 @@ export class FichePlanteService {
 
   public getByNom(typePlante: string): Observable<FichePlante> {
     return this.httpClient.get<FichePlante>(
-      `${FichePlanteService.URL}/${typePlante}`
+      FichePlanteService.URL + '/nom/' + typePlante
     );
   }
 
