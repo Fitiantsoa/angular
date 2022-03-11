@@ -62,12 +62,23 @@ export class AchatComponent implements OnInit {
       this.utilisateurService.info().subscribe((result) => {
         this.utilisateur = result;
         if (!this.utilisateur.adresse) {
-          this.router.navigate(['/user']);
+          if (
+            confirm(
+              'Vous devez renseigner vos informations personnelles afin de pouvoir passer une commande. Voulez-vous continuer?'
+            )
+          ) {
+            this.router.navigate(['/user']);
+          } else {
+            this.router.navigate(['/achat']);
+          }
         } else {
           this.commandeService.create(commande).subscribe((ok) => {
             this.produitService
               .update(this.produit)
               .subscribe((ok) => this.router.navigate(['/achat']));
+            alert(
+              "Commande passé avec succès. Vous pouvez consulter la liste de vos commandes dans la rubrique 'COMMANDE'"
+            );
           });
         }
       });
