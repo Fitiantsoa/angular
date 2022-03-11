@@ -48,7 +48,12 @@
             *ngFor="let p of plantes"
             style="z-index: 10"
           >
-            <img [src]="giveImage(p.typePlante)" class="plante" />
+            <img
+              src="../../../../assets/images/fiche-plante/plante/{{
+                p.typePlante
+              }}.png"
+              class="plante"
+            />
           </button>
         </div>
 
@@ -73,7 +78,6 @@
                   style="font-size: 0.8rem"
                   [(ngModel)]="plante.typePlante"
                   name="typePlante"
-                  (change)="ajoutPlante($event)"
                 >
                   ajouter :&nbsp
 
@@ -106,6 +110,7 @@
                     <!-- SI LE TEMPS RAJOUTER NOM DANS TERRAIN -->
                   </option>
                 </select>
+                <button (click)="ajoutPlante($event)">Ajouter</button>
               </p>
             </div>
           </div>
