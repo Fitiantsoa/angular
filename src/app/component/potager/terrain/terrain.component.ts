@@ -113,83 +113,8 @@ export class TerrainComponent implements OnInit {
   }
 
   giveImage(value: any) {
-    let pathImage: string = '';
-    switch (value) {
-      case 'Ail':
-        pathImage = '../assets/images/Ail.png';
-        break;
-      case 'Aubergine':
-        pathImage = './assets/images/Auberginepetite.PNG';
-        break;
-      case 'Betterave':
-        pathImage = '../assets/images/fiche-plante/plante/Betterave.png';
-        break;
-      case 'Carotte':
-        pathImage = '../assets/images/carotte.png';
-        break;
-      case 'Concombre':
-        pathImage = '../assets/images/fiche-plante/plante/Concombre.png';
-        break;
-      case 'Céléri':
-        pathImage = '../assets/images/fiche-plante/plante/Céléri.png';
-        break;
-      case 'Chou':
-        pathImage = './assets/images/fiche-plante/plante/Chou.png';
-        break;
-      case 'Courge':
-        pathImage = './assets/images/fiche-plante/plante/Courge.png';
-        break;
-      case 'Courgette':
-        pathImage = './assets/images/fiche-plante/plante/Courgette.png';
-        break;
-      case 'Fenouil':
-        pathImage = './assets/images/fiche-plante/plante/Fenouil.png';
-        break;
-        case 'Fève':
-          pathImage = './assets/images/fiche-plante/plante/Fève.png';
-          break;
-      case 'Fraisier':
-        pathImage = './assets/images/fiche-plante/plante/Fraisier.png';
-        break;
-      case 'Haricot':
-        pathImage = './assets/images/fiche-plante/plante/Haricot.png';
-        break;
-      case 'Laitue':
-        pathImage = '../assets/images/fiche-plante/plante/Laitue.png';
-        break;
-      case 'Maïs':
-        pathImage = '../assets/images/fiche-plante/plante/Maïs.png';
-        break;      
-      case 'Mâche':
-        pathImage = '../assets/images/fiche-plante/plante/Mâche.png';
-        break;
-      case 'Melon':
-        pathImage = './assets/images/fiche-plante/plante/Melon.png';
-        break;
-      case 'Patate Douce':
-        pathImage = './assets/images/fiche-plante/plante/Patate douce.png';
-        break;
-        case 'Piment Cayenne':
-          pathImage = './assets/images/fiche-plante/plante/Piment Cayenne.png';
-          break;
-      case 'Poireau':
-        pathImage = './assets/images/fiche-plante/plante/Poireau.png';
-        break;
-      case 'Pois':
-        pathImage = './assets/images/fiche-plante/plante/Pois.png';
-        break;
-      case 'Poivron':
-        pathImage = './assets/images/fiche-plante/plante/Poivron.png';
-        break;
-      case 'Radis':
-        pathImage = './assets/images/fiche-plante/plante/Radis.png';
-        break;
-      case 'Tomate':
-        pathImage = '../assets/images/fiche-plante/plante/Tomate.png';
-        break;
-      default:
-        pathImage = '../assets/images/carotte.png';
-    }
+    let pathImage =
+      '../../../assets/images/fiche-plante/plante/' + value + '.png';
     return pathImage;
   }
   //list() {
