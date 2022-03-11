@@ -1,0 +1,52 @@
+
+
+      <div class="card-body">
+        <div>
+
+
+          <!-- <div class="form-group">
+            <label>Nom:</label>
+            <input class="form-control" [(ngModel)]="produit.plante!.typePlante"/>
+          </div> -->
+
+          <!-- <div class="form-group">
+            <label>Nom:</label>
+            <input
+              *ngIf="typePlante == ''"
+              class="form-control"
+              [(ngModel)]="produit.nom"
+            />
+            <input
+              *ngIf="typePlante != ''"
+              value="{{ typePlante }}"
+              class="form-contol"
+              readonly
+            />
+          </div> -->
+
+          <div class="form-group">
+            <label>Stock:</label>
+            <input class="form-control" [(ngModel)]="produit.stock" />
+          </div>
+
+          <div class="form-group">
+            <label>Prix:</label>
+            <input class="form-control" [(ngModel)]="produit.prix" />
+          </div>
+
+          <br />
+
+          <div class="row justify-content-center">
+            <button
+              (click)="save()"
+              class="btn btn--radius-2 btn--green"
+              type="submit"
+            >
+              Vendre
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
