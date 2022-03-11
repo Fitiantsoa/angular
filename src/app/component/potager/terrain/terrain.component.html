@@ -100,9 +100,11 @@
       <h5 class="card-header">Conseils</h5>
       <i *ngFor="let i of fichesPlanteId" style="cursor: pointer"
         ><u [routerLink]="['/fiches_plante/perso', i]">
-          src="../../../assets/images/fiche-plante/plante/{{ i }}.png</u
-        ></i
-      >
+          <img
+            src="../../../assets/images/fiche-plante/planteById/{{ i }}.png"
+            alt=""
+          /> </u
+      ></i>
     </div>
 
     <div class="card" style="height: 35%; display: flex; align-items: center">
