@@ -29,6 +29,7 @@ export class TerrainComponent implements OnInit {
   typesPlante: string[] = [];
   fichesPlanteId = new Set<number>();
   fichesPlanteNom = new Set<string>();
+  planteAVendre: string = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,

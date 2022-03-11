@@ -5,7 +5,6 @@
         <h2 class="title">Éditer une annonce</h2>
       </div>
       <div class="card-body">
-
         <div>
           <div class="form-group">
             <label>N°:</label>
@@ -19,7 +18,17 @@
 
           <div class="form-group">
             <label>Nom:</label>
-            <input class="form-control" [(ngModel)]="produit.nom"/>
+            <input
+              *ngIf="typePlante == ''"
+              class="form-control"
+              [(ngModel)]="produit.nom"
+            />
+            <input
+              *ngIf="typePlante != ''"
+              value="{{ typePlante }}"
+              class="form-contol"
+              readonly
+            />
           </div>
 
           <div class="form-group">
@@ -32,33 +41,33 @@
             <input class="form-control" [(ngModel)]="produit.prix" />
           </div>
 
-          <br>
+          <br />
 
+          <div class="row justify-content-between">
+            <button
+              (click)="save()"
+              class="btn btn--radius-2 btn--green"
+              type="submit"
+            >
+              Enregistrer
+            </button>
+            <a
+              routerLink="/vendre"
+              routerLinkActive="active"
+              class="btn btn--radius-2 btn--grey"
+              >Annuler</a
+            >
 
-          <div class="row justify-content-between"
-        >
-          <button
-            (click)="save()"
-            class="btn btn--radius-2 btn--green"
-            type="submit"
-          >
-           Enregistrer
-          </button>
-          <a
-          routerLink="/vendre"
-          routerLinkActive="active"
-          class= "btn btn--radius-2 btn--grey">Annuler</a>
-
-          <button
-            *ngIf="produit.id!"
-            (click)="delete(produit.id!)"
-            class="btn btn--radius-2 btn--red"
-            type="submit"
-          >
-           Supprimer
-          </button>
+            <button
+              *ngIf="produit.id!"
+              (click)="delete(produit.id!)"
+              class="btn btn--radius-2 btn--red"
+              type="submit"
+            >
+              Supprimer
+            </button>
+          </div>
         </div>
-
       </div>
     </div>
   </div>

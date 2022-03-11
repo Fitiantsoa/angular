@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TypePlante } from 'src/app/model/type-plante';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produit } from 'src/app/model/produit';
 import { ProduitService } from 'src/app/sercice/produit/produit.service';
@@ -6,9 +7,11 @@ import { ProduitService } from 'src/app/sercice/produit/produit.service';
 @Component({
   selector: 'app-create-produit-vendre',
   templateUrl: './create-produit-vendre.component.html',
-  styleUrls: ['./create-produit-vendre.component.css']
+  styleUrls: ['./create-produit-vendre.component.css'],
 })
 export class CreateProduitVendreComponent implements OnInit {
+  @Input()
+  typePlante: string = '';
 
   produit: Produit = new Produit();
 
@@ -38,6 +41,9 @@ export class CreateProduitVendreComponent implements OnInit {
         this.router.navigate(['/vendre']);
       });
     } else {
+      if (this.typePlante != '') {
+        this.produit.nom = this.typePlante;
+      }
       this.produitService.create(this.produit).subscribe((ok) => {
         this.router.navigate(['/vendre']);
       });
